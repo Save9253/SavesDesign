@@ -1,0 +1,21 @@
+:root{
+    --lt:#c3e06d;
+    --md:#36343c;
+    --dr:#1a1a1a;
+    --ac:#b25c59;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{box-sizing: border-box;font-family: 'Mukta', sans-serif;}
+
+body{
+    background-color: var(--lt);
+    height: 100vh;
+    width:100%;
+    display: grid;
+    place-content: center;
+    margin:0;
+}
+
+path{transition: 1s ease;}
