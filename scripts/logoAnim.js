@@ -1,4 +1,5 @@
-const logoPaths = document.querySelectorAll('#logo path');
+const logoPaths = document.querySelectorAll('.line');
+const logoShape = document.querySelector('#shape');
 const logo2ds = [
     "M43.0787 8.92908C37.2447 12.7658 32.3688 17.6335 29.2368 23.0582L4.76699 65.4411C1.59393 70.937 0.275513 76.878 0.532672 82.621L43.0787 8.92908Z",
     "M51.3317 4.48059C48.4388 5.73434 45.6637 7.22907 43.0787 8.9291L0.532715 82.621C0.648746 85.2182 1.08635 87.7745 1.82351 90.231L51.3317 4.48059Z",
@@ -33,13 +34,25 @@ const logo2ds = [
     "M11.7647 132.085L37.0955 88.2107C35.4994 88.2103 32.7941 88.2098 31.4117 88.2095L8.92139 127.164C9.58288 128.309 11.0769 130.894 11.7647 132.085Z",
     "M0.96322 111.411L13.7848 89.2032C9.57859 90.563 6.13663 93.2259 3.81321 96.629L2.38965 99.0944C0.613201 102.784 0.0220422 107.073 0.96322 111.411Z"
 ]
+const logoTxt = document.querySelector('#logoTxt');
+const logoSign = document.querySelector('#logoSign');
+const logoGrdStps = document.querySelectorAll('.logoGrdStp');
 
-function d (p1,d2,i) {
+function d (p1,d2) {
     p1.attributes.opacity.value = '1';
     p1.attributes.d.value = d2;
 }
-function allds () {
-    for(i=0;i<logoPaths.length;i++){
+function logoAnim () {
+    for(i=0;i<32;i++){
         setTimeout(d,i*100,logoPaths[i],logo2ds[i]);
     }
+    setTimeout(()=>{logoShape.attributes.opacity.value = '1'},3600);
+    setTimeout(()=>{
+        logoSign.style.transform = "translate(0)";
+        logoTxt.style.transform = "translate(0)";
+        for(i=0;i<2;i++){
+            logoGrdStps[i].attributes.offset.value="0";
+        }
+    },4100)
+
 }
