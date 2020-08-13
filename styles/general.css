@@ -18,7 +18,7 @@ body{
     margin:0;
 }
 
-#logo path,#logo g{transition: 1s ease;}
+#logo * {transition: 1s ease;}
 .logoTxt{
     font-size: 60px;
     font-weight: 500;

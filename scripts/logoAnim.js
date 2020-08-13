@@ -36,23 +36,21 @@ const logo2ds = [
 ]
 const logoTxt = document.querySelector('#logoTxt');
 const logoSign = document.querySelector('#logoSign');
-const logoGrdStps = document.querySelectorAll('.logoGrdStp');
+const logoRect = document.querySelector('#logo rect');
 
 function d (p1,d2) {
     p1.attributes.opacity.value = '1';
     p1.attributes.d.value = d2;
 }
-function logoAnim () {
+function logoAnim() {
     for(i=0;i<32;i++){
-        setTimeout(d,i*100,logoPaths[i],logo2ds[i]);
-    }
-    setTimeout(()=>{logoShape.attributes.opacity.value = '1'},3600);
+        setTimeout(d,(i*50)+1000,logoPaths[i],logo2ds[i]);
+    };
+    setTimeout(()=>{logoShape.attributes.opacity.value = '1'},3050);
     setTimeout(()=>{
         logoSign.style.transform = "translate(0)";
         logoTxt.style.transform = "translate(0)";
-        for(i=0;i<2;i++){
-            logoGrdStps[i].attributes.offset.value="0";
-        }
-    },4100)
-
-}
+        logoRect.style.transform="translate(0)";
+    },3550);
+};
+logoAnim();
