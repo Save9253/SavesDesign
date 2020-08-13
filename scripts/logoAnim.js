@@ -46,11 +46,11 @@ function logoAnim() {
     for(i=0;i<32;i++){
         setTimeout(d,(i*50)+1000,logoPaths[i],logo2ds[i]);
     };
-    setTimeout(()=>{logoShape.attributes.opacity.value = '1'},3050);
     setTimeout(()=>{
+        logoShape.attributes.opacity.value = '1';
         logoSign.style.transform = "translate(0)";
         logoTxt.style.transform = "translate(0)";
         logoRect.style.transform="translate(0)";
-    },3550);
+    },3050);
 };
 logoAnim();
