@@ -1,0 +1,9 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    min-width:250px;
+}
+
+#logo{margin:3px}
