@@ -9,7 +9,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
-*{box-sizing: border-box;font-family: 'Mukta', sans-serif;}
+*{
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    margin-block-start: unset;
+    margin-block-end: unset;
+}
 
 body{
     background-color: var(--lt);
@@ -76,4 +81,15 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
     margin-right: auto;
     width: fit-content;
     padding: 0 5px;
+}
+
+.errFld{background-color:var(--ac)!important;}
+
+.errMsg{
+    color:var(--ac);
+    font-weight: bold;
+    font-size: 20px;
+    border-left:solid 3px var(--ac);
+    padding-left:10px;
+    border-radius: 2px;
 }

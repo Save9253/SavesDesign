@@ -6,4 +6,4 @@ input{
     min-width:250px;
 }
 
-#logo{margin:3px}
+#logo,.errMsg{margin:3px}
