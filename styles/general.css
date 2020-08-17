@@ -40,7 +40,7 @@ input{
     border-radius: 2px;
     background-color: var(--md50)!important;
     color:white !important;
-    margin:3px;
+    margin:3px 0;
 }
 input:-webkit-autofill{
     -webkit-text-fill-color: white;
@@ -60,7 +60,7 @@ button{
     box-shadow: 0 0 var(--ac);
     transform: translate(0,0);
     cursor: pointer;
-    margin:5px 3px;
+    margin:5px 0;
 }
 button:hover{
     box-shadow: 2px 2px var(--ac);
@@ -90,6 +90,11 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
     font-weight: bold;
     font-size: 20px;
     border-left:solid 3px var(--ac);
+    padding-left:10px;
+    border-radius: 2px;
+}
+.msg{
+    border-left:solid 3px var(--md);
     padding-left:10px;
     border-radius: 2px;
 }

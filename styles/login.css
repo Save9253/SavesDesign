@@ -1,3 +1,4 @@
+#content{max-width: 300px;}
 form{
     display: flex;
     flex-direction: column;
@@ -6,4 +7,4 @@ input{
     min-width:250px;
 }
 
-#logo,.errMsg{margin:3px}
+#logo,.errMsg,.msg{margin:3px 0}
