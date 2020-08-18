@@ -21,12 +21,13 @@
     if(!isset($_SESSION['uname'])):
 ?>
 <form action="functions/login.php" method="POST">
-    <input <?php if($errName == 1){echo 'class="errFld"';};?> type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
-    <div class="pwdDiv">
-        <input <?php if($errPwd == 1){echo 'class="errFld"';};?> type="password" name="pwd" placeholder="Password">
+    <input class="fld<?php if($errName == 1){echo "errFld";};?>" type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
+    <div class="fld pwdDiv <?php if($errPwd == 1){echo 'errFld';};?>">
+        <input  type="password" name="pwd" placeholder="Password">
         <svg class="eyePwd" width="33" height="33" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 13.8L2.7 16.3L8.5 17.5L9.3 17.6L15 18L20.7 17.6L21.5 17.5L27.3 16.3L30 13.8L27 14.8L21 15.6L15 15.8L9 15.6L3 14.8Z" fill="white" />
+            <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white" />
         </svg>
+        <p class="tooltipPwd" style="opacity:0">Show</p>
     </div>
     <button type="submit" name="login">Login</button>
 </form>

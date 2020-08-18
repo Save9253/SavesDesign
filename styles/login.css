@@ -1,10 +1,7 @@
-#content{max-width: 300px;}
+#content{width: 280px;}
 form{
     display: flex;
     flex-direction: column;
-}
-input{
-    min-width:250px;
 }
 
 #logo,.errMsg,.msg{margin:3px 0}
@@ -15,13 +12,28 @@ input{
 .pwdDiv input{
     border-radius: 2px 0 0 2px;
     height:33px;
+    background-color: transparent;
+    min-width:237px;
+    color: white;
 }
 .eyePwd{
     padding: 0 5px;
     cursor: pointer;
-    background-color: var(--md50);
     border-radius: 0 2px 2px 0;
 }
+
 .eyePwd path{
     transition: 500ms ease;
+}
+
+.tooltipPwd{
+    position: absolute;
+    left:calc(50% + 145px);
+    font-size: 11px;
+    color:var(--md);
+    transition:500ms ease;
+}
+/* Mobile*/
+@media screen and (max-width:900px){
+    .tooltipPwd{display: none;}
 }

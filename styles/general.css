@@ -37,6 +37,8 @@ body{
 input{
     border: none;
     padding: 5px 10px;
+}
+.fld{
     border-radius: 2px;
     background-color: var(--md50)!important;
     color:white !important;
