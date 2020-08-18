@@ -9,7 +9,7 @@ if(isset($_POST['register'])){
 
     if(empty($uname) || empty($email) || empty($pwd) || empty($pwdRpt)){
         if(empty($pwd)){$pwdEmp=1;}else{$pwdEmp=0;}
-        if(empty($pwdRpt)){$pwdRptEmp=1;}else{$pwdRptEmp=1;}
+        if(empty($pwdRpt)){$pwdRptEmp=1;}else{$pwdRptEmp=0;}
         header('Location: ../register.php?err=empty&uname='.$uname.'&email='.$email.'&pwdEmp='.$pwdEmp.'&pwdRptEmp='.$pwdRptEmp);
         exit();
     }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match('/^[a-zA-z0-9]*$/', $uname)){
