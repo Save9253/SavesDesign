@@ -13,11 +13,16 @@
         if($_GET['err']=='noU'){echo '<p class="errMsg">There is no such user!</p>';};
         if($_GET['err']=='pwd'){echo '<p class="errMsg">Wrong password!</p>';};
     }
+    $errName = 0;
+    if(isset($_GET['err']) && (($_GET['err']=='empty' && empty($_GET['uname'])) || $_GET['err'] == 'noU')){$errName = 1;};
+
+    $errPwd = 0;
+    if(isset($_GET['err']) && ((isset($_GET['pwdEmp']) && $_GET['pwdEmp']==1) || $_GET['err']=='pwd')){$errPwd = 1;}
     if(!isset($_SESSION['uname'])):
 ?>
 <form action="functions/login.php" method="POST">
-    <input <?php if(isset($_GET['err']) && (($_GET['err']=='empty' && empty($_GET['uname'])) || $_GET['err'] == 'noU')){echo 'class="errFld"';};?> type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
-    <input <?php if(isset($_GET['err']) && ((isset($_GET['pwdEmp']) && $_GET['pwdEmp']==1) || $_GET['err']=='pwd')){echo 'class="errFld"';};?> type="password" name="pwd" placeholder="Password">
+    <input <?php if($errName == 1){echo 'class="errFld"';};?> type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
+    <input <?php if($errPwd == 1){echo 'class="errFld"';};?> type="password" name="pwd" placeholder="Password">
     <button type="submit" name="login">Login</button>
 </form>
 <?php
