@@ -8,3 +8,20 @@ input{
 }
 
 #logo,.errMsg,.msg{margin:3px 0}
+.pwdDiv{
+    display: flex;
+    align-items: center;
+}
+.pwdDiv input{
+    border-radius: 2px 0 0 2px;
+    height:33px;
+}
+.eyePwd{
+    padding: 0 5px;
+    cursor: pointer;
+    background-color: var(--md50);
+    border-radius: 0 2px 2px 0;
+}
+.eyePwd path{
+    transition: 500ms ease;
+}

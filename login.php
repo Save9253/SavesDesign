@@ -22,7 +22,12 @@
 ?>
 <form action="functions/login.php" method="POST">
     <input <?php if($errName == 1){echo 'class="errFld"';};?> type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
-    <input <?php if($errPwd == 1){echo 'class="errFld"';};?> type="password" name="pwd" placeholder="Password">
+    <div class="pwdDiv">
+        <input <?php if($errPwd == 1){echo 'class="errFld"';};?> type="password" name="pwd" placeholder="Password">
+        <svg class="eyePwd" width="33" height="33" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 13.8L2.7 16.3L8.5 17.5L9.3 17.6L15 18L20.7 17.6L21.5 17.5L27.3 16.3L30 13.8L27 14.8L21 15.6L15 15.8L9 15.6L3 14.8Z" fill="white" />
+        </svg>
+    </div>
     <button type="submit" name="login">Login</button>
 </form>
 <?php
@@ -38,4 +43,4 @@
     endif;
     include_once 'footer.php';
 ?>
-<script type="text/javascript" src="./scripts/errFld.js"></script>
+<script type="text/javascript" src="./scripts/Flds.js"></script>
