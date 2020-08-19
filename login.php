@@ -2,7 +2,7 @@
     $page = "Login";
     $styles = '<link rel="stylesheet" href="./styles/login.css">';
     include_once 'header.php';
-    include_once './parts/logoThick.php';
+    include_once './parts/logoThick.svg';
     if(isset($_GET['msg'])){
         if($_GET['msg']=="scs"){echo '<p class="msg">You are registered successfully!<br>Use your Username or E-mail to log in.</p>';};
         if($_GET['msg']=="lgdOut"){echo '<p class="msg">You are logged out!</p>';};
@@ -33,7 +33,7 @@
 </form>
 <?php
     if(!(isset($_GET['msg']) && $_GET['msg']=="scs")){
-        include_once './parts/sepr.php';
+        include_once './parts/sepr.html';
         echo '<form action="register.php"><button type="submit">Register</button></form>';
     };
     else:

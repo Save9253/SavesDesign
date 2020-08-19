@@ -2,7 +2,7 @@
     $page ='Register';
     $styles='<link rel="stylesheet" href="./styles/login.css">';
     include_once 'header.php';
-    include './parts/logoThin.php';
+    include './parts/logoThick.svg';
     if(isset($_GET['err'])){
         if($_GET['err']=='empty'){echo '<p class="errMsg">Fill in all the fields!</p>';}
         if($_GET['err']=='invlMail'||$_GET['err']=='invlMailUname'){echo '<p class="errMsg">Enter a valid e-mail adress!</p>';}
