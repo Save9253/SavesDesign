@@ -10,9 +10,8 @@ require 'PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 
-try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -28,12 +27,17 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Save\'s Design Password Recovery ';
+    $mail->Body    = '
+        <img style="width:100%" src="http://35.231.143.2/imgs/SavesDesignFeatured.png" alt="Save\'s Design Logo">
+        <div style="text-align:center;">
+            <p style="padding:10px;font-size:18px;font-weight:600;">Follow this link to recover your password:</p>
+            <p style="padding:10px;font-size:16px;">Here will be a link!</p>
+        </div>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+if($mail->send()){
+    header('Location:../index.php?msg=scs');
+}else{
+    header('Location:../index.php?msg=fail');
 }
