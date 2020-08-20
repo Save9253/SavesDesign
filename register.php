@@ -4,12 +4,12 @@
     include_once './parts/header.php';
     include './parts/logoThick.svg';
     if(isset($_GET['err'])){
-        if($_GET['err']=='empty'){echo '<p class="errMsg">Fill in all the fields!</p>';}
-        if($_GET['err']=='invlMail'||$_GET['err']=='invlMailUname'){echo '<p class="errMsg">Enter a valid e-mail adress!</p>';}
-        if($_GET['err']=='invlUname'||$_GET['err']=='invlMailUname'){echo '<p class="errMsg">Enter a valid username!</p>';}
-        if($_GET['err']=='pwdMtch'){echo '<p class="errMsg">The passwords don\'t match!</p>';}
-        if($_GET['err']=='dbConn'){echo '<p class="errMsg">Failed to connect to the database!</p>';}
-        if($_GET['err']=='unameTkn'){echo '<p class="errMsg">The username is already taken!</p>';}
+        if($_GET['err']=='empty'){echo '<p class="errMsg">Fill in all the fields</p>';}
+        if($_GET['err']=='invlMail'||$_GET['err']=='invlMailUname'){echo '<p class="errMsg">Enter a valid e-mail address</p>';}
+        if($_GET['err']=='invlUname'||$_GET['err']=='invlMailUname'){echo '<p class="errMsg">Enter a valid username</p>';}
+        if($_GET['err']=='pwdMtch'){echo '<p class="errMsg">Passwords don\'t match</p>';}
+        if($_GET['err']=='dbConn'){echo '<p class="errMsg">Failed to connect to the database. Please try again later.</p>';}
+        if($_GET['err']=='unameTkn'){echo '<p class="errMsg">Username is already taken</p>';}
     }
     $errMail = 0;
     if(
@@ -27,7 +27,7 @@
     if(
         ( isset($_GET['pwdEmp']) && $_GET['pwdEmp'] == 1 ) ||
         ( isset($_GET['err']) && ($_GET['err'] == 'pwdMtch') )
-    ){$errPwd = 0;}
+    ){$errPwd = 1;}
 
     $errPwdRpt = 0;
     if(

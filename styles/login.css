@@ -33,6 +33,13 @@ form{
     color:var(--md);
     transition:500ms ease;
 }
+
+#forgotPwd{
+    color:var(--dr);
+    text-align: center;
+}
+#forgotPwd:hover{color:var(--ac)}
+
 /* Mobile*/
 @media screen and (max-width:900px){
     .tooltipPwd{display: none;}
