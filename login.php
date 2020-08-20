@@ -1,7 +1,7 @@
 <?php
     $page = "Login";
     $styles = '<link rel="stylesheet" href="./styles/login.css">';
-    include_once 'header.php';
+    include_once './parts/header.php';
     include_once './parts/logoThick.svg';
     if(isset($_GET['msg'])){
         if($_GET['msg']=="scs"){echo '<p class="msg">You are registered successfully!<br>Use your Username or E-mail to log in.</p>';};
@@ -29,6 +29,7 @@
         </svg>
         <p class="tooltipPwd" style="opacity:0">Show</p>
     </div>
+    <?php if(isset($_GET['err']) && $_GET['err'] == 'pwd'){echo '<a href="pwdRec.php">Forgot your password?</a>';}?>
     <button type="submit" name="login">Login</button>
 </form>
 <?php
@@ -42,6 +43,6 @@
 <form action="./functions/logout.php"><button type="submit">Logout</button></form>
 <?php
     endif;
-    include_once 'footer.php';
+    include_once './parts/footer.php';
 ?>
 <script type="text/javascript" src="./scripts/Flds.js"></script>

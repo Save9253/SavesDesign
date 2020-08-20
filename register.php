@@ -1,7 +1,7 @@
 <?php
     $page ='Register';
     $styles='<link rel="stylesheet" href="./styles/login.css">';
-    include_once 'header.php';
+    include_once './parts/header.php';
     include './parts/logoThick.svg';
     if(isset($_GET['err'])){
         if($_GET['err']=='empty'){echo '<p class="errMsg">Fill in all the fields!</p>';}
@@ -55,4 +55,4 @@
     <button type="submit" name="register">Register</button>
 </form>
 <script type="text/javascript" src="./scripts/Flds.js"></script>
-<?php include_once 'footer.php'?>
+<?php include_once './parts/footer.php'?>

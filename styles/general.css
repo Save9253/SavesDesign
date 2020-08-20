@@ -25,7 +25,13 @@ body{
     margin:0;
 }
 
-#logo * {transition: 1s ease;}
+a{
+    text-decoration: unset;
+    color:unset;
+    cursor: pointer;
+    transition:ease 500ms;
+}
+
 .logoTxt{
     font-size: 60px;
     font-weight: 500;
