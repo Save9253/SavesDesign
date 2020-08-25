@@ -1,10 +1,17 @@
-#content{width: 280px;}
 form{
     display: flex;
     flex-direction: column;
 }
-
-#logo,.errMsg,.msg{margin:3px 0}
+#content{
+    width:280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    justify-content: flex-end;
+}
+#logoThick{margin:0 0 10px}
+.errMsg,.msg{margin:3px 0}
 .pwdDiv{
     display: flex;
     align-items: center;

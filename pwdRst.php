@@ -1,6 +1,7 @@
 <?php
     $page = "Password Reset";
     $styles = '<link rel="stylesheet" href="./styles/login.css">';
+    $HeaderLogo = 'no';
     include_once './parts/header.php';
     include_once './parts/logoThick.svg';
     $errMail = 0;

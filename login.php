@@ -1,6 +1,7 @@
 <?php
     $page = "Login";
     $styles = '<link rel="stylesheet" href="./styles/login.css">';
+    $HeaderLogo = 'no';
     include_once './parts/header.php';
     include_once './parts/logoThick.svg';
     if(isset($_GET['msg'])){

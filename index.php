@@ -1,5 +1,6 @@
 <?php
     $page = 'Home';
+    $HeaderLogo = 'yes';
     include_once './parts/header.php';
 ?>
 

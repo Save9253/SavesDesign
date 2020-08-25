@@ -1,6 +1,7 @@
 <?php
     $page ='Register';
     $styles='<link rel="stylesheet" href="./styles/login.css">';
+    $HeaderLogo = 'no';
     include_once './parts/header.php';
     include './parts/logoThick.svg';
     if(isset($_GET['err'])){
