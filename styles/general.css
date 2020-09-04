@@ -136,3 +136,11 @@ header #logoThin, #logoLink{
     margin: 0 5px;
     font-size: 18px;
 }
+.bodyMoved{left:-250px;}
+.navMoved{right:0 !important;}
+#sideNav{
+    position:fixed;
+    right:-250px;
+    width:250px;
+    height:100vh;
+}
