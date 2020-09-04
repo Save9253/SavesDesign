@@ -6,11 +6,11 @@
     include_once './parts/logoThick.svg';
     $errMail = 0;
     if(isset($_GET['err'])){
-        if($_GET['err'] == 'mail'){echo '<p class="errMsg">No users with this e-mail registered</p>'; $errMail = 1;};
-        if($_GET['err'] == 'empt'){echo '<p class="errMsg">Enter an e-mail address</p>'; $errMail = 1;};
-        if($_GET['err'] == 'dbConn'){echo '<p class="errMsg">Failed to connect to the database. Please try again later.</p>';};
-        if($_GET['err'] == 'fail'){echo '<p class="errMsg">Failed send a link</p>';};
-        if($_GET['err'] == 'pwdMtch'){echo '<p class="errMsg">Passwords don\'t match</p>';};
+        if($_GET['err'] == 'mail'){echo '<div class="errMsg">No users with this e-mail registered</div> '; $errMail = 1;};
+        if($_GET['err'] == 'empt'){echo '<div class="errMsg">Enter an e-mail address</div> '; $errMail = 1;};
+        if($_GET['err'] == 'dbConn'){echo '<div class="errMsg">Failed to connect to the database. Please try again later.</div> ';};
+        if($_GET['err'] == 'fail'){echo '<div class="errMsg">Failed send a link</div> ';};
+        if($_GET['err'] == 'pwdMtch'){echo '<div class="errMsg">Passwords don\'t match</div> ';};
     }
     $errPwd = 0;
     if(
@@ -26,9 +26,9 @@
 ?>
 <?php if(!isset($_GET['msg']) && !isset($_GET['selector'])):?>
     <form action="functions/pwdRstMail.php" method="POST">
-        <p style="text-align:justify">Enter the e-mail address you used to register and I will send you a link to reset your password.</p>
+        <div style="text-align:justify">Enter the e-mail address you used to register and I will send you a link to reset your password.</div>
         <input maxlength="65" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>
-        <button type="submit" name="pwdRstMl">Send link</button>
+        <button class="btn" type="submit" name="pwdRstMl">Send link</button>
     </form>
 <?php elseif(isset($_GET['selector'])):
         require './functions/db.php';
@@ -42,12 +42,12 @@
         $result = mysqli_stmt_get_result($stmt);
         if(!$row = mysqli_fetch_assoc($result)){header('Location: ../pwdRst.php?err=dbConn');exit();}
         if($currentDate > $row['expires']){
-            echo '<p class="errMsg">The link has expired. Please send a new link.</p>';
+            echo '<div class="errMsg">The link has expired. Please send a new link.</div> ';
 ?>
     <form action="functions/pwdRstMail.php" method="POST">
-        <p style="text-align:justify">Enter the e-mail address you used to register and I will send you a link to reset your password.</p>
+        <div style="text-align:justify">Enter the e-mail address you used to register and I will send you a link to reset your password.</div>
         <input maxlength="65" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>
-        <button type="submit" name="pwdRstMl">Send link</button>
+        <button class="btn" type="submit" name="pwdRstMl">Send link</button>
     </form>
 <?php }else{ ?>
     <form action="functions/pwdRst.php?<?php echo 'selector='.$_GET['selector'].'&validator='.$_GET['validator']?>" method="POST">
@@ -56,21 +56,21 @@
             <svg class="eyePwd" width="33" height="33" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white" />
             </svg>
-            <p class="tooltipPwd" style="opacity:0">Show</p>
+            <div class="tooltipPwd" style="opacity:0">Show</div>
         </div>
         <div class="fld pwdDiv <?php if($errPwdRpt == 1){echo 'errFld';};?>">
             <input type="password" name="pwdRpt" placeholder="Repeat New Password">
             <svg class="eyePwd" width="33" height="33" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white" />
             </svg>
-            <p class="tooltipPwd" style="opacity:0">Show</p>
+            <div class="tooltipPwd" style="opacity:0">Show</div>
         </div>
-        <button type="submit" name="pwdRst">Reset</button>
+        <button class="btn" type="submit" name="pwdRst">Reset</button>
     </form>
 <?php };
     elseif(isset($_GET['msg']) && $_GET['msg'] == 'scs'):
 ?>
-    <p style="text-align:center">The link was sent to your e-mail!</p>
+    <div style="text-align:center">The link was sent to your e-mail!</div>
 <?php endif;?>
 <?php include_once './parts/footer.php';?>
 <script type="text/javascript" src="./scripts/Flds.js"></script>

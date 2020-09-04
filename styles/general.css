@@ -13,8 +13,6 @@
 *{
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
-    margin-block-start: unset;
-    margin-block-end: unset;
 }
 h1,h2{
     font-family: 'Do Hyeon', sans-serif;;
@@ -24,6 +22,9 @@ body{
     background-color: var(--lt);
     width:100%;
     margin:0;
+    position: absolute;
+    left:0;
+    transition:1s ease;
 }
 #content{
     min-height: calc(100vh - 60px);
@@ -39,7 +40,10 @@ a{
     transition:ease 500ms;
 }
 
-ul{padding-inline-start: unset;}
+ul{
+    padding-inline-start: unset;
+    list-style-type: none;
+}
 
 .logoTxt{
     font-size: 60px;
@@ -49,6 +53,7 @@ ul{padding-inline-start: unset;}
 .hid{display: none;}
 .hid *{display: none;}
 
+/* Inputs */
 input{
     border: none;
     padding: 5px 10px;
@@ -67,23 +72,26 @@ input:-webkit-autofill{
 input::placeholder{color:var(--wh50);}
 textarea:focus, input:focus, button:focus{outline: none;}
 
+/* Buttons */
 button{
     border: none;
-    padding: 5px 10px;
-    border-radius: 2px;
     transition: 500ms ease;
+    cursor: pointer;
+}
+.btn{
+    margin:5px 0;
     background-color: var(--md);
     color:white;
     box-shadow: 0 0 var(--ac);
     transform: translate(0,0);
-    cursor: pointer;
-    margin:5px 0;
+    padding: 5px 10px;
+    border-radius: 2px;
 }
-button:hover{
+.btn:hover, .btn:focus{
     box-shadow: 2px 2px var(--ac);
     transform: translate(-2px,-2px);
 }
-button:active{
+.btn:active{
     color:var(--md);
     background-color:white;
 }
@@ -99,9 +107,12 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
     width: fit-content;
     padding: 0 5px;
 }
+.icon{
+    background-color:transparent;
+}
 
+/* Messages */
 .errFld{background-color:var(--ac)!important;}
-
 .errMsg{
     color:var(--ac);
     font-weight: bold;
@@ -143,4 +154,9 @@ header #logoThin, #logoLink{
     right:-250px;
     width:250px;
     height:100vh;
+    background-color:var(--md);
+    transition:1s ease;
+    top: 0;
+    color: white;
+    padding: 15px;
 }
