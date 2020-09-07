@@ -143,9 +143,7 @@ header #logoThin{
     box-shadow:0 0 var(--md),0 0 var(--md);
     transition:500ms ease;
 }
-#logoLink{
-        height:50px;
-}
+header #logoLink{height:50px;}
 #logoLink:focus{outline:unset;}
 #logoLink:focus svg, #logoLink:hover svg{
     box-shadow:-0.5px -0.5px var(--md), 2px 2px var(--md);

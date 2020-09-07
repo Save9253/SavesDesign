@@ -3,7 +3,11 @@
     $styles='<link rel="stylesheet" href="./styles/login.css">';
     $HeaderLogo = 'no';
     include_once './parts/header.php';
-    include './parts/logoThick.svg';
+
+    echo '<a id="logoLink" href="index.php">';
+    include "parts/logoThick.svg";
+    echo '</a>';
+
     if(isset($_GET['err'])){
         if($_GET['err']=='empty'){echo '<div class="errMsg">Fill in all the fields</div>';}
         if($_GET['err']=='invlMail'||$_GET['err']=='invlMailUname'){echo '<div class="errMsg">Enter a valid e-mail address</div>';}

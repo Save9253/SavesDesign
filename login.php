@@ -2,8 +2,13 @@
     $page = "Login";
     $styles = '<link rel="stylesheet" href="./styles/login.css">';
     $HeaderLogo = 'no';
+
     include_once './parts/header.php';
-    include_once './parts/logoThick.svg';
+
+    echo '<a id="logoLink" href="index.php">';
+    include "parts/logoThick.svg";
+    echo '</a>';
+
     if(isset($_GET['msg'])){
         if($_GET['msg']=="scs"){echo '<div class="msg">You are registered successfully!<br>Use your Username or E-mail to log in.</div>';};
         if($_GET['msg']=="lgdOut"){echo '<div class="msg">You are logged out!</div>';};
