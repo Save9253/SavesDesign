@@ -22,9 +22,7 @@
             <li>
                 <button id="hamburger" class="icon">
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="3"/>
-                        <rect width="20" height="3" y="7"/>
-                        <rect width="20" height="3" y="14"/>
+                        <path d="M0 0L20 0L20 3L0 3Z M0 7L20 7L20 10L0 10Z M0 14L20 14L20 17L0 17Z">
                     </svg>
                 </button>
             </li>
