@@ -38,6 +38,7 @@ a{
     color:unset;
     cursor: pointer;
     transition:ease 500ms;
+    display: flex;
 }
 
 ul{
@@ -150,12 +151,17 @@ header #logoLink{height:50px;}
 }
 
 /* Navigation */
-#descNav *{font-family: 'Do Hyeon', sans-serif;}
-#descNav li{
+#topNav *{font-family: 'Do Hyeon', sans-serif;}
+#topNav li{
     display: inline;
     margin: 0 5px;
     font-size: 18px;
 }
+#topNav ul{
+    display: flex;
+    align-items: center;
+}
+
 .bodyMoved{left:-250px;}
 .navMoved{right:0 !important;}
 .navMoved *{display: block !important;}
@@ -180,7 +186,8 @@ header #logoLink{height:50px;}
 #hamburger{
     box-shadow:0 0 var(--md),0 0 var(--md);
     border-radius: 5px;
-    padding:5px 5px 0;
+    padding: 5px;
+    display: flex;
 }
 #hamburger:hover,#hamburger:focus{
     box-shadow: -0.5px -0.5px var(--md),2px 2px var(--md);
