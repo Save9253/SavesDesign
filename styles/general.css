@@ -107,9 +107,9 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
     width: fit-content;
     padding: 0 5px;
 }
-.icon{
-    background-color:transparent;
-}
+.icon{background-color:transparent;}
+.icon svg{transition:500ms ease;}
+
 
 /* Messages */
 .errFld{background-color:var(--ac)!important;}
@@ -134,10 +134,20 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:60px;
+    height:70px;
 }
-header #logoThin, #logoLink{
+header #logoThin{
     height:40px;
+    margin:5px;
+}
+#logoLink{
+    box-shadow:0 0 var(--md),0 0 var(--md);
+    height:50px;
+    border-radius: 5px;
+}
+#logoLink:focus,#logoLink:hover{
+    box-shadow: -0.5px -0.5px var(--md),2px 2px var(--md);
+    outline:unset;
 }
 
 /* Navigation */
@@ -159,4 +169,17 @@ header #logoThin, #logoLink{
     top: 0;
     color: white;
     padding: 15px;
+}
+#sideNav ul{
+    margin-block-start: unset;
+    margin-block-end: unset;
+}
+#hamburger{
+    box-shadow:0 0 var(--md),0 0 var(--md);
+    border-radius: 5px;
+    padding:5px 5px 0;
+}
+#hamburger:hover,#hamburger:focus{
+    box-shadow: -0.5px -0.5px var(--md),2px 2px var(--md);
+    outline:unset;
 }

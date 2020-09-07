@@ -2,11 +2,6 @@ form{
     display: flex;
     flex-direction: column;
 }
-#content{
-    width:280px;
-    margin-left: auto;
-    margin-right: auto;
-}
 header{
     justify-content: flex-end;
 }

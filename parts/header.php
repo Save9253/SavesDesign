@@ -20,8 +20,8 @@
             <li><a href="login.php"><?php if(isset($_SESSION['uname'])){echo $_SESSION['uname'];}else{echo 'Log in';}?></a></li>
             <?php endif;?>
             <li>
-                <button class="icon">
-                    <svg id="hamburger" width="20" height="17" viewBox="0 0 20 17" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
+                <button id="hamburger" class="icon">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
                         <rect width="20" height="3"/>
                         <rect width="20" height="3" y="7"/>
                         <rect width="20" height="3" y="14"/>
@@ -31,11 +31,9 @@
         </ul>
     </nav>
 </header>
-<nav id="sideNav">
-    <ul>
-        <li><a href="./index.php">Home</a></li>
-    </ul>
-    <div id="mobileFooter">
-    </div>
-</nav>
+    <nav id="sideNav">
+        <ul>
+            <li><a href="./index.php">Home</a></li>
+        </ul>
+    </nav>
 <main id="content">
