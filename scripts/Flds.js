@@ -25,6 +25,10 @@ function eyeSetup (b){
     });
     eyePwds[b].addEventListener('mouseenter',()=>{pwdTTs[b].style.opacity = 1;});
     eyePwds[b].addEventListener('mouseleave',()=>{pwdTTs[b].style.opacity = 0;});
+
+    eyePwds[b].addEventListener('focus',()=>{pwdTTs[b].style.opacity = 1;});
+    eyePwds[b].addEventListener('blur',()=>{pwdTTs[b].style.opacity = 0;});
+
     setTimeout(()=>{
         eyePwdPaths[b].attributes.d.value = eyePwdDClosed;
     },1000);
