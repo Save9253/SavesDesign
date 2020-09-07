@@ -137,17 +137,18 @@ header{
     height:70px;
 }
 header #logoThin{
-    height:40px;
-    margin:5px;
+    height:50px;
+    padding:5px;
+    border-radius: 5px;
+    box-shadow:0 0 var(--md),0 0 var(--md);
+    transition:500ms ease;
 }
 #logoLink{
-    box-shadow:0 0 var(--md),0 0 var(--md);
-    height:50px;
-    border-radius: 5px;
+        height:50px;
 }
-#logoLink:focus,#logoLink:hover{
-    box-shadow: -0.5px -0.5px var(--md),2px 2px var(--md);
-    outline:unset;
+#logoLink:focus{outline:unset;}
+#logoLink:focus svg, #logoLink:hover svg{
+    box-shadow:-0.5px -0.5px var(--md), 2px 2px var(--md);
 }
 
 /* Navigation */
