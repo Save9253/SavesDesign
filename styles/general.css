@@ -71,7 +71,7 @@ input:-webkit-autofill{
     border-bottom: solid 2px white;
 }
 input::placeholder{color:var(--wh50);}
-textarea:focus, input:focus, button:focus{outline: none;}
+textarea:focus, input:focus, button:focus,a:focus{outline: none;}
 
 /* Buttons */
 button{
@@ -151,7 +151,6 @@ header #logoLink{height:50px;}
 }
 
 /* Navigation */
-#topNav *{font-family: 'Do Hyeon', sans-serif;}
 #topNav li{
     display: inline;
     margin: 0 5px;
@@ -161,6 +160,22 @@ header #logoLink{height:50px;}
     display: flex;
     align-items: center;
 }
+.menuLink{
+    flex-direction: column;
+    align-items: center;
+}
+.menuLink:hover .menuTtl,.menuLink:focus .menuTtl{
+    height: 20px;
+    opacity:1;
+}
+.menuTtl{
+    font-size:12px;
+    height: 0px;
+    overflow: hidden;
+    transition: ease 500ms;
+    opacity: 0;
+}
+
 
 .bodyMoved{left:-250px;}
 .navMoved{right:0 !important;}
