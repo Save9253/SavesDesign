@@ -27,7 +27,7 @@ body{
     transition:1s ease;
 }
 #content{
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 70px);
     width:100%;
     display: grid;
     place-content: center;
