@@ -18,7 +18,7 @@
         <ul>
             <?php if($page !== 'Login'):?>
             <li>
-                <a class="menuLink" href="<?php if(isset($_SESSION['uname'])){echo 'functions/logout.php';}else{echo 'login.php';}?>">
+                <a class="menuIt" href="<?php if(isset($_SESSION['uname'])){echo 'functions/logout.php';}else{echo 'login.php';}?>">
                     <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M28.7 1.3H2.7C1.6 1.3 0.7 2.2 0.7 3.2V29.3C0.7 30.5 1.6 31.3 2.7 31.3H28.7C29.8 31.3 30.7 30.5 30.7 29.3V3.2C30.7 2.2 29.8 1.3 28.7 1.3Z" stroke="var(--dr)" stroke-linecap="round" stroke-linejoin="round"/>
                         <path
@@ -31,10 +31,11 @@
             </li>
             <?php endif;?>
             <li>
-                <button id="hamburger" class="icon">
+                <button id="hamburger" class="icon menuIt">
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0L20 0L20 3L0 3Z M0 7L20 7L20 10L0 10Z M0 14L20 14L20 17L0 17Z">
                     </svg>
+                    <div class="menuTtl">Menu</div>
                 </button>
             </li>
         </ul>

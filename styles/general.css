@@ -160,11 +160,11 @@ header #logoLink{height:50px;}
     display: flex;
     align-items: center;
 }
-.menuLink{
+.menuIt{
     flex-direction: column;
     align-items: center;
 }
-.menuLink:hover .menuTtl,.menuLink:focus .menuTtl{
+.menuIt:hover .menuTtl,.menuIt:focus .menuTtl{
     height: 20px;
     opacity:1;
 }
@@ -199,13 +199,8 @@ header #logoLink{height:50px;}
     margin-block-end: unset;
 }
 #hamburger{
-    box-shadow:0 0 var(--md),0 0 var(--md);
-    border-radius: 5px;
-    padding: 5px;
     display: flex;
 }
 #hamburger:hover,#hamburger:focus{
-    box-shadow: -0.5px -0.5px var(--md),2px 2px var(--md);
     outline:unset;
 }
-#hamburger svg path{transition:1s ease}
