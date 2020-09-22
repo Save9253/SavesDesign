@@ -5,6 +5,7 @@
     --dr:#1a1a1a;
     --ac:#b25c59;
     --wh50:rgba(255,255,255,0.5);
+    --lt70:rgba(195,224,109,0.7);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
@@ -13,6 +14,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
+    scroll-behavior: smooth;
 }
 h1,h2{
     font-family: 'Do Hyeon', sans-serif;;
@@ -138,9 +140,9 @@ header{
     height:70px;
     position:fixed;
     width:100vw;
-    top:0;
     background-color: var(--lt);
     z-index:999;
+    transition: ease 500ms;
 }
 .headerPlaceHolder{
     height:70px;
@@ -211,4 +213,32 @@ header #logoLink{height:50px;}
 }
 #hamburger:hover,#hamburger:focus{
     outline:unset;
+}
+
+/* Side Navigation */
+.secWNav{
+    display: grid;
+    grid-template-columns: minmax(auto,220px) auto;
+}
+.secWNav section{grid-column: 2/3;}
+.secNav{
+    position: sticky;
+    height: fit-content;
+    top:70px;
+    grid-column: 1/2;
+    grid-row: auto;
+    width:220px;
+    color:var(--lt70);
+    padding: 0 10px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.secNav a{
+    line-height: 1.2em;
+    margin: 10px 0;
+    text-align: right;
+}
+.secNav a:hover,.secNav a:focus{
+    color:var(--lt);
 }

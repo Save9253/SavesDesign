@@ -71,9 +71,11 @@
         <path d="M13.6 338.9L15.8 297.1L13.99 275.9L28.3 251.7L33.9 207.2L33.99 163L38.5 156.8L47.2 159.7L51.4 224.99L57.1 222.1L101.3 238.6L108.3 247L121.9 257.1L118.9 265.2L108.7 268.3L102.5 264.8L104.9 278.99L106.5 288.8L103 295.99L95.99 294.5L94.7 304.9L78.2 317.9L70.9 319.9L65.99 329.1L67.7 347.4L58.9 380.2L45.1 389.5" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </section>
-<section class="compare">
+<section class="compare secWNav">
+    <nav class="secNav">
+    </nav>
     <section class="topS">
-        <h2>Finding a domain:</h2>
+        <h2>Finding a domain</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -147,7 +149,7 @@
         </div>
     </section>
     <section>
-        <h2>Hosting a website:</h2>
+        <h2>Hosting a website</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -190,7 +192,7 @@
         </div>
     </section>
     <section>
-        <h2>Content Management System:</h2>
+        <h2>Content Management System</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -239,7 +241,7 @@
         </div>
     </section>
     <section>
-        <h2>Layout:</h2>
+        <h2>Layout</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -280,7 +282,7 @@
         </div>
     </section>
     <section>
-        <h2>Mobile Compatibility:</h2>
+        <h2>Mobile Compatibility</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -345,7 +347,7 @@
         </div>
     </section>
     <section>
-        <h2>Functionality:</h2>
+        <h2>Functionality</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -378,7 +380,7 @@
         </div>
     </section>
     <section>
-        <h2>Accessibility:</h2>
+        <h2>Accessibility</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -436,7 +438,7 @@
         </div>
     </section>
     <section class="bottS">
-        <h2>Search Engine Optimization:</h2>
+        <h2>Search Engine Optimization</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L20 10L40 0V10L20 20L0 10Z"/>
@@ -540,3 +542,4 @@
     </div>
 </section>
 <?php include_once './parts/footer.php'?>
+<script type="text/javascript" src="./scripts/secNav.js"></script>

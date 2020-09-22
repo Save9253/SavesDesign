@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="headerPlaceHolder"></div>
-<header>
+<header style="top:0;">
     <?php if($HeaderLogo == 'yes'):?>
     <a id="logoLink" href="index.php"><?php include "parts/logoThin.svg";?></a>
     <?php endif;?>
