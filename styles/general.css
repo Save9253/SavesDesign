@@ -136,6 +136,14 @@ header{
     justify-content: space-between;
     align-items: center;
     height:70px;
+    position:fixed;
+    width:100vw;
+    top:0;
+    background-color: var(--lt);
+    z-index:999;
+}
+.headerPlaceHolder{
+    height:70px;
 }
 header #logoThin{
     height:50px;

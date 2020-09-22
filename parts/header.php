@@ -10,6 +10,7 @@
     <title><?php echo $page?> | Save's Design</title>
 </head>
 <body>
+<div class="headerPlaceHolder"></div>
 <header>
     <?php if($HeaderLogo == 'yes'):?>
     <a id="logoLink" href="index.php"><?php include "parts/logoThin.svg";?></a>
