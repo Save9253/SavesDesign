@@ -78,3 +78,13 @@ Nbtn.addEventListener('mouseenter', ()=>{
 Nbtn.addEventListener('mouseleave', ()=>{
     Nicon.attributes.d.value = NiconD;
 })
+Nbtn.addEventListener('focus', ()=>{
+    if(secWNav.classList.contains('secWNavMoved')){
+        Nicon.attributes.d.value = NiconDL;
+    }else{
+        Nicon.attributes.d.value = NiconDR;
+    }
+})
+Nbtn.addEventListener('blur', ()=>{
+    Nicon.attributes.d.value = NiconD;
+})

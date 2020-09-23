@@ -1,13 +1,13 @@
 /* Side Navigation */
 .secWNav{
     display: grid;
-    grid-template-columns: minmax(auto,235px) auto;
-    width:calc(100vw + 160px);
-    margin-left: -191px;
+    grid-template-columns: minmax(auto,230px) auto;
+    width:calc(100vw + 155px);
+    margin-left: -192px;
     transition:ease 1s;
 }
 .secWNavMoved{
-    margin-left: 175px !important;
+    margin-left: 170px !important;
 }
 .secWNav section{grid-column: 2/3;}
 .secNavDiv{
@@ -16,14 +16,14 @@
     height: fit-content;
     top:70px;
     grid-row: auto;
-    width:235px;
+    width:230px;
     display: flex;
     flex-direction: row-reverse;
     padding: 0 10px;
 }
 #secNavBtn{
-    fill:var(--lt);
-    padding:0 0 0 5px;
+    fill:var(--ac);
+    padding:0;
 }
 #secNavBtn svg path{
     transition:500ms ease;
@@ -39,7 +39,6 @@
 .secNav a{
     line-height: 1.2em;
     margin: 10px 0;
-    padding-right: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -48,12 +47,11 @@
     text-align: right;
     width:160px
 }
-.secNav a:hover,.secNav a:focus{
-    padding-right: 0;
-}
+.secNav a:hover,.secNav a:focus{color:white !important;}
+.secNav a:hover svg,.secNav a:focus svg{fill:white !important;}
 
 .secNav svg{
-    margin-left:10px;
+    margin: 0 10px;
     fill:var(--ac);
     transition: 500ms ease;
     width:8px;
