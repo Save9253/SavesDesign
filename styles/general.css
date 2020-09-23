@@ -234,11 +234,29 @@ header #logoLink{height:50px;}
     flex-direction: column;
     align-items: flex-end;
 }
-.secNav a{
+.secNav a span{
     line-height: 1.2em;
-    margin: 10px 0;
+    padding: 10px 0;
     text-align: right;
 }
 .secNav a:hover,.secNav a:focus{
     color:var(--lt);
+}
+.secNav a:hover .crcl,.secNav a:focus .crcl{
+    fill:var(--lt);
+}
+.navM{
+    width: 10px;
+    margin-left:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--md50);
+}
+.crcl{
+    fill:var(--md50);
+    transition: 500ms ease;
+    overflow:visible;
+    stroke:var(--md);
+    stroke-width:4px;
 }
