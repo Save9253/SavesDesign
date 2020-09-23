@@ -1,0 +1,71 @@
+/* Side Navigation */
+.secWNav{
+    display: grid;
+    grid-template-columns: minmax(auto,235px) auto;
+    width:calc(100vw + 160px);
+    margin-left: -191px;
+    transition:ease 1s;
+}
+.secWNavMoved{
+    margin-left: 175px !important;
+}
+.secWNav section{grid-column: 2/3;}
+.secNavDiv{
+    grid-column: 1/2;
+    position: sticky;
+    height: fit-content;
+    top:70px;
+    grid-row: auto;
+    width:235px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 10px;
+}
+#secNavBtn{
+    fill:var(--lt);
+    padding:0 0 0 5px;
+}
+#secNavBtn svg path{
+    transition:500ms ease;
+}
+
+.secNav{
+    width:220px;
+    color:var(--ac);
+    display: flex;
+    flex-direction: column;
+}
+
+.secNav a{
+    line-height: 1.2em;
+    margin: 10px 0;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.secNav span{
+    text-align: right;
+    width:160px
+}
+.secNav a:hover,.secNav a:focus{
+    padding-right: 0;
+}
+
+.secNav svg{
+    margin-left:10px;
+    fill:var(--ac);
+    transition: 500ms ease;
+    width:8px;
+    height:8px;
+}
+#linkToTop{
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+}
+#linkToTop svg{
+    width:10px;
+    height:10px;
+}
+.focusSecA{color:var(--lt) !important;}
+.focusSecA svg{fill:var(--lt) !important;}

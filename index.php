@@ -1,7 +1,10 @@
 <?php
     $page = 'Home';
     $HeaderLogo = 'yes';
-    $styles = '<link rel="stylesheet" href="./styles/home.css">';
+    $styles = '
+        <link rel="stylesheet" href="./styles/home.css">
+        <link rel="stylesheet" href="./styles/secNav.css">
+        ';
     include_once './parts/header.php';
 ?>
 <section id="intro">
@@ -72,14 +75,21 @@
     </svg>
 </section>
 <section class="compare secWNav">
-    <nav class="secNav">
-        <a href='#' id=linkToTop>
-            <span>To the top</span>
-            <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 5L5 0L10 5Z"/>
+    <div class="secNavDiv">
+        <button type="button" id="secNavBtn" class="icon">
+            <svg width="10" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H3L3 20L3 40H0L0 20Z"/>
             </svg>
-        </a>
-    </nav>
+        </button>
+        <nav class="secNav">
+            <a href='#' id=linkToTop>
+                <span>To the top</span>
+                <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5L5 0L10 5Z"/>
+                </svg>
+            </a>
+        </nav>
+    </div>
     <section class="topS">
         <h2>Finding a domain</h2>
         <div class="redStrip">
