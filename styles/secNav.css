@@ -1,16 +1,14 @@
 /* Side Navigation */
 .secWNav{
     display: grid;
-    grid-template-columns: minmax(auto,230px) auto;
-    width: calc(var(--winWidth) + 195px);
-    margin-left: -195px;
-    transition:ease 1s;
+    grid-template-columns: 30px auto;
+    width: var(--winWidth);
 }
-.secWNavMoved{
-    margin-left: 0px !important;
-}
+
 .secWNav section{grid-column: 2/3;}
 .secNavDiv{
+    transition:ease 1s;
+    margin-left: -195px;
     grid-column: 1/2;
     position: sticky;
     height: fit-content;
@@ -19,6 +17,16 @@
     width:230px;
     display: flex;
     flex-direction: row-reverse;
+    z-index: 3;
+    border-radius: 2px;
+    border-style:solid;
+    border-width: 1px 1px 1px 0;
+    border-color: var(--md);
+    background-color: var(--md);
+}
+.secNavDMoved{
+    margin-left: 0px !important;
+    border-color: var(--ac);
 }
 #secNavBtn{
     fill:var(--ac);

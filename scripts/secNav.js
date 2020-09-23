@@ -48,7 +48,7 @@ document.addEventListener('scroll',()=>{
 })
 
 //Open the nav
-const secWNav = document.querySelector('.secWNav');
+const secNavD = document.querySelector('.secNavDiv');
 const Nbtn = document.querySelector('#secNavBtn');
 const Nicon = document.querySelector('#secNavBtn svg path');
 const NiconDR = 'M0 0H3L10 20L3 40H0L7 20Z';
@@ -57,21 +57,21 @@ const NiconD = 'M0 0H3L3 20L3 40H0L0 20Z';
 
 
 Nbtn.addEventListener('click',()=>{
-    secWNav.classList.toggle('secWNavMoved');
+    secNavD.classList.toggle('secNavDMoved');
     Nicon.attributes.d.value = NiconD;
 })
 
 navAs.forEach(navA =>{
     navA.addEventListener('click',()=>{
-        if(secWNav.classList.contains('secWNavMoved')){
-            secWNav.classList.remove('secWNavMoved');
+        if(secNavD.classList.contains('secNavDMoved')){
+            secNavD.classList.remove('secNavDMoved');
         }
         Nicon.attributes.d.value = NiconD;
     })
 })
 
 Nbtn.addEventListener('mouseenter', ()=>{
-    if(secWNav.classList.contains('secWNavMoved')){
+    if(secNavD.classList.contains('secNavDMoved')){
         Nicon.attributes.d.value = NiconDL;
     }else{
         Nicon.attributes.d.value = NiconDR;
@@ -81,7 +81,7 @@ Nbtn.addEventListener('mouseleave', ()=>{
     Nicon.attributes.d.value = NiconD;
 })
 Nbtn.addEventListener('focus', ()=>{
-    if(secWNav.classList.contains('secWNavMoved')){
+    if(secNavD.classList.contains('secNavDMoved')){
         Nicon.attributes.d.value = NiconDL;
     }else{
         Nicon.attributes.d.value = NiconDR;
