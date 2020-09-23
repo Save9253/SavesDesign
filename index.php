@@ -73,6 +73,12 @@
 </section>
 <section class="compare secWNav">
     <nav class="secNav">
+        <a href='#' id=linkToTop>
+            <span>To the top</span>
+            <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 5L5 0L10 5Z"/>
+            </svg>
+        </a>
     </nav>
     <section class="topS">
         <h2>Finding a domain</h2>
