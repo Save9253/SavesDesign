@@ -550,11 +550,12 @@
     <h2>It is your choice in the end</h2>
     <div class="inf left">
         <h3>on your own</h3>
-        <p>You can make a website on your own, paying seemingly small prices to greedy large corporations, who are in business just to make as much money as they can. Additionally, you can risk your reputation on the web, lose precious time, and end up with a slower website.</p>
+        <p>Though making a website on your own is hard, time-consuming and I believe everyone can learn how to do it. My tutorials will help you to learn all the skills needed to successfully create, host and run a website.</p>
+        <p><b>Learn how to make websties own your own!</b></p>
     </div>
     <div class="inf right">
         <h3>with Save</h3>
-        <p>You can trust making a website to me, a hard-working entrepreneur who is passionate about helping other business owners succeed by building excellent websites.  I will make a website just the way you want considering all of your needs. Your website will load fast and give the best experience to your customers. You won't have to worry about anything. I will take care of every step of the process and will keep you updated with regular reports. </p>
+        <p>Or you can save your time and simply trust making your website to me, a hard-working entrepreneur who is passionate about helping other business owners succeed by building excellent websites.  I will make a website just the way you want considering all of your needs. Your website will load fast and give the best experience to your customers. You won't have to worry about anything. I will take care of every step of the process and will keep you updated with regular reports. </p>
     </div>
 </section>
 <?php include_once './parts/footer.php'?>

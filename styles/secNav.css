@@ -2,8 +2,8 @@
 .secWNav{
     display: grid;
     grid-template-columns: minmax(auto,230px) auto;
-    width:calc(100vw + 168px);
-    margin-left: -185px;
+    width:calc(100vw + 178px);
+    margin-left: -195px;
     transition:ease 1s;
 }
 .secWNavMoved{
@@ -19,7 +19,6 @@
     width:230px;
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 10px;
 }
 #secNavBtn{
     fill:var(--ac);
@@ -38,7 +37,7 @@
 
 .secNav a{
     line-height: 1.2em;
-    margin: 10px 0;
+    margin: 5px 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -67,3 +66,8 @@
 }
 .focusSecA{color:var(--lt) !important;}
 .focusSecA svg{fill:var(--lt) !important;}
+@media screen and (max-width: 600px){
+    .secWNav {
+        width: calc(100vw + 195px);
+    }
+}
