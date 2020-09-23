@@ -2,8 +2,8 @@
 .secWNav{
     display: grid;
     grid-template-columns: minmax(auto,230px) auto;
-    width:calc(100vw + 155px);
-    margin-left: -192px;
+    width:calc(100vw + 168px);
+    margin-left: -185px;
     transition:ease 1s;
 }
 .secWNavMoved{
