@@ -9,6 +9,7 @@ h2s.forEach(h2 => {
     const newA = document.createElement('a');
     h2.setAttribute('id', anch);
     newA.setAttribute('href','#' + anch);
+    newA.setAttribute('class','secNavA');
     newA.innerHTML = '<span>' + h2.textContent + '</span>' + navM;
     nav.appendChild(newA);
     newA.addEventListener('click', ()=>{
@@ -23,4 +24,25 @@ document.addEventListener('scroll',()=>{
 })
 headerEls.forEach(e => {
     e.addEventListener('focus',()=>{header.style.top = '0px'})
+})
+
+// High light the focus section
+const sec = document.querySelectorAll('.secWNav section');
+const navAs = document.querySelectorAll('.secNavA');
+let focusSec;
+
+document.addEventListener('scroll',()=>{
+    let MidScroll = scrollY + (innerHeight/2);
+    for(i = 0;i<sec.length;i++){
+        let SecTop = sec[i].offsetTop;
+        let SecBott = sec[i].offsetTop + sec[i].clientHeight;
+        if(focusSec ==  i){
+            navAs[i].classList.add('focusSecA')
+        }else{
+            navAs[i].classList.remove('focusSecA')
+        }
+        if(MidScroll > SecTop && MidScroll < SecBott){
+            if(focusSec != i){focusSec = i;}
+        }
+    }
 })
