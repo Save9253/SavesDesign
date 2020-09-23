@@ -2,12 +2,12 @@
 .secWNav{
     display: grid;
     grid-template-columns: minmax(auto,230px) auto;
-    width:calc(100vw + 178px);
+    width: calc(var(--winWidth) + 195px);
     margin-left: -195px;
     transition:ease 1s;
 }
 .secWNavMoved{
-    margin-left: 170px !important;
+    margin-left: 0px !important;
 }
 .secWNav section{grid-column: 2/3;}
 .secNavDiv{
@@ -66,8 +66,3 @@
 }
 .focusSecA{color:var(--lt) !important;}
 .focusSecA svg{fill:var(--lt) !important;}
-@media screen and (max-width: 600px){
-    .secWNav {
-        width: calc(100vw + 195px);
-    }
-}

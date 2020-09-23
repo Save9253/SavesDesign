@@ -21,7 +21,7 @@ h1,h2{
 
 body{
     background-color: var(--lt);
-    width:100%;
+    width: var(--winWidth);
     margin:0;
     position: absolute;
     left:0;

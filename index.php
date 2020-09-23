@@ -548,15 +548,13 @@
 </section>
 <section id="conclusion">
     <h2>It is your choice in the end</h2>
-    <div class="inf left">
+    <div class="left">
         <h3>on your own</h3>
-        <p>Though making a website on your own is hard, time-consuming and I believe everyone can learn how to do it. My tutorials will help you to learn all the skills needed to successfully create, host and run a website.</p>
-        <p><b>Learn how to make websties own your own!</b></p>
+        <button type="button" class="btn">Learn how to make websties on your own!</button>
     </div>
-    <div class="inf right">
+    <div class="right">
         <h3>with Save</h3>
-        <p>Or you can save your time and simply trust making your website to me, a hard-working entrepreneur who is passionate about helping other business owners succeed by building excellent websites.  I will make a website just the way you want considering all of your needs. Your website will load fast and give the best experience to your customers. You won't have to worry about anything. I will take care of every step of the process and will keep you updated with regular reports. </p>
-    </div>
+        <button type="button" class="btn">Have Save to make a website for you!</button>    </div>
 </section>
 <?php include_once './parts/footer.php'?>
 <script type="text/javascript" src="./scripts/secNav.js"></script>

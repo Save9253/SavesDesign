@@ -58,6 +58,7 @@ const NiconD = 'M0 0H3L3 20L3 40H0L0 20Z';
 
 Nbtn.addEventListener('click',()=>{
     secWNav.classList.toggle('secWNavMoved');
+    Nicon.attributes.d.value = NiconD;
 })
 
 navAs.forEach(navA =>{
@@ -65,6 +66,7 @@ navAs.forEach(navA =>{
         if(secWNav.classList.contains('secWNavMoved')){
             secWNav.classList.remove('secWNavMoved');
         }
+        Nicon.attributes.d.value = NiconD;
     })
 })
 

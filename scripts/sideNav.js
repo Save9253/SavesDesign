@@ -17,7 +17,12 @@ hamB.addEventListener('click',()=>{
     }
 });
 content.addEventListener('click',()=>{
-    if(body.classList.contains('bodyMoved')){body.classList.remove('bodyMoved')}
-    if(sideNav.classList.contains('navMoved')){sideNav.classList.remove('navMoved')}
+    if(body.classList.contains('bodyMoved')){body.classList.remove('bodyMoved')};
+    if(sideNav.classList.contains('navMoved')){sideNav.classList.remove('navMoved')};
     if(hamBpath.attributes.d.value == arrowD){hamBpath.attributes.d.value = hamBD}
 });
+
+// Width with no scroll bar
+function winWidth(){document.documentElement.style.setProperty('--winWidth', document.documentElement.clientWidth + "px")}
+winWidth();
+window.addEventListener('resize', ()=>{winWidth();});
