@@ -54,11 +54,28 @@ const mustch = document.querySelector('#mustch');
 const ReyeB = document.querySelector('#ReyeB');
 const LeyeB = document.querySelector('#LeyeB');
 
+const yes = document.querySelector('#yes');
+const no = document.querySelector('#no');
+
+let ReyeOp = true;
+
+yes.addEventListener('mouseenter',()=>{expr(yesEx);ReyeOp = false});
+yes.addEventListener('mouseleave',()=>{expr(quEx);ReyeOp = true});
+
+no.addEventListener('mouseenter',()=>{expr(noEx)});
+no.addEventListener('mouseleave',()=>{expr(quEx)});
+
+yes.addEventListener('focus',()=>{expr(yesEx);ReyeOp = false});
+yes.addEventListener('blur',()=>{expr(quEx);ReyeOp = true});
+
+no.addEventListener('focus',()=>{expr(noEx)});
+no.addEventListener('blur',()=>{expr(quEx)});
+
 function blink() {
-    Reye.attributes.d.value = blinkClosed.Reye;
+    if(ReyeOp){Reye.attributes.d.value = blinkClosed.Reye;}
     Leye.attributes.d.value = blinkClosed.Leye;
     setTimeout(()=>{
-        Reye.attributes.d.value = blinkOpen.Reye;
+        if(ReyeOp){Reye.attributes.d.value = blinkOpen.Reye;}
         Leye.attributes.d.value = blinkOpen.Leye;
     },300);
 }
