@@ -23,6 +23,6 @@ content.addEventListener('click',()=>{
 });
 
 // Width with no scroll bar
-function winWidth(){document.documentElement.style.setProperty('--winWidth', document.documentElement.clientWidth + "px")}
+function winWidth(){document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + "px")}
 winWidth();
 window.addEventListener('resize', ()=>{winWidth();});

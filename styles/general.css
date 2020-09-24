@@ -65,7 +65,7 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
 /* Main */
 body{
     background-color: var(--lt);
-    width: var(--winWidth);
+    width: var(--vw);
     margin:0;
     position: absolute;
     left:0;
