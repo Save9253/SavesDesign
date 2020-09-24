@@ -554,13 +554,13 @@
                 <path d="M0 0H40V20L45 17.5V27.5L20 40L-5 27.5V17.5L0 20Z"/>
             </svg>
         </div>
-        <button type="button" class="left">Learn how to make websties <br><b>on your own!</b></button>
+        <a class="left"><span>Learn how to make websties <br><b>on your own!</b></span></a>
         <div class="rightArr">
             <svg class="arrowB" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0H40V20L45 17.5V27.5L20 40L-5 27.5V17.5L0 20Z"/>
             </svg>
         </div>
-        <button type="button" class="right">Make your website <br><b>with Save!</b></button>
+        <a class="right"><span>Make your website <br><b>with Save!</b></span></a>
     </section>
 </section>
 <?php include_once './parts/footer.php'?>

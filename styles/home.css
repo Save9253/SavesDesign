@@ -129,7 +129,7 @@
     grid-template-columns: repeat(2,50%);
     padding:0 10px 50px;
 }
-#end button{
+#end a{
     margin-top: 20px;
     font-size: 20px;
     background-color: var(--lt);
@@ -139,8 +139,11 @@
     line-height: 1.2em;
     padding:10px;
     width:calc(100% - 5px);
+    text-align: center;
+    display: grid;
+    place-content: center;
 }
-#end button:hover,#end button:focus{
+#end a:hover,#end a:focus{
     box-shadow: 2px 2px var(--dr);
 }
 #end .left{
