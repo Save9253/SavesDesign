@@ -29,11 +29,15 @@
     border-color: var(--ac);
 }
 #secNavBtn{
-    fill:var(--ac);
     padding:0;
     margin-right: 3px;
 }
-
+#secNavBtn svg path{
+    fill:var(--ac);
+}
+#secNavBtn:focus svg path{
+    fill:white;
+}
 .secNav{
     width:220px;
     color:var(--ac);
