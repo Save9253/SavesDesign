@@ -1,7 +1,7 @@
 /* Side Navigation */
 .secWNav{
     display: grid;
-    grid-template-columns: 30px auto;
+    grid-template-columns: 30px auto 30px;
     width: var(--winWidth);
 }
 

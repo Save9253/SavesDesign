@@ -1,3 +1,4 @@
+/* All */
 :root{
     --lt:#c3e06d;
     --md:#36343c;
@@ -15,11 +16,53 @@
     font-family: 'Mukta', sans-serif;
     scroll-behavior: smooth;
 }
+
+/* Text */
 h1,h2{
     font-family: 'Do Hyeon', sans-serif;;
 }
-svg *{transition: ease 500ms;}
+p{text-align:justify}
+h1{
+    margin-block-start: 15px;
+    margin-block-end: 15px;
+}
+h2{
+    margin-block-start: 12px;
+    margin-block-end: 12px;
+}
+h3{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    font-size: 24px;
+}
+h1,h2,h3{text-align: center;}
 
+/* Elements */
+svg *{transition: ease 500ms;}
+a{
+    text-decoration: unset;
+    color:unset;
+    cursor: pointer;
+    transition:ease 500ms;
+    display: flex;
+}
+ul{
+    padding-inline-start: unset;
+    list-style-type: none;
+}
+hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
+.hrP{
+    margin:-40px 0 0;
+    font-size: 24px;
+    font-weight: 600;
+    background-color:var(--lt);
+    margin-left:auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 0 5px;
+}
+
+/* Main */
 body{
     background-color: var(--lt);
     width: var(--winWidth);
@@ -28,6 +71,7 @@ body{
     left:0;
     transition:1s ease;
 }
+.bodyMoved{left:-250px;}
 #content{
     min-height: calc(100vh - 70px);
     width:100%;
@@ -35,24 +79,7 @@ body{
     place-content: center;
 }
 
-a{
-    text-decoration: unset;
-    color:unset;
-    cursor: pointer;
-    transition:ease 500ms;
-    display: flex;
-}
-
-ul{
-    padding-inline-start: unset;
-    list-style-type: none;
-}
-
-.logoTxt{
-    font-size: 60px;
-    font-weight: 500;
-}
-
+/* Hidden Class */
 .hid{display: none;}
 .hid *{display: none;}
 
@@ -97,18 +124,6 @@ button{
 .btn:active{
     color:var(--md);
     background-color:white;
-}
-
-hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
-.hrP{
-    margin:-40px 0 0;
-    font-size: 24px;
-    font-weight: 600;
-    background-color:var(--lt);
-    margin-left:auto;
-    margin-right: auto;
-    width: fit-content;
-    padding: 0 5px;
 }
 .icon{background-color:transparent;}
 
@@ -184,10 +199,9 @@ header #logoLink{height:50px;}
     opacity: 0;
 }
 
-
-.bodyMoved{left:-250px;}
 .navMoved{right:0 !important;}
 .navMoved *{display: block !important;}
+
 #sideNav{
     position:fixed;
     right:-250px;

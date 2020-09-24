@@ -1,25 +1,7 @@
-body{overflow-x: hidden;}
-p{text-align:justify}
-h1{
-    margin-block-start: 15px;
-    margin-block-end: 15px;
-}
-h2{
-    margin-block-start: 12px;
-    margin-block-end: 12px;
-}
-h3{
-    margin-block-start: 10px;
-    margin-block-end: 10px;
-    font-size: 24px;
-}
-h1,h2,h3{text-align: center;}
-
-#intro,header{max-width: var(--winWidth);}
-
+/* Intro Section */
 #intro{
     grid-template-columns: repeat(2,minmax(auto,500px));
-    padding-bottom: 30px;
+    padding:0 10px 30px;
     display: grid;
     place-content: center;
 }
@@ -35,49 +17,7 @@ h1,h2,h3{text-align: center;}
     width:100%;
 }
 
-#end{
-    display: grid;
-    grid-template-columns:30px auto;
-    place-content: center;
-}
-#end section{
-    grid-column: 2/3;
-    width:1040px;
-    display: grid;
-    grid-template-columns: repeat(2,50%);
-    padding:0 10px 50px;
-}
-#end section div{
-    place-self: center;
-}
-#end section h2{
-    grid-row:1/2;
-    grid-column: 1/3;
-    z-index: 2;
-    max-width:calc(var(--winWidth) - 120px);
-    justify-self: center;
-}
-.rightArr,.leftArr{
-    width:40px;
-    z-index: 1;
-    grid-row: 1/2;
-}
-.rightArr{
-    justify-self: end;
-    grid-column: 2/3;
-    margin-right: 100px;
-}
-.leftArr{
-    grid-column: 1/2;
-    margin-left: 100px;
-}
-.arrowB{
-    fill:var(--md);
-    overflow: visible;
-}
-
-.bottS .inf{margin-bottom:30px !important;}
-
+/* Compare Section */
 .compare{
     background-color:var(--md);
 }
@@ -125,6 +65,8 @@ h1,h2,h3{text-align: center;}
     border-radius: 2px 2px 0 0;
     margin: 5px 10px;
 }
+.bottS .inf{margin-bottom:30px !important;}
+
 .redStrip,.greenStrip{
     width:40px;
     height:100%;
@@ -150,6 +92,10 @@ h1,h2,h3{text-align: center;}
     margin-right: 100px;
 }
 
+.bad{border:2px solid var(--ac)}
+.good{border:2px solid var(--lt)}
+.bad h3{border-bottom:solid 2px var(--ac);color:var(--ac)}
+.good h3{border-bottom:solid 2px var(--lt);color:var(--lt)}
 .bad svg{
     max-width:80%;
     max-height: 200px;
@@ -160,10 +106,6 @@ h1,h2,h3{text-align: center;}
     max-height: 200px;
     margin:20px 0 10px;
 }
-.bad{border:2px solid var(--ac)}
-.good{border:2px solid var(--lt)}
-.bad h3{border-bottom:solid 2px var(--ac);color:var(--ac)}
-.good h3{border-bottom:solid 2px var(--lt);color:var(--lt)}
 
 .left{
     justify-self: end;
@@ -172,6 +114,73 @@ h1,h2,h3{text-align: center;}
 .right{
     justify-self: start;
     grid-column: 2/3;
+}
+
+/* End section */
+#end{
+    display: grid;
+    grid-template-columns:30px auto 30px;
+    place-content: center;
+}
+#end section{
+    grid-column: 2/3;
+    width:1040px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    padding:0 10px 50px;
+}
+#end button{
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: var(--lt);
+    border-radius: 2px;
+    border:2px solid var(--dr);
+    box-shadow: 0 0 var(--dr);
+    line-height: 1.2em;
+    padding:10px;
+    width:calc(100% - 5px);
+}
+#end button:hover,#end button:focus{
+    box-shadow: 2px 2px var(--dr);
+}
+#end .left{
+    justify-self: start;
+    margin-right:5px;
+}
+#end .right{
+    justify-self: end;
+    margin-left: 5px;
+}
+#end section h2{
+    grid-row:1/2;
+    grid-column: 1/3;
+    z-index: 2;
+    max-width:calc(var(--winWidth) - 120px);
+    justify-self: center;
+    margin-bottom: 0;
+}
+.rightArr,.leftArr{
+    width:40px;
+    z-index: 1;
+    grid-row: 1/2;
+    background-color: var(--md);
+    height:100%;
+    display: grid;
+    place-content: end center;
+}
+.rightArr{
+    justify-self: end;
+    grid-column: 2/3;
+    margin-right: 100px;
+}
+.leftArr{
+    grid-column: 1/2;
+    margin-left: 100px;
+}
+.arrowB{
+    width:100%;
+    fill:var(--md);
+    overflow: visible;
 }
 
 @media screen and (max-width:600px){
