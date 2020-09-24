@@ -78,11 +78,11 @@
     <div class="secNavDiv">
         <button type="button" id="secNavBtn" class="icon">
             <svg width="10" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0H3L3 20L3 40H0L0 20Z"/>
+                <path d="M4 0H7L7 20L7 40H4L4 20Z"/>
             </svg>
         </button>
         <nav class="secNav">
-            <a href='#' id=linkToTop>
+            <a href='#' id="linkToTop">
                 <span>To the top</span>
                 <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 5L5 0L10 5Z"/>
@@ -546,15 +546,24 @@
         </div>
     </section>
 </section>
-<section id="conclusion">
-    <h2>It is your choice in the end</h2>
-    <div class="left">
-        <h3>on your own</h3>
-        <button type="button" class="btn">Learn how to make websties on your own!</button>
-    </div>
-    <div class="right">
-        <h3>with Save</h3>
-        <button type="button" class="btn">Have Save to make a website for you!</button>    </div>
+<section id="end">
+    <section>
+        <h2>It is your choice in the end</h2>
+        <svg class="leftArr arrowB" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H40V20L45 17.5V27.5L20 40L-5 27.5V17.5L0 20Z"/>
+        </svg>
+        <div class="left">
+            <h3>on your own</h3>
+            <button type="button" class="btn">Learn how to make websties on your own!</button>
+        </div>
+        <svg class="rightArr arrowB" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H40V20L45 17.5V27.5L20 40L-5 27.5V17.5L0 20Z"/>
+        </svg>
+        <div class="right">
+            <h3>with Save</h3>
+            <button type="button" class="btn">Have Save to make a website for you!</button>
+        </div>
+    </section>
 </section>
 <?php include_once './parts/footer.php'?>
 <script type="text/javascript" src="./scripts/secNav.js"></script>

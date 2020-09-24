@@ -31,9 +31,7 @@
 #secNavBtn{
     fill:var(--ac);
     padding:0;
-}
-#secNavBtn svg path{
-    transition:500ms ease;
+    margin-right: 3px;
 }
 
 .secNav{
@@ -58,9 +56,8 @@
 .secNav a:hover svg,.secNav a:focus svg{fill:white !important;}
 
 .secNav svg{
-    margin: 0 10px;
+    margin: 0 7px 0 10px;
     fill:var(--ac);
-    transition: 500ms ease;
     width:8px;
     height:8px;
 }
@@ -68,9 +65,14 @@
     border-bottom: solid 1px;
     padding-bottom: 5px;
 }
-#linkToTop svg{
+#linkToEnd{
+    border-top: solid 1px;
+    padding-top: 5px;
+}
+#linkToTop svg,#linkToEnd svg{
     width:10px;
     height:10px;
 }
+
 .focusSecA{color:var(--lt) !important;}
 .focusSecA svg{fill:var(--lt) !important;}

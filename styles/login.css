@@ -31,10 +31,6 @@ header{
     border-radius: 0 2px 2px 0;
 }
 
-.eyePwd path{
-    transition: 500ms ease;
-}
-
 .tooltipPwd{
     position: absolute;
     left:calc(50% + 145px);

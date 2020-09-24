@@ -18,6 +18,7 @@
 h1,h2{
     font-family: 'Do Hyeon', sans-serif;;
 }
+svg *{transition: ease 500ms;}
 
 body{
     background-color: var(--lt);
@@ -110,8 +111,6 @@ hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
     padding: 0 5px;
 }
 .icon{background-color:transparent;}
-.icon svg{transition:500ms ease;}
-
 
 /* Messages */
 .errFld{background-color:var(--ac)!important;}

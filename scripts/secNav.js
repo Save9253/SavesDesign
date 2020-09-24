@@ -16,6 +16,13 @@ h2s.forEach(h2 => {
         header.style.top = '-55px';
     })
 });
+
+const endA = document.createElement('a');
+endA.setAttribute('href','#end');
+endA.setAttribute('id','linkToEnd');
+endA.innerHTML = '<span>To the end</span><svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 5L10 0Z"/></svg>';
+nav.appendChild(endA);
+
 header.addEventListener('click',()=>{
     header.style.top = '0px';
 })
@@ -53,7 +60,7 @@ const Nbtn = document.querySelector('#secNavBtn');
 const Nicon = document.querySelector('#secNavBtn svg path');
 const NiconDR = 'M0 0H3L10 20L3 40H0L7 20Z';
 const NiconDL = 'M7 0H10L3 20L10 40H7L0 20Z';
-const NiconD = 'M0 0H3L3 20L3 40H0L0 20Z';
+const NiconD = 'M4 0H7L7 20L7 40H4L4 20Z';
 
 
 Nbtn.addEventListener('click',()=>{
