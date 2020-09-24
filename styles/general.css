@@ -165,12 +165,12 @@ header #logoThin{
     padding:5px;
     border-radius: 5px;
     box-shadow:0 0 var(--md),0 0 var(--md);
-    transition:500ms ease;
 }
 header #logoLink{height:50px;}
+#logoLink,#logoLink svg g{transition: none;}
 #logoLink:focus{outline:unset;}
-#logoLink:focus svg, #logoLink:hover svg{
-    box-shadow:-0.5px -0.5px var(--md), 2px 2px var(--md);
+#logoLink:focus svg .dark, #logoLink:hover svg .dark{
+    fill:var(--lt);
 }
 
 /* Navigation */

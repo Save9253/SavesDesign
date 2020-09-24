@@ -43,16 +43,16 @@ const blinkOpen = {
     Leye:"M54.1 97.3L61.7 99.7L63.9 102.4L61.1 100.6L58.4 100.3L57.9 102.9L53.8 104.4L49.4 102.8L48.9 99.9L45.6 99.8L40.8 101.6L45.2 98.6L54.1 97.3Z",
 }
 
-const LeyeSh = document.querySelector('#LeyeSh');
-const nose = document.querySelector('#nose');
-const TLip = document.querySelector('#TLip');
-const BLip = document.querySelector('#BLip');
-const Rnosed = document.querySelector('#Rnosed');
-const Reye = document.querySelector('#Reye');
-const Leye = document.querySelector('#Leye');
-const mustch = document.querySelector('#mustch');
-const ReyeB = document.querySelector('#ReyeB');
-const LeyeB = document.querySelector('#LeyeB');
+const LeyeSh = document.querySelector('#face #LeyeSh');
+const nose = document.querySelector('#face #nose');
+const TLip = document.querySelector('#face #TLip');
+const BLip = document.querySelector('#face #BLip');
+const Rnosed = document.querySelector('#face #Rnosed');
+const Reye = document.querySelector('#face #Reye');
+const Leye = document.querySelector('#face #Leye');
+const mustch = document.querySelector('#face #mustch');
+const ReyeB = document.querySelector('#face #ReyeB');
+const LeyeB = document.querySelector('#face #LeyeB');
 
 const yes = document.querySelector('#yes');
 const no = document.querySelector('#no');
