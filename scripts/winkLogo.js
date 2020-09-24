@@ -17,13 +17,13 @@ const wink = {
     ReyeB:"M150 179L157 166L201 154L216 172L198 167L162 174L150 179Z",
 }
 
-const nose = document.querySelector('#LgFace #nose');
-const TLip = document.querySelector('#LgFace #TLip');
-const BLip = document.querySelector('#LgFace #BLip');
-const RnoseD = document.querySelector('#LgFace #RnoseD');
-const Reye = document.querySelector('#LgFace #Reye');
-const mustch = document.querySelector('#LgFace #mustch');
-const ReyeB = document.querySelector('#LgFace #ReyeB');
+const noseLg = document.querySelector('#LgFace #nose');
+const TLipLg = document.querySelector('#LgFace #TLip');
+const BLipLg = document.querySelector('#LgFace #BLip');
+const RnoseDLg = document.querySelector('#LgFace #RnoseD');
+const ReyeLg = document.querySelector('#LgFace #Reye');
+const mustchLg = document.querySelector('#LgFace #mustch');
+const ReyeBLg = document.querySelector('#LgFace #ReyeB');
 
 const logoLink = document.querySelector('#logoLink');
 
@@ -34,11 +34,11 @@ logoLink.addEventListener('focus',()=>{expr(wink);ReyeOp = false});
 logoLink.addEventListener('blur',()=>{expr(norm);ReyeOp = true});
 
 function expr(expression){
-    nose.attributes.d.value = expression.nose;
-    TLip.attributes.d.value = expression.TLip;
-    RnoseD.attributes.d.value = expression.RnoseD;
-    BLip.attributes.d.value = expression.BLip;
-    Reye.attributes.d.value = expression.Reye;
-    mustch.attributes.d.value = expression.mustch;
-    ReyeB.attributes.d.value = expression.ReyeB;
+    noseLg.attributes.d.value = expression.nose;
+    TLipLg.attributes.d.value = expression.TLip;
+    RnoseDLg.attributes.d.value = expression.RnoseD;
+    BLipLg.attributes.d.value = expression.BLip;
+    ReyeLg.attributes.d.value = expression.Reye;
+    mustchLg.attributes.d.value = expression.mustch;
+    ReyeBLg.attributes.d.value = expression.ReyeB;
 }
