@@ -79,7 +79,7 @@ function blink() {
         Leye.attributes.d.value = blinkOpen.Leye;
     },300);
 }
-setInterval(() => {blink()}, 3000);
+setInterval(() => {blink()}, 4000);
 
 function expr(expression){
     LeyeSh.attributes.d.value = expression.LeyeSh;
