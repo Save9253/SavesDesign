@@ -120,15 +120,16 @@
 #end{
     display: grid;
     grid-template-columns:30px 1fr 30px;
-    place-content: center;
     max-width: var(--vw);
 }
 #end section{
+    max-width: 1040px;
     grid-column: 2/3;
     width:100%;
     display: grid;
     grid-template-columns: repeat(2,50%);
     padding:0 10px 50px;
+    place-self: center;
 }
 #end a{
     margin-top: 20px;
