@@ -8,14 +8,14 @@
     include_once './parts/header.php';
 ?>
 <section id="intro">
-    <h1>How to build<wbr> a website?</h1>
+    <h1>How to build a website?</h1>
     <div>
         <p>Nowadays, a website is a very important part of a business's image. It is often the first impression your customers get, and we all know how important it is to make the inf right first impression. </p>
         <p>Making a website on your own takes a lot of time and energy. You might make mistakes and lose your time, money, and reputation due to bad customer experiences on your website.</p>
         <p>Thankfully, I am here so that you don't have to go through the painful but important process of making a website.</p>
         <p><b> Scroll down to see how I can make your life easier on every step of making a website.</b></p>
     </div>
-    <svg viewBox="0 10 490 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg role="img" aria-label="Building a website" viewBox="0 10 490 385" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M57 15.9C54.8 15.6 52.7 17.1 52.4 19.4L46 64.2L371.9 110.5L378.3 65.6C378.6 63.4 377.1 61.3 374.8 61L57 15.9Z" fill="white" stroke="#1A1A1A" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="round"/>
         <path d="M93.4 29.4L64 25.2C63.1 25.1 62.3 25.7 62.2 26.6L58 56C57.9 56.9 58.5 57.7 59.4 57.8L88.8 62C89.7 62.1 90.5 61.5 90.6 60.6L94.8 31.2C94.9 30.3 94.3 29.5 93.4 29.4Z" fill="#36343C"/>
         <path d="M343.1 73.1L330.1 71.3C329.2 71.1 328.3 71.8 328.2 72.7L326.4 85.7C326.2 86.6 326.9 87.4 327.8 87.6L340.8 89.4C341.7 89.6 342.6 88.9 342.7 88L344.5 75C344.7 74.1 344 73.2 343.1 73.1Z" fill="#36343C"/>
@@ -99,7 +99,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg  viewBox="0 0 401 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Finding a domain on your own" viewBox="0 0 401 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M354.2 20.6C354.4 19 354.8 17.4 355.3 15.7C355.8 14.1 356.5 12.6 357.4 11.3C358.3 10.1 359.5 9.1 360.9 8.3C362.2 7.6 363.9 7.3 366 7.6L376.4 9.1C378 9.3 379.4 9.9 380.6 10.7C381.8 11.6 382.7 12.5 383.3 13.7C384 14.9 384.5 16.1 384.8 17.5C385.1 19 385.2 20.3 385.1 21.7C385.1 23.1 384.8 24.3 384.4 25.5C384 26.8 383.5 27.8 382.9 28.7L372.4 42.8L371.5 49.5L362.9 48.2L364 40.7L373.8 28C374.4 27.3 374.8 26.4 375.1 25.2C375.5 24.1 375.6 22.9 375.6 21.8C375.6 20.6 375.4 19.6 374.9 18.7C374.4 17.9 373.7 17.4 372.7 17.2L367.8 16.5C367 16.4 366.3 16.5 365.7 16.7C365.1 16.9 364.6 17.2 364.2 17.7C363.8 18.1 363.5 18.7 363.3 19.5C363.1 20.1 363 20.9 362.8 21.8L354.2 20.6ZM369.8 63.2L361 61.9L362.2 53.2L371 54.5L369.8 63.2Z" fill="#B25C59"/>
                 <path d="M10.7 23C10.4 21.5 10.3 20.1 10.3 18.5C10.3 17 10.5 15.5 10.9 14.2C11.4 12.8 12.1 11.6 13.1 10.6C14 9.6 15.4 9 17.2 8.6L26.6 7.1C28 6.8 29.4 6.9 30.6 7.4C31.8 7.8 32.9 8.4 33.8 9.2C34.7 10 35.4 11 36 12.1C36.7 13.2 37.1 14.4 37.4 15.5C37.8 16.7 37.9 17.9 37.9 19C37.9 20.2 37.7 21.2 37.4 22.1L32.2 37L33.2 43L25.6 44.3L24.5 37.5L29.5 24C29.7 23.3 29.9 22.4 29.8 21.3C29.8 20.2 29.7 19.2 29.3 18.2C29 17.2 28.5 16.4 27.9 15.8C27.3 15.1 26.5 14.9 25.6 15.1L21.2 15.8C20.5 15.9 19.9 16.1 19.4 16.5C19 16.8 18.6 17.2 18.4 17.8C18.2 18.3 18.1 18.8 18.2 19.5C18.2 20.2 18.3 20.9 18.4 21.7L10.7 23ZM35.5 55.2L27.6 56.6L26.3 48.8L34.2 47.5L35.5 55.2Z" fill="#B25C59"/>
                 <path d="M344.4 1.7H257.4V43.8H344.4V1.7Z" fill="#B25C59" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -153,7 +153,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 202 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Finding a domain with Save" viewBox="0 0 202 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M201.1 1.1H1.1V97.8H201.1V1.1Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M29 75.6V67.1H37.8V75.6H29Z" fill="#1A1A1A"/>
                 <path d="M59.7 36.1C61.9 36.1 63.8 36.5 65.5 37.1C67.3 37.8 68.7 38.7 69.9 39.9C71.1 41.1 72.1 42.5 72.7 44.2C73.4 45.9 73.7 47.8 73.7 49.9V60.1C73.7 62.2 73.4 64.1 72.7 65.8C72.1 67.5 71.1 69 69.9 70.2C68.7 71.4 67.3 72.3 65.5 72.9C63.8 73.6 61.9 73.9 59.7 73.9H56.8C54.6 73.9 52.6 73.6 50.9 72.9C49.2 72.3 47.7 71.4 46.5 70.2C45.3 69 44.4 67.5 43.8 65.8C43.1 64.1 42.8 62.2 42.8 60.1V49.9V49.3V23.3H51.6V37.1C53.4 36.4 55.3 36.1 57.4 36.1H59.7ZM56.8 44.7C55.2 44.7 53.9 45.1 53 46.1C52.1 47.1 51.6 48.4 51.6 49.9V59.8C51.6 61.4 52 62.8 53 63.8C53.9 64.9 55.2 65.4 56.8 65.4H59.7C61.3 65.4 62.6 64.9 63.6 63.8C64.6 62.8 65.1 61.4 65.1 59.8V50.1C65.1 48.5 64.6 47.2 63.6 46.2C62.6 45.2 61.3 44.7 59.7 44.7H56.8Z" fill="#1A1A1A"/>
@@ -173,7 +173,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 301 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Hosting a website on your own" viewBox="0 0 301 155" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M149.1 67.1L132.1 70.3L118.4 80L109.8 95.2L105.1 94.8L92.6 97.5L82.2 106.9L77.4 122.5L81.5 137.1L92 146.9L105.1 150.3H193.1L210.8 146.1L222.1 133.3L226.4 117L222.7 100.7L210.1 87.7L193.1 83.7L183.4 85.2L174.3 75.6L162.7 69.4L149.1 67.1Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M149.2 111C150.9 111 152.4 111.3 153.8 112C155.2 112.6 156.4 113.5 157.5 114.5C158.6 115.6 159.4 116.8 160 118.3C160.6 119.7 160.9 121.2 160.9 122.9C160.9 124.5 160.6 126 160 127.5C159.4 128.9 158.5 130.1 157.4 131.2C156.4 132.3 155.2 133.1 153.8 133.8C152.4 134.4 150.9 134.7 149.2 134.7H149H147.9V138H141.6V134.7H130.6V128H141.6V117.8H140.3C138.6 117.8 137.1 117.4 135.7 116.8C134.3 116.2 133 115.3 132 114.3C130.9 113.2 130.1 112 129.4 110.5C128.8 109.1 128.5 107.6 128.5 105.9C128.5 104.3 128.8 102.8 129.4 101.4C130.1 99.9 130.9 98.7 132 97.6C133 96.6 134.3 95.7 135.7 95.1C137.1 94.4 138.6 94.1 140.3 94.1H141.6V90.8H147.9V94.1H155.7V100.9H147.9V111H149.2ZM147.9 117.8V128H149.3C150.7 127.9 151.8 127.4 152.7 126.5C153.7 125.5 154.2 124.3 154.2 122.9C154.2 122.2 154.1 121.5 153.8 120.9C153.5 120.2 153.1 119.7 152.7 119.3C152.3 118.8 151.7 118.5 151.1 118.2C150.5 117.9 149.8 117.8 149.1 117.8H147.9ZM135.3 105.9C135.3 107.3 135.7 108.5 136.7 109.5C137.6 110.5 138.8 111 140.2 111H141.6V100.9H140.4C138.9 100.9 137.7 101.3 136.7 102.3C135.8 103.3 135.3 104.5 135.3 105.9Z" fill="white"/>
                 <path d="M161.3 91.9H157.3V89.6H161.3L159.4 86.1L161.4 85.1L163.2 88.4L164.9 85.1L166.9 86.1L165 89.6H169V91.9H165L166.9 95.4L164.9 96.4L163.1 93.1L161.4 96.4L159.4 95.4L161.3 91.9Z" fill="white"/>
@@ -200,7 +200,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 203 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Finding a domain with Save" viewBox="0 0 203 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M97.6 1.5L74.8 5.8L56.4 18.9L44.8 39.3L38.6 38.8L21.8 42.4L7.8 55L1.4 76L6.9 95.6L21 108.8L38.6 113.2H156.7L180.4 107.7L195.6 90.4L201.4 68.5L196.5 46.7L179.5 29.2L156.7 23.9L143.7 25.8L131.4 12.9L115.9 4.6L97.6 1.5Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M104.4 60.1C106.8 60.1 109 60.5 111.1 61.5C113.3 62.4 115.1 63.7 116.7 65.3C118.2 66.8 119.5 68.7 120.4 70.8C121.3 73 121.8 75.2 121.8 77.7C121.8 80.1 121.3 82.3 120.4 84.5C119.5 86.6 118.2 88.4 116.6 90C115 91.6 113.2 92.9 111.1 93.8C109 94.7 106.8 95.1 104.4 95.1H104H102.4V100.1H93V95.2H76.7V85.2H93V70.1H91.1C88.7 70.1 86.4 69.6 84.2 68.6C82.2 67.7 80.3 66.4 78.8 64.9C77.2 63.3 75.9 61.4 75 59.3C74.1 57.2 73.7 54.9 73.7 52.5C73.7 50.1 74.1 47.8 75 45.7C75.9 43.6 77.2 41.7 78.8 40.2C80.3 38.6 82.2 37.3 84.2 36.4C86.4 35.5 88.7 35 91.1 35H93V30H102.4V35H114V45H102.4V60.1H104.4ZM102.4 70.1V85.2H104.5C106.5 85.1 108.2 84.4 109.6 83C111.1 81.5 111.8 79.8 111.8 77.7C111.8 76.6 111.6 75.6 111.1 74.7C110.7 73.7 110.2 73 109.5 72.3C108.9 71.6 108.1 71.1 107.2 70.7C106.3 70.3 105.3 70.1 104.2 70.1H102.4ZM83.7 52.5C83.7 54.5 84.4 56.3 85.7 57.8C87.1 59.2 88.9 60 90.9 60.1H93V45H91.2C89.1 45 87.3 45.7 85.8 47.1C84.4 48.6 83.7 50.4 83.7 52.5V52.5Z" fill="#1A1A1A"/>
             </svg>
@@ -216,7 +216,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 303 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Other Content Management Systems" viewBox="0 0 303 164" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 2V71.1H119.1V2H1.5Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M119.1 2V71.1H301.5V2H119.1Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1.5 71.1V162.7H185.8V71.1H1.5Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -246,7 +246,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Save's Content Management Systems" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.2V201.2H201.5V1.2H1.5Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M110.4 65.9L136.9 92.3L92.2 137L65.7 110.6L110.4 65.9Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M54.8 140.1L51.9 150.8L62.6 147.9L54.8 140.1Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
@@ -265,7 +265,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 301 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Layout with Content Management Systems" viewBox="0 0 301 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M92.9 1.5V113.3H204.8V1.5H92.9Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M147.8 48.8L147.8 25.6L149.3 23.6L156.3 23.5L157.1 32.9L159.6 23.5L164.7 23.5L166.7 26.7L168.1 23.5L172.6 23.5L173.5 24.9L174.4 23.5L177.1 23.5L179.4 25.7L179.6 48.8L147.8 48.8Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M147.9 52.3L179.5 52.4L179.3 59.6L177.4 61.1L168.9 61.5L166.9 63.2L166.8 65.7L169.8 85.2L167.5 89.5L162.4 91.3L157.2 88.5L156 84.5L159.1 64.3L158.3 62.4L156.1 61.6L150 61.5L147.8 59.2L147.9 52.3Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -288,7 +288,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 202 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Layout with Save" viewBox="0 0 202 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.7 1.9V156.7H188.2V1.9H1.7Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M121.9 67.3L121.9 35.2L123.9 32.4L133.7 32.2L134.8 45.3L138.2 32.2L145.3 32.2L148.1 36.7L150 32.2L156.2 32.2L157.5 34.2L158.7 32.2L162.5 32.2L165.7 35.3L166 67.4L121.9 67.3Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M122 72.3L165.9 72.3L165.6 82.3L162.9 84.5L151.1 85L148.3 87.4L148.2 90.8L152.3 117.9L149.2 123.9L142.2 126.3L134.9 122.4L133.3 116.9L137.5 88.9L136.4 86.2L133.4 85.1L124.9 85L121.8 81.7L122 72.3Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
@@ -306,7 +306,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 300 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Mobile compatibility on your own" viewBox="0 0 300 226" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M292.1 5.3H8.8V47.8H292.1V5.3Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linejoin="round"/>
                 <path d="M292.1 47.8H8.8V217.8H292.1V47.8Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linejoin="round"/>
                 <path d="M41 34.2L37.4 36.5L33.3 37.4L29.2 36.5L25.7 34.2L23.3 30.7L22.5 26.5L23.3 22.4L25.7 18.9L29.2 16.6L33.3 15.7L37.4 16.6L41 18.9L43.3 22.4L44.1 26.5L43.3 30.7L41 34.2Z" fill="white"/>
@@ -339,7 +339,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 113 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Mobile compatibility with Save" viewBox="0 0 113 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M106 7H4.9V41.6H106V7Z" fill="#C0DD6C"/>
                 <path d="M104.3 41.3H8.4V191.8H104.3V41.3Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="1.8" stroke-linejoin="round"/>
                 <path d="M28 30.9L25.4 32.7L22.3 33.3L19.2 32.7L16.6 30.9L14.9 28.3L14.3 25.2L14.9 22.2L16.6 19.5L19.2 17.8L22.3 17.2L25.4 17.8L28 19.5L29.7 22.2L30.4 25.2L29.7 28.3L28 30.9Z" fill="#1A1A1A"/>
@@ -371,7 +371,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 302 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Functionality with CMS" role="img" aria-label="Functionality with Save" viewBox="0 0 302 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.8 20.7V105.5H85.6V20.7H0.8Z" fill="#B25C59" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M216 20.1V104.9H300.8V20.1H216Z" fill="#B25C59" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M94 1.4V114.5H207V1.4H94Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -388,7 +388,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Functionality with Save" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1V201H201V1H1Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M101 39.9L109.9 56L124.4 44.5L126.5 62.9L144.2 57.8L139.1 75.5L157.5 77.6L146 92.1L162.1 101L146 109.9L157.5 124.4L139.1 126.5L144.2 144.2L126.5 139.1L124.4 157.5L109.9 146L101 162.1L92.1 146L77.6 157.5L75.5 139.1L57.8 144.2L62.9 126.5L44.5 124.4L56 109.9L39.9 101L56 92.1L44.5 77.6L62.9 75.5L57.8 57.8L75.5 62.9L77.6 44.5L92.1 56L101 39.9Z" fill="#1A1A1A" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -404,7 +404,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 304 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Accessibility on your own" viewBox="0 0 304 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.2 42.5L22.4 21L63.7 6.9L103 2.2L142.3 6.9L183.7 21L203.8 42.5L183.7 59.5L142.3 73.4L103 77.7L63.7 73.4L22.4 59.5L2.2 42.5Z" fill="white" stroke="white" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M2.2 42.5L22.4 31.1L59.7 20.5V38.3L65.1 56.2L80.4 68.4L103 72.7L126.8 68.4L140.9 56.2L146.4 38.3V20.5L183.7 31.1L203.8 42.5L183.7 21L142.3 6.9L103 2.2L63.7 6.9L22.4 21L2.2 42.5" fill="#B25C59"/>
                 <path d="M225.8 1.7L254.1 72.7L259.8 51.7L286.2 78.2C291.6 72.8 296.9 67.5 302.2 62.1L275.8 35.7L296.8 30.1L225.8 1.7Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linejoin="round"/>
@@ -418,7 +418,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg width="239" height="203" viewBox="0 0 239 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Accessibility with Save" viewBox="0 0 239 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M87.1 27.2L99.9 13.5L126.1 4.6L151.1 1.6L176.1 4.6L202.3 13.5L215.1 27.2L202.3 38L176.1 46.8L151.1 49.5L126.1 46.8L99.9 38L87.1 27.2Z" fill="#C3E06D" stroke="#C3E06D" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M87.1 27.2L99.9 19.9L123.6 13.2V24.5L127 35.9L136.8 43.6L151.1 46.4L166.2 43.6L175.2 35.9L178.6 24.5V13.2L202.3 19.9L215.1 27.2L202.3 13.5L176.1 4.6L151.1 1.6L126.1 4.6L99.9 13.5L87.1 27.2" fill="#1A1A1A"/>
                 <path d="M22.2 11.7L40.2 56.8L43.7 43.5L60.5 60.3C63.9 56.9 67.3 53.5 70.7 50.1L53.9 33.3L67.2 29.7L22.2 11.7Z" fill="#1A1A1A" stroke="#C3E06D" stroke-width="2" stroke-linejoin="round"/>
@@ -462,7 +462,7 @@
         </div>
         <div class="inf left bad">
             <h3>on your own</h3>
-            <svg viewBox="0 0 301 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Search Engine Optimization on your own" viewBox="0 0 301 227" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M76 50.2V86H15.5V70.5H34V104.5H15.5V120H46V97H85V175.5H70V111.5H56V133H16V169H55V142H27.5V157H42V179.5H19V199.5H53V185H64.5V207.5H22.5V217.5H81.5V196.5L99.7 197" stroke="#B25C59" stroke-width="4" stroke-linejoin="round"/>
                 <path d="M215 1.9H1.7V50.2H215V1.9Z" fill="#B25C59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M173.3 13.7L176.7 11.4L180.8 10.6L184.8 11.4L188.3 13.7L190.6 17.2L191.4 21.2L190.6 25.3L188.3 28.7L184.8 31L180.8 31.9L176.7 31L173.3 28.7L171 25.3L170.1 21.2L171 17.2L173.3 13.7Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -506,7 +506,7 @@
         </div>
         <div class="inf right good">
             <h3>with Save</h3>
-            <svg viewBox="0 0 216 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Search Engine Optimization with Save" viewBox="0 0 216 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M106.7 49.6V68.6Z" fill="#C0DD6C"/>
                 <path d="M106.7 49.6V68.6" stroke="#C0DD6C" stroke-width="4" stroke-linejoin="round"/>
                 <path d="M207.9 68.6H7.9V98.6H207.9V68.6Z" fill="#C0DD6C" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
@@ -561,7 +561,7 @@
             </svg>
         </div>
         <a class="right" href="login.php" id="yes"><span>Make your website <br><b>with Save!</b></span></a>
-        <svg id="face" viewBox="0 0 149 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg role="img" aria-label="Save" id="face" viewBox="0 0 149 203" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g fill="var(--md50)">
                 <path id="LeyeSh" d="M47.8 91.5L61.7 99.7L66.1 105.2L72.6 111.1L73.3 103.5L71.5 93.3L65.2 91.7L47.8 91.5Z"/>
                 <path id="Rshadow" d="M121.8 51.8L122.8 77L119.6 86.6L117.8 93.7L119.3 103.5L125.9 117.1L126.3 134.7L117.6 159.2L108.9 180.1L109.1 187.2L120.7 171.8L129.3 154.1L135.4 153.5L140.7 144L147.5 124L143.9 109.4L138.4 109.2L132.7 116.9L129.9 88.5L131.2 80.9L131.2 65.9L121.8 51.8Z"/>
