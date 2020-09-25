@@ -80,8 +80,8 @@ body{
 }
 
 /* Hidden Class */
-.hid{display: none;}
-.hid *{display: none;}
+.hid{display: none !important}
+.hid *{display: none !important}
 
 /* Inputs */
 input{

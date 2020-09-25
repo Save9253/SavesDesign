@@ -33,12 +33,12 @@ const headerEls = document.querySelectorAll('header > *');
 const unfoldBtn = document.querySelector('#headerUnfold');
 unfoldBtn.addEventListener('click',()=>{
     header.style.top = '0px';
-    unfoldBtn.classList.add('hid');
+    setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
 })
 document.addEventListener('scroll',()=>{
     if(scrollY == 0){
         header.style.top = '0px';
-        unfoldBtn.classList.add('hid');
+        setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
     }else{
         header.style.top = '-70px';
         unfoldBtn.classList.remove('hid');
@@ -47,6 +47,6 @@ document.addEventListener('scroll',()=>{
 headerEls.forEach(e => {
     e.addEventListener('focus',()=>{
         header.style.top = '0px'
-        unfoldBtn.classList.add('hid');
+        setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
     })
 })
