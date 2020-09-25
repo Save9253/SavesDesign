@@ -157,7 +157,7 @@ header{
     z-index:999;
     transition: ease 500ms;
 }
-.headerPlaceHolder{
+#headerPlaceHolder{
     height:70px;
 }
 header #logoThin{
@@ -171,6 +171,17 @@ header #logoLink{height:50px;}
 #logoLink:focus{outline:unset;}
 #logoLink:focus svg .dark, #logoLink:hover svg .dark{
     fill:var(--lt);
+}
+
+#headerUnfold{
+    width:100%;
+    height:15px;
+    background-color: var(--lt);
+    position:fixed;
+    z-index: 998;
+    top:0;
+    display: grid;
+    place-content: center;
 }
 
 /* Navigation */
@@ -212,6 +223,7 @@ header #logoLink{height:50px;}
     top: 0;
     color: white;
     padding: 15px;
+    border-left: solid 2px var(--lt);
 }
 #sideNav *{
     display: none;

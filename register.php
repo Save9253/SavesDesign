@@ -65,3 +65,4 @@
 </form>
 <script type="text/javascript" src="./scripts/Flds.js"></script>
 <?php include_once './parts/footer.php'?>
+<script type="text/javascript" src="./scripts/winkLogo.js"></script>

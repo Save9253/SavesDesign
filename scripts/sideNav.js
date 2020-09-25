@@ -26,3 +26,27 @@ content.addEventListener('click',()=>{
 function winWidth(){document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + "px")}
 winWidth();
 window.addEventListener('resize', ()=>{winWidth();});
+
+// Header Folder
+const header = document.querySelector('header');
+const headerEls = document.querySelectorAll('header > *');
+const unfoldBtn = document.querySelector('#headerUnfold');
+unfoldBtn.addEventListener('click',()=>{
+    header.style.top = '0px';
+    unfoldBtn.classList.add('hid');
+})
+document.addEventListener('scroll',()=>{
+    if(scrollY == 0){
+        header.style.top = '0px';
+        unfoldBtn.classList.add('hid');
+    }else{
+        header.style.top = '-70px';
+        unfoldBtn.classList.remove('hid');
+    }
+})
+headerEls.forEach(e => {
+    e.addEventListener('focus',()=>{
+        header.style.top = '0px'
+        unfoldBtn.classList.add('hid');
+    })
+})

@@ -1,7 +1,5 @@
 const nav = document.querySelector('.secNav');
 const h2s = document.querySelectorAll('.secWNav h2');
-const header = document.querySelector('header');
-const headerEls = document.querySelectorAll('header > *');
 const navM = '<svg class="crcl" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5"/></svg>';
 
 h2s.forEach(h2 => {
@@ -12,9 +10,6 @@ h2s.forEach(h2 => {
     newA.setAttribute('class','secNavA');
     newA.innerHTML = '<span>' + h2.textContent + '</span>' + navM;
     nav.appendChild(newA);
-    newA.addEventListener('click', ()=>{
-        header.style.top = '-55px';
-    })
 });
 
 const endA = document.createElement('a');
@@ -22,16 +17,6 @@ endA.setAttribute('href','#end');
 endA.setAttribute('id','linkToEnd');
 endA.innerHTML = '<span>To the end</span><svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 5L10 0Z"/></svg>';
 nav.appendChild(endA);
-
-header.addEventListener('click',()=>{
-    header.style.top = '0px';
-})
-document.addEventListener('scroll',()=>{
-    if(scrollY == 0){header.style.top = '0px';}
-})
-headerEls.forEach(e => {
-    e.addEventListener('focus',()=>{header.style.top = '0px'})
-})
 
 // High light the focus section
 const sec = document.querySelectorAll('.secWNav section');
