@@ -92,7 +92,7 @@
             </li>
         </ul>
     </nav>
-    <section class="topS">
+    <section aria-label="Finding a domain" class="topS">
         <h2>Finding a domain</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +166,7 @@
             <p>I'll direct you through the process of finding the best domain for your website from the best trusted source.</p>
         </div>
     </section>
-    <section>
+    <section aria-label="Hosting a website">
         <h2>Hosting a website</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +209,7 @@
             <p>No hosting companies will be involved and no extra money will be paid. It will be solely your website and a Google Server at truly the lowest price for hosting. You can choose to pay monthly or annually, with no additional charge for monthly payments. </p>
         </div>
     </section>
-    <section>
+    <section aria-label="Content Management System">
         <h2>Content Management System</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +258,7 @@
             <p>Honestly, not everyone even needs a Content Management System. And if you do need one, it should be designed for your specific needs. Such CMS will make it easier for you to manage your content and it will make your site load faster which, consequently, will positively affect your ranking on Google.</p>
         </div>
     </section>
-    <section>
+    <section aria-label="Layout">
         <h2>Layout</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -299,7 +299,7 @@
             <p>There are no limits on how the layout can look. I will build a special design just for you and your needs. I'll create your website according to your preferred style. Or, if you don't have a particular style in mind, I'll gladly compose one for you! </p>
         </div>
     </section>
-    <section>
+    <section aria-label="Mobile Compatibility">
         <h2>Mobile Compatibility</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +364,7 @@
             <p>I will test the appearance of your website on a wide screen, big screen, small screen, tablet, and phone to make sure the visitors will have the best experience, whichever device they may use.</p>
         </div>
     </section>
-    <section>
+    <section aria-label="Functionality">
         <h2>Functionality</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -397,7 +397,7 @@
             <p>I will bring to reality any functionality you may need with as little code as possible to ensure the best performance. </p>
         </div>
     </section>
-    <section>
+    <section aria-label="Accessibility">
         <h2>Accessibility</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +455,7 @@
             <p>I will make sure that your website is navigable by keyboard with a screen reader, as well as visually navigable with mouse and touch. It will make your website accessible to a larger audience and it may improve your ranking on Google as well.</p>
         </div>
     </section>
-    <section class="bottS">
+    <section aria-label="Search Engine Optimization" class="bottS">
         <h2>Search Engine Optimization</h2>
         <div class="redStrip">
             <svg class="arrow" viewBox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
@@ -548,8 +548,8 @@
         </div>
     </section>
 </section>
-<section id="end">
-    <section>
+<section aria-label="Choice" id="end">
+    <section aria-label="">
         <h2>It is your choice in the end</h2>
         <div class="leftArr">
             <svg class="arrowB" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
