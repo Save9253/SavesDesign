@@ -7,7 +7,7 @@
         ';
     include_once './parts/header.php';
 ?>
-<section id="intro">
+<section aria-label="How to build a website?" id="intro">
     <h1>How to build a website?</h1>
     <div>
         <p>Nowadays, a website is a very important part of a business's image. It is often the first impression your customers get, and we all know how important it is to make the inf right first impression. </p>
@@ -74,22 +74,24 @@
         <path d="M13.6 338.9L15.8 297.1L14 275.9L28.3 251.7L33.9 207.2L34 163L38.5 156.8L47.2 159.7L51.4 225L57.1 222.1L101.3 238.6L108.3 247L121.9 257.1L118.9 265.2L108.7 268.3L102.5 264.8L104.9 279L106.5 288.8L103 296L96 294.5L94.7 304.9L78.2 317.9L70.9 319.9L66 329.1L67.7 347.4L58.9 380.2L45.1 389.5" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </section>
-<section class="compare secWNav">
-    <div class="secNavDiv">
+<section aria-label="Compare the two ways" class="compare secWNav">
+    <nav class="secNav">
         <button type="button" id="secNavBtn" class="icon">
             <svg width="10" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 0H7L7 20L7 40H4L4 20Z"/>
             </svg>
         </button>
-        <nav class="secNav">
-            <a href='#' id="linkToTop">
-                <span>To the top</span>
-                <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 5L5 0L10 5Z"/>
-                </svg>
-            </a>
-        </nav>
-    </div>
+        <ul>
+            <li>
+                <a href='#' id="linkToTop">
+                    <span>To the top</span>
+                    <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 5L5 0L10 5Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <section class="topS">
         <h2>Finding a domain</h2>
         <div class="redStrip">

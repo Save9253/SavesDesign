@@ -6,7 +6,7 @@
 }
 
 .secWNav section{grid-column: 2/3;}
-.secNavDiv{
+.secNav{
     transition:ease 1s;
     margin-left: -195px;
     grid-column: 1/2;
@@ -24,7 +24,7 @@
     border-color: var(--md);
     background-color: var(--md);
 }
-.secNavDMoved{
+.secNavMoved{
     margin-left: 0px !important;
     border-color: var(--ac);
 }
@@ -38,7 +38,7 @@
 #secNavBtn:focus svg path{
     fill:white;
 }
-.secNav{
+.secNav ul{
     width:220px;
     color:var(--ac);
     display: flex;
@@ -59,7 +59,7 @@
 .secNav a:hover,.secNav a:focus{color:white !important;}
 .secNav a:hover svg,.secNav a:focus svg{fill:white !important;}
 
-.secNav svg{
+.secNav ul svg{
     margin: 0 7px 0 10px;
     fill:var(--ac);
     width:8px;

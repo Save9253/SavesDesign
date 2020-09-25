@@ -1,22 +1,26 @@
-const nav = document.querySelector('.secNav');
+const navUl = document.querySelector('.secNav ul');
 const h2s = document.querySelectorAll('.secWNav h2');
 const navM = '<svg class="crcl" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5"/></svg>';
 
 h2s.forEach(h2 => {
     const anch = h2.textContent.replaceAll(' ','-');
+    const newLi = document.createElement('li');
     const newA = document.createElement('a');
     h2.setAttribute('id', anch);
     newA.setAttribute('href','#' + anch);
     newA.setAttribute('class','secNavA');
     newA.innerHTML = '<span>' + h2.textContent + '</span>' + navM;
-    nav.appendChild(newA);
+    newLi.appendChild(newA);
+    navUl.appendChild(newLi);
 });
 
+const endLi = document.createElement('li');
 const endA = document.createElement('a');
 endA.setAttribute('href','#end');
 endA.setAttribute('id','linkToEnd');
 endA.innerHTML = '<span>To the end</span><svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L5 5L10 0Z"/></svg>';
-nav.appendChild(endA);
+endLi.appendChild(endA);
+navUl.appendChild(endLi);
 
 // High light the focus section
 const sec = document.querySelectorAll('.secWNav section');
@@ -40,7 +44,7 @@ document.addEventListener('scroll',()=>{
 })
 
 //Open the nav
-const secNavD = document.querySelector('.secNavDiv');
+const secNav = document.querySelector('.secNav');
 const Nbtn = document.querySelector('#secNavBtn');
 const Nicon = document.querySelector('#secNavBtn svg path');
 const NiconDR = 'M0 0H3L10 20L3 40H0L7 20Z';
@@ -49,21 +53,21 @@ const NiconD = 'M4 0H7L7 20L7 40H4L4 20Z';
 
 
 Nbtn.addEventListener('click',()=>{
-    secNavD.classList.toggle('secNavDMoved');
+    secNav.classList.toggle('secNavMoved');
     Nicon.attributes.d.value = NiconD;
 })
 
 navAs.forEach(navA =>{
     navA.addEventListener('click',()=>{
-        if(secNavD.classList.contains('secNavDMoved')){
-            secNavD.classList.remove('secNavDMoved');
+        if(secNav.classList.contains('secNavMoved')){
+            secNav.classList.remove('secNavMoved');
         }
         Nicon.attributes.d.value = NiconD;
     })
 })
 
 Nbtn.addEventListener('mouseenter', ()=>{
-    if(secNavD.classList.contains('secNavDMoved')){
+    if(secNav.classList.contains('secNavMoved')){
         Nicon.attributes.d.value = NiconDL;
     }else{
         Nicon.attributes.d.value = NiconDR;
@@ -73,7 +77,7 @@ Nbtn.addEventListener('mouseleave', ()=>{
     Nicon.attributes.d.value = NiconD;
 })
 Nbtn.addEventListener('focus', ()=>{
-    if(secNavD.classList.contains('secNavDMoved')){
+    if(secNav.classList.contains('secNavMoved')){
         Nicon.attributes.d.value = NiconDL;
     }else{
         Nicon.attributes.d.value = NiconDR;
