@@ -81,7 +81,7 @@ body{
 
 /* Hidden Class */
 .hid{display: none !important}
-.hid *{display: none !important}
+.contHid *{display: none !important}
 
 /* Inputs */
 input{
@@ -183,6 +183,7 @@ header #logoLink{height:50px;}
     display: grid;
     place-content: center;
 }
+#headerUnfold:hover svg{fill:var(--ac)}
 
 /* Navigation */
 #topNav li{
@@ -210,12 +211,8 @@ header #logoLink{height:50px;}
     opacity: 0;
 }
 
-.navMoved{right:0 !important;}
-.navMoved *{display: block !important;}
-
 #sideNav{
     position:fixed;
-    right:-250px;
     width:250px;
     height:100vh;
     background-color:var(--md);
@@ -225,9 +222,7 @@ header #logoLink{height:50px;}
     padding: 15px;
     border-left: solid 2px var(--lt);
 }
-#sideNav *{
-    display: none;
-}
+
 #sideNav ul{
     margin-block-start: unset;
     margin-block-end: unset;

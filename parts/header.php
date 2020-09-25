@@ -41,12 +41,12 @@
         </ul>
     </nav>
 </header>
-<button id="headerUnfold" class="hid">
+<button id="headerUnfold" class="">
     <svg width="30" viewBox="0 0 30 6" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0L15 3L30 0V3L15 6L0 3Z">
     </svg>
 </button>
-<nav id="sideNav">
+<nav id="sideNav" style="right:-250px;" class="contHid">
     <ul>
         <li><a href="./index.php">Home</a></li>
     </ul>

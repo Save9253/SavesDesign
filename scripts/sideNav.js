@@ -9,11 +9,14 @@ const arrowD = 'M10 0L20 7L20 10L10 3Z M0 7L20 7L20 10L0 10Z M10 14L20 7L20 10L1
 
 hamB.addEventListener('click',()=>{
     body.classList.toggle('bodyMoved');
-    sideNav.classList.toggle('navMoved');
     if(hamBpath.attributes.d.value == hamBD){
         hamBpath.attributes.d.value = arrowD;
+        sideNav.classList.remove('contHid');
+        sideNav.style.right = "0";
     }else{
         hamBpath.attributes.d.value = hamBD;
+        setTimeout(()=>{sideNav.classList.add('contHid')},1000);
+        sideNav.style.right = "-250px";
     }
 });
 content.addEventListener('click',()=>{
