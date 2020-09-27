@@ -32,8 +32,8 @@
             <li aria-label="Menu">
                 <button aria-expanded="false" aria-controls="sideNav" aria-label="Menu" id="hamburger" class="icon menuIt">
                     <div class="menuTtl">Menu</div>
-                    <svg aria-label="Menu" role="img" width="20" height="17" viewBox="0 0 20 17" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0L20 0L20 3L0 3Z M0 7L20 7L20 10L0 10Z M0 14L20 14L20 17L0 17Z">
+                    <svg aria-label="Menu" overflow="visible" role="img" width="20" stroke-width="3" stroke-linecap="round" stroke="var(--dr)" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1.5L20 1.5 M0 8.5L20 8.5 M0 15.5L20 15.5">
                     </svg>
                 </button>
             </li>
@@ -41,8 +41,8 @@
     </nav>
 </header>
 <div aria-expanded="true" aria-controls="header" id="headerUnfold" aria-hidden="true" aria-label="Expand Header" class="">
-        <svg role="img" width="30" viewBox="0 0 30 6" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0L15 3L30 0V3L15 6L0 3Z">
+        <svg overflow="visible" role="img" width="30" stroke="var(--dr)" viewBox="0 0 30 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linejoin="round"  stroke-width="3" stroke-linecap="round" d="M0 1L15 5L30 1">
         </svg>
 </div>
 <nav aria-label="Site" id="sideNav" style="right:-250px;" class="contHid">

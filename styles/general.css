@@ -186,7 +186,7 @@ header #logoLink{height:50px;}
     place-content: center;
     cursor: pointer;
 }
-#headerUnfold:hover svg{fill:var(--ac)}
+#headerUnfold:hover svg{stroke:var(--ac)}
 
 /* Navigation */
 #topNav li{

@@ -78,15 +78,15 @@
 <section aria-label="Compare the two ways" class="compare secWNav">
     <nav aria-label="Page" id="secNav">
         <button aria-expanded="false" aria-controls="secNav" aria-label="Expand Page Navigation" type="button"  id="secNavBtn" class="icon">
-            <svg width="10" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 0H7L7 20L7 40H4L4 20Z"/>
+            <svg role="img" aria-label="Arrow" overflow="visible" width="10" fill="none" height="40" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linejoin="round" stroke-linecap="round" d="M5 0L5 20L5 40"/>
             </svg>
         </button>
         <ul>
             <li>
                 <a href='#' id="linkToTop">
                     <span>To the top</span>
-                    <svg viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
+                    <svg role="img" aria-label="Arrow Up" viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 5L5 0L10 5Z"/>
                     </svg>
                 </a>

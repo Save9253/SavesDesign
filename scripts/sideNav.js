@@ -4,8 +4,8 @@ const hamBpath = document.querySelector('#hamburger svg path');
 const body = document.querySelector('body');
 const sideNav = document.querySelector('#sideNav');
 const content = document.querySelector('#content');
-const hamBD = 'M0 0L20 0L20 3L0 3Z M0 7L20 7L20 10L0 10Z M0 14L20 14L20 17L0 17Z';
-const arrowD = 'M10 0L20 7L20 10L10 3Z M0 7L20 7L20 10L0 10Z M10 14L20 7L20 10L10 17Z';
+const hamBD = 'M0 1.5L20 1.5 M0 8.5L20 8.5 M0 15.5L20 15.5';
+const arrowD = 'M10 1.5L20 8.5 M0 8.5L20 8.5 M10 15.5L20 8.5';
 
 hamB.addEventListener('click',()=>{
     body.classList.toggle('bodyMoved');

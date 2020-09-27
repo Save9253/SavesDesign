@@ -26,17 +26,18 @@
 }
 .secNavMoved{
     margin-left: 0px !important;
-    border-color: var(--ac);
+    border-color: var(--ac) !important;
 }
 #secNavBtn{
     padding:0;
     margin-right: 3px;
 }
 #secNavBtn svg path{
-    fill:var(--ac);
+    stroke:var(--ac);
+    stroke-width:2px;
 }
 #secNavBtn:focus svg path{
-    fill:white;
+    stroke:white;
 }
 #secNav ul{
     width:220px;
