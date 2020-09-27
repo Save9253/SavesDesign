@@ -118,6 +118,8 @@ button{
     transform: translate(0,0);
     padding: 5px 10px;
     border-radius: 2px;
+    display: grid;
+    place-content: center;
 }
 .btn:hover, .btn:focus{
     box-shadow: 2px 2px var(--ac);
@@ -181,6 +183,7 @@ header #logoLink{height:50px;}
     top:0;
     display: grid;
     place-content: center;
+    cursor: pointer;
 }
 #headerUnfold:hover svg{fill:var(--ac)}
 

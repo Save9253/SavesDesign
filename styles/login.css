@@ -36,6 +36,11 @@ header{
     transition:500ms ease;
 }
 
+#RegBtn{
+    height:32px;
+    font-size: 14px;
+}
+
 #forgotPwd{
     color:var(--dr);
     text-align: center;

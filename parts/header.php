@@ -14,7 +14,7 @@
     <?php if($HeaderLogo == 'yes'):?>
     <a id="logoLink" aira-label="Return to home page" href="index.php"><?php include "parts/logoThin.svg";?></a>
     <?php endif;?>
-    <nav aria-label="Main" id="topNav" tabindex="0">
+    <nav aria-label="Main" id="topNav">
         <ul>
             <?php if($page !== 'Login'):?>
             <li>
@@ -40,11 +40,11 @@
         </ul>
     </nav>
 </header>
-<button aria-expanded="true" aria-controls="header" id="headerUnfold" aria-hidden="true" aria-label="Expand Header" tabindex="-1" class="">
+<div aria-expanded="true" aria-controls="header" id="headerUnfold" aria-hidden="true" aria-label="Expand Header" class="">
         <svg role="img" width="30" viewBox="0 0 30 6" fill="var(--dr)" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0L15 3L30 0V3L15 6L0 3Z">
         </svg>
-</button>
+</div>
 <nav aria-label="Site" id="sideNav" style="right:-250px;" class="contHid">
     <ul>
         <li aria-label="Home"><a href="./index.php">Home</a></li>
