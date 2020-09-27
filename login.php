@@ -34,7 +34,7 @@
     <input aria-invalid="<?php if($errName == 1){echo "true";}else{echo 'false';};?>" aria-label="Username or E-mail" aria-required="true" class="fld <?php if($errName == 1){echo "errFld";};?>" type="text" name="uname" placeholder="Username or E-mail" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';};?>>
     <div aria-label="Password Field" class="fld pwdDiv <?php if($errPwd == 1){echo 'errFld';};?>">
         <input aria-invalid="<?php if($errPwd == 1){echo "true";}else{echo 'false';};?>" aria-label="Password" aria-required="true" type="password" name="pwd" placeholder="Password">
-        <button aria-pressed="false" aria-label="Show Password" aria-pressed="false" type="button" class="icon eyePwd">
+        <button aria-pressed="false" aria-label="Show Password" type="button" class="icon eyePwd">
             <svg aria-label="Closed eye" role="img" width="25" height="22" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white"></path>
             </svg>
