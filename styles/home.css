@@ -94,7 +94,7 @@
 
 .bad{border:2px solid var(--ac)}
 .good{border:2px solid var(--lt)}
-.bad h3{border-bottom:solid 2px var(--ac);color:var(--ac)}
+.bad h3{border-bottom:solid 2px var(--ac);color:var(--aclt)}
 .good h3{border-bottom:solid 2px var(--lt);color:var(--lt)}
 .bad svg{
     max-width:80%;

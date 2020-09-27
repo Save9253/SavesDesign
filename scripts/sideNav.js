@@ -13,10 +13,12 @@ hamB.addEventListener('click',()=>{
         hamBpath.attributes.d.value = arrowD;
         sideNav.classList.remove('contHid');
         sideNav.style.right = "0";
+        hamB.attributes[0].value = 'true';
     }else{
         hamBpath.attributes.d.value = hamBD;
         setTimeout(()=>{sideNav.classList.add('contHid')},1000);
         sideNav.style.right = "-250px";
+        hamB.attributes[0].value = 'false';
     }
 });
 content.addEventListener('click',()=>{
@@ -36,20 +38,20 @@ const headerEls = document.querySelectorAll('header > *');
 const unfoldBtn = document.querySelector('#headerUnfold');
 unfoldBtn.addEventListener('click',()=>{
     header.style.top = '0px';
-    setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
+    unfoldBtn.attributes[0].value = 'true';
 })
 document.addEventListener('scroll',()=>{
     if(scrollY == 0){
         header.style.top = '0px';
-        setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
+        unfoldBtn.attributes[0].value = 'true';
     }else{
         header.style.top = '-70px';
-        unfoldBtn.classList.remove('hid');
+        unfoldBtn.attributes[0].value = 'false';
     }
 })
 headerEls.forEach(e => {
     e.addEventListener('focus',()=>{
         header.style.top = '0px'
-        setTimeout(()=>{unfoldBtn.classList.add('hid');},1000);
+        unfoldBtn.attributes[0].value = 'true';
     })
 })

@@ -17,13 +17,13 @@ const wink = {
     ReyeB:"M150 179L157 166L201 154L216 172L198 167L162 174L150 179Z",
 }
 
-const noseLg = document.querySelector('#LgFace #nose');
-const TLipLg = document.querySelector('#LgFace #TLip');
-const BLipLg = document.querySelector('#LgFace #BLip');
-const RnoseDLg = document.querySelector('#LgFace #RnoseD');
-const ReyeLg = document.querySelector('#LgFace #Reye');
-const mustchLg = document.querySelector('#LgFace #mustch');
-const ReyeBLg = document.querySelector('#LgFace #ReyeB');
+const noseLg = document.querySelector('#LgFace #noseLg');
+const TLipLg = document.querySelector('#LgFace #TLipLg');
+const BLipLg = document.querySelector('#LgFace #BLipLg');
+const RnoseDLg = document.querySelector('#LgFace #RnoseDLg');
+const ReyeLg = document.querySelector('#LgFace #ReyeLg');
+const mustchLg = document.querySelector('#LgFace #mustchLg');
+const ReyeBLg = document.querySelector('#LgFace #ReyeBLg');
 
 const logoLink = document.querySelector('#logoLink');
 

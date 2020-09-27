@@ -6,7 +6,7 @@
 }
 
 .secWNav section{grid-column: 2/3;}
-.secNav{
+#secNav{
     transition:ease 1s;
     margin-left: -195px;
     grid-column: 1/2;
@@ -38,28 +38,28 @@
 #secNavBtn:focus svg path{
     fill:white;
 }
-.secNav ul{
+#secNav ul{
     width:220px;
-    color:var(--ac);
+    color:var(--aclt);
     display: flex;
     flex-direction: column;
 }
 
-.secNav a{
+#secNav a{
     line-height: 1.2em;
     margin: 5px 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.secNav span{
+#secNav span{
     text-align: right;
     width:160px
 }
-.secNav a:hover,.secNav a:focus{color:white !important;}
-.secNav a:hover svg,.secNav a:focus svg{fill:white !important;}
+#secNav a:hover,#secNav a:focus{color:white !important;}
+#secNav a:hover svg,#secNav a:focus svg{fill:white !important;}
 
-.secNav ul svg{
+#secNav ul svg{
     margin: 0 7px 0 10px;
     fill:var(--ac);
     width:8px;

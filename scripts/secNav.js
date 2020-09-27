@@ -1,4 +1,4 @@
-const navUl = document.querySelector('.secNav ul');
+const navUl = document.querySelector('#secNav ul');
 const h2s = document.querySelectorAll('.secWNav h2');
 const navM = '<svg class="crcl" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5"/></svg>';
 
@@ -44,7 +44,7 @@ document.addEventListener('scroll',()=>{
 })
 
 //Open the nav
-const secNav = document.querySelector('.secNav');
+const secNav = document.querySelector('#secNav');
 const Nbtn = document.querySelector('#secNavBtn');
 const Nicon = document.querySelector('#secNavBtn svg path');
 const NiconDR = 'M0 0H3L10 20L3 40H0L7 20Z';
@@ -55,12 +55,16 @@ const NiconD = 'M4 0H7L7 20L7 40H4L4 20Z';
 Nbtn.addEventListener('click',()=>{
     secNav.classList.toggle('secNavMoved');
     Nicon.attributes.d.value = NiconD;
+    if(Nbtn.attributes[0].value == 'true'){
+        Nbtn.attributes[0].value = 'false';
+    }else{Nbtn.attributes[0].value = 'true';}
 })
 
 navAs.forEach(navA =>{
     navA.addEventListener('click',()=>{
         if(secNav.classList.contains('secNavMoved')){
             secNav.classList.remove('secNavMoved');
+            Nbtn.attributes[0].value = 'false';
         }
         Nicon.attributes.d.value = NiconD;
     })
