@@ -16,12 +16,11 @@
 *{
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* Text */
 h1,h2{
-    font-family: 'Do Hyeon', sans-serif;;
+    font-family: 'Do Hyeon', sans-serif;
 }
 p{text-align:justify}
 h1{
@@ -52,7 +51,12 @@ ul{
     padding-inline-start: unset;
     list-style-type: none;
 }
-hr{border:none;border-bottom: solid 2px var(--md);margin:20px 2px;}
+hr{
+    border:none;
+    border-bottom: solid 2px var(--md);
+    margin:20px 2px;
+    width: 100%;
+}
 .hrP{
     margin:-40px 0 0;
     font-size: 24px;

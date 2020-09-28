@@ -1,3 +1,4 @@
+*{scroll-behavior: smooth;}
 /* Intro Section */
 #intro{
     grid-template-columns: repeat(2,minmax(auto,500px));

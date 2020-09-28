@@ -1,0 +1,76 @@
+#content{padding:0 20px}
+#packages{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.package{
+    border-radius: 2px;
+    padding: 10px 20px 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--md);
+    color:white;
+}
+
+.package h3{color:var(--lt)}
+.package hr{border-color:var(--lt)}
+
+.description p{
+    margin:5px 0;
+}
+.description ul{
+    margin: 0 10px;
+    list-style-type: disc;
+    color:var(--lt);
+}
+.description span{
+    font-weight: bold;
+    font-size: 18px;
+}
+.description li{
+    margin-left:20px;
+}
+
+.price{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    font-size: 24px;
+}
+.price *,.addTCart{font-family: 'Do Hyeon', sans-serif;}
+.oldPrice{
+    color:var(--aclt);
+    text-decoration: line-through;
+}
+.newPrice{
+    color:var(--lt);
+    font-size: 30px;
+}
+.discount{
+    background-color: var(--lt);
+    padding:2px 5px;
+    border-radius: 2px;
+    color:var(--dr);
+}
+
+.addTCart{
+    border-width: 2px 0;
+    border-color: var(--lt);
+    border-style: solid;
+    background-color: transparent;
+    color:var(--lt);
+    width:100%;
+    font-size: 20px;
+    margin-top: 10px;
+    padding:5px;
+}
+.addTCart:hover,.addTCart:focus{
+    background-color: var(--lt);
+    color:var(--dr);
+}
