@@ -55,7 +55,10 @@
                             }
                         ?>
                     </div>
-                <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit" class="addTCart">Add to Cart</button>
+                <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCart">
+                    <input name="id" type="hidden" value="<?php echo $row['id']?>">
+                    <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
+                </form>
                 </div>
             <?php }; ?>
         </div>

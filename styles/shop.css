@@ -87,17 +87,20 @@ h2{font-size: 32px;}
 }
 
 .addTCart{
+    width:100%;
+    margin-top: 10px;
+}
+.addTCart button{
+    width:100%;
     border-width: 2px 0;
     border-color: var(--lt);
     border-style: solid;
     background-color: transparent;
     color:var(--lt);
-    width:100%;
-    font-size: 20px;
-    margin-top: 10px;
     padding:5px;
+    font-size: 20px;
 }
-.addTCart:hover,.addTCart:focus{
+.addTCart button:hover,.addTCart button:focus{
     background-color: var(--lt);
     color:var(--dr);
 }

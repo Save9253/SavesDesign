@@ -16,12 +16,29 @@
     <?php endif;?>
     <nav aria-label="Main" id="topNav">
         <ul>
+            <li>
+                <a class="menuIt" aria-label="Cart" href="">
+                    <div id="log" class="menuTtl">Cart</div>
+                    <svg role="img" overflow="visible" aria-label="Cart" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="var(--dr)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 5L15 10L30 55H75L85 25"/>
+                            <path d="M30 55L25 70H70"/>
+                            <circle cx="25" cy="75" r="5"/>
+                            <circle cx="70" cy="75" r="5"/>
+                            <line y1="25" x1="30" y2="25" x2="85" />
+                            <line y1="35" x1="33" y2="35" x2="82" />
+                            <line y1="45" x1="36" y2="45" x2="79" />
+                        </g>
+                    </svg>
+                </a>
+            </li>
             <?php if($page !== 'Login'):?>
             <li>
                 <a class="menuIt" aria-label="<?php if(isset($_SESSION['uname'])){echo 'Log out';}else{echo 'Log in';}?>" href="<?php if(isset($_SESSION['uname'])){echo 'functions/logout.php';}else{echo 'login.php';}?>">
                     <div id="log" class="menuTtl"><?php if(isset($_SESSION['uname'])){echo 'Log out';}else{echo 'Log in';}?></div>
-                    <svg role="img" aria-label="<?php if(isset($_SESSION['uname'])){echo 'Log out';}else{echo 'Log in';}?>" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg role="img" overflow="visible" aria-label="<?php if(isset($_SESSION['uname'])){echo 'Log out';}else{echo 'Log in';}?>" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
+                            stroke-width="1.5"
                             d="M13.6 6.2L10.5 8.5L9.89853 11.2L10 15.1L9.6 15.3L9.2 16.6L10 18.3L10.7 19L11.2 19L11.872 20.3L12.1 20.6L12.2 24.2L4.3 28.2L3 29.8L2.8 31.3H28.7L28.5 29.2L27.2 27.5L19.6 24.1L19.3 21.2L19.7 20.7L20.5 19.2L21 19.1L21.4 18.3L22 16.6L21.7 15.3L21.2 15.3L21.6 13.2L21.5 10.8L20.6 8.3L17.6 6.3L13.6 6.2Z"
                             <?php if(isset($_SESSION['uname'])){echo 'fill="var(--dr)"';}else{echo 'stroke="var(--dr)" stroke-linecap="round" stroke-linejoin="round"';}?>
                         />
