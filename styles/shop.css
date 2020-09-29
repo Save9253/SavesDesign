@@ -1,12 +1,37 @@
-#content{padding:0 20px}
+h1{font-size: 46px;}
+h2{font-size: 32px;}
+
+.H{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+.H p{font-size: 20px;text-align: center;}
+
+#content section{padding:0 20px;display: grid;}
+
+#top{
+    border-bottom: solid;
+    margin:0 10px 20px;
+}
+
+#all{
+    background-color: var(--md);
+    color:white;
+    width:var(--vw);
+}
+
 #packages{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
-.package{
+.service{
     border-radius: 2px;
     padding: 10px 20px 20px;
     max-width: 300px;
@@ -17,25 +42,27 @@
     background-color: var(--md);
     color:white;
 }
-
-.package h3{color:var(--lt)}
-.package hr{border-color:var(--lt)}
-
-.description p{
-    margin:5px 0;
+.service svg{margin:10px;}
+.service h3{color:var(--lt)}
+.service hr{
+    border-color:var(--lt);
+    margin:10px 0;
 }
+.service a:hover,.service a:focus{color:white;}
+
+.description{line-height: 1.4em;}
+.description p{margin:5px 0;}
 .description ul{
-    margin: 0 10px;
+    margin: 5px 10px;
     list-style-type: disc;
-    color:var(--lt);
 }
 .description span{
     font-weight: bold;
     font-size: 18px;
 }
-.description li{
-    margin-left:20px;
-}
+.description li{margin-left:20px;}
+.includes{color:var(--lt)}
+.requires{color:var(--aclt)}
 
 .price{
     display: flex;
@@ -43,7 +70,7 @@
     align-items: center;
     font-size: 24px;
 }
-.price *,.addTCart{font-family: 'Do Hyeon', sans-serif;}
+.oldPrice,.newPrice,.discount,.addTCart{font-family: 'Do Hyeon', sans-serif;}
 .oldPrice{
     color:var(--aclt);
     text-decoration: line-through;
@@ -73,4 +100,9 @@
 .addTCart:hover,.addTCart:focus{
     background-color: var(--lt);
     color:var(--dr);
+}
+
+@media screen and (max-width:600px){
+    .H{gap:0}
+    .H p{font-size: 16px;margin-top:0}
 }
