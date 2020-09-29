@@ -69,6 +69,8 @@
 </section>
 <?php
     mysqli_close($db);
+    else:
+        echo '<p role="alert">Coud not connect to the database</p>';
     endif;
     include_once './parts/footer.php';
 ?>
