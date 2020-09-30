@@ -30,6 +30,12 @@ h2{font-size: 32px;}
     justify-content: center;
     padding-bottom: 20px;
 }
+#packagesSec .H p{
+    background-color: var(--md);
+    border-radius: 2px;
+    color:white;
+    padding: 5px 10px
+}
 
 .service{
     border-radius: 2px;

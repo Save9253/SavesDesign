@@ -8,17 +8,17 @@
 ?>
 <div class="H" id="top">
     <h1>Shop</h1>
-    <p>Enjoy clear prices! All taxes are already included!</p>
+    <p>Enjoy transparent prices! All taxes are already included!</p>
 </div>
 <?php
     if($db):
     $result = mysqli_query($db,"SELECT * FROM `services` WHERE `category` = 'Packages' ORDER BY `price` ASC");
     if (mysqli_num_rows($result) > 0) {
 ?>
-    <section aria-label="Packages">
+    <section id="packagesSec" aria-label="Packages">
         <div class="H">
             <h2>Packages</h2>
-            <p class="underH">Get a <span class="discount">10%</span> discount bying a package!</p>
+            <p class="underH">Get a <span class="discount">10%</span> discount for purchasing a package!</p>
         </div>
         <div aria-label="Packages" id="packages">
             <?php while($row = mysqli_fetch_assoc($result)) {?>
