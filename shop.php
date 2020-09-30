@@ -71,6 +71,7 @@
     </div>
     <?php
         print_r($_SESSION['cart']);
+        echo $_SESSION['cartItems'];
     ?>
 </section>
 <?php

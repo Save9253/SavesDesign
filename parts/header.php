@@ -1,12 +1,15 @@
 <?php
     session_start();
+    $_SESSION['cartItems'] = 0;
     if(isset($_POST['servID'])){
-        #if(isset($_SESSION['cart'])){
-            #array_push($_SESSION['cart'],$_POST['servID']);
-        #}else{
+        if(isset($_SESSION['cart'])){
+            array_push($_SESSION['cart'],$_POST['servID']);
+            $_SESSION['cartItems'] = count($_SESSION['cart']);
+        }else{
             $_SESSION['cart'] = array($_POST['servID']);
-        #}
+        }
     }
+    if(isset($_SESSION['cart'])){$_SESSION['cartItems'] = count($_SESSION['cart']);}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +30,18 @@
         <ul>
             <li>
                 <a class="menuIt" aria-label="Cart" href="cart.php">
-                    <div id="log" class="menuTtl">Cart</div>
-                    <svg role="img" overflow="visible" aria-label="Cart" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="menuTtl">Cart</div>
+                    <svg id="cartSVG" role="img" overflow="visible" aria-label="Cart" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g stroke="var(--dr)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 5L15 10L30 55H75L85 25"/>
                             <path d="M30 55L25 70H70"/>
                             <circle cx="25" cy="75" r="5"/>
                             <circle cx="70" cy="75" r="5"/>
-                            <line y1="25" x1="30" y2="25" x2="85" />
-                            <line y1="35" x1="33" y2="35" x2="82" />
-                            <line y1="45" x1="36" y2="45" x2="79" />
+                            <path id="cartL1" opacity="1" d="M30 25H85"/>
+                            <path id="cartL2" opacity="1" d="M33 35H82"/>
+                            <path id="cartL3" opacity="1" d="M36 45H79"/>
                         </g>
+                        <text id="cartText" x="35" y="45" style="font-size:0px;" fill="var(--dr)"><?php echo $_SESSION['cartItems']?></text>
                     </svg>
                 </a>
             </li>

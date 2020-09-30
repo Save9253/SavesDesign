@@ -9,6 +9,7 @@ h2s.forEach(h2 => {
     h2.setAttribute('id', anch);
     newA.setAttribute('href','#' + anch);
     newA.setAttribute('class','secNavA');
+    newA.setAttribute('aria-current','false');
     newA.innerHTML = '<span>' + h2.textContent + '</span>' + navM;
     newLi.appendChild(newA);
     navUl.appendChild(newLi);
@@ -33,9 +34,11 @@ document.addEventListener('scroll',()=>{
         let SecTop = sec[i].offsetTop;
         let SecBott = sec[i].offsetTop + sec[i].clientHeight;
         if(focusSec ==  i){
-            navAs[i].classList.add('focusSecA')
+            navAs[i].classList.add('focusSecA');
+            navAs[i].setAttribute('aria-current','location');
         }else{
-            navAs[i].classList.remove('focusSecA')
+            navAs[i].classList.remove('focusSecA');
+            navAs[i].setAttribute('aria-current','false');;
         }
         if(MidScroll > SecTop && MidScroll < SecBott){
             if(focusSec != i){focusSec = i;}

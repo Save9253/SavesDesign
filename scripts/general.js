@@ -55,3 +55,26 @@ headerEls.forEach(e => {
         unfoldBtn.attributes[0].value = 'true';
     })
 })
+
+//Cart animation
+const cartL1 = document.querySelector('#cartL1');
+const cartL2 = document.querySelector('#cartL2');
+const cartL3 = document.querySelector('#cartL3');
+const cartText = document.querySelector('#cartText');
+
+if(cartText.innerHTML!="0"){
+    setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
+    setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
+    setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
+    if(cartText.innerHTML.length == 1){
+        setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
+    }else if(cartText.innerHTML.length == 2){
+        cartText.setAttribute('x','28');
+        setTimeout(()=>{cartText.style['font-size'] = '50px'},1250);
+    }
+    setTimeout(()=>{
+        cartL1.setAttribute('opacity','0');
+        cartL2.setAttribute('opacity','0');
+        cartL3.setAttribute('opacity','0');
+    },1250);
+}

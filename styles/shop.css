@@ -76,7 +76,7 @@ h2{font-size: 32px;}
     align-items: center;
     font-size: 24px;
 }
-.oldPrice,.newPrice,.discount,.addTCart{font-family: 'Do Hyeon', sans-serif;}
+.oldPrice,.newPrice,.discount,.addTCart,#cartText{font-family: 'Do Hyeon', sans-serif;}
 .oldPrice{
     color:var(--aclt);
     text-decoration: line-through;
@@ -110,6 +110,8 @@ h2{font-size: 32px;}
     background-color: var(--lt);
     color:var(--dr);
 }
+.cartL1,.cartL2,.cartL3{transition: 500ms ease;}
+
 
 @media screen and (max-width:600px){
     .H{gap:0}

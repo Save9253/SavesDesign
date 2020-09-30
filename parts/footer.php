@@ -1,4 +1,4 @@
 </main>
 </body>
-<script type="text/javascript" src="./scripts/sideNav.js"></script>
+<script type="text/javascript" src="./scripts/general.js"></script>
 </html>
