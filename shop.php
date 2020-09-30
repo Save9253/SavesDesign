@@ -56,7 +56,7 @@
                         ?>
                     </div>
                 <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCart">
-                    <input name="id" type="hidden" value="<?php echo $row['id']?>">
+                    <input name="servID" type="hidden" value="<?php echo $row['id']?>">
                     <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
                 </form>
                 </div>
@@ -69,6 +69,9 @@
         <h2>All the services</h2>
         <p>Pay only for what you need!</p>
     </div>
+    <?php
+        print_r($_SESSION['cart']);
+    ?>
 </section>
 <?php
     mysqli_close($db);

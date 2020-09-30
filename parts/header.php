@@ -1,4 +1,13 @@
-<?php session_start();?>
+<?php
+    session_start();
+    if(isset($_POST['servID'])){
+        if(isset($_SESSION['cart'])){
+            array_push($_SESSION['cart'],$_POST['servID']);
+        }else{
+            $_SESSION['cart'] = array($_POST['servID']);
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
