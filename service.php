@@ -1,7 +1,7 @@
 <?php
     $servID = $_GET['id'];
     $HeaderLogo = 'yes';
-
+    $page = 'Shop';
     $servTitle = '';
 
     require './functions/db.php';
@@ -17,8 +17,8 @@
         }
     }
     if($servTitle!=null){
-        $page = $servTitle;
-    }else{$page = "Service";}
+        $title = $servTitle;
+    }else{$title = "Service";}
 
     include_once './parts/header.php';
 

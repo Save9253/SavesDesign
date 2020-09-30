@@ -225,15 +225,21 @@ header #logoLink{height:50px;}
     background-color:var(--md);
     transition:1s ease;
     top: 0;
-    color: white;
+    color: var(--lt);
     padding: 15px;
     border-left: solid 2px var(--lt);
 }
-
 #sideNav ul{
     margin-block-start: unset;
     margin-block-end: unset;
 }
+#sideNav a:hover,#sideNav a:focus{color:var(--aclt)}
+#sideNav hr{
+    border-bottom: solid 1px var(--lt);
+    margin: 5px 0;
+}
+.curentPage{color: white;}
+
 #hamburger{
     display: flex;
 }

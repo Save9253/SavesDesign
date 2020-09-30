@@ -1,11 +1,11 @@
 <?php
     session_start();
     if(isset($_POST['servID'])){
-        if(isset($_SESSION['cart'])){
-            array_push($_SESSION['cart'],$_POST['servID']);
-        }else{
+        #if(isset($_SESSION['cart'])){
+            #array_push($_SESSION['cart'],$_POST['servID']);
+        #}else{
             $_SESSION['cart'] = array($_POST['servID']);
-        }
+        #}
     }
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/general.css">
     <?php if(isset($styles)){echo $styles;}?>
     <link rel="shortcut icon" href="./imgs/SavesDesignFavicon.png">
-    <title><?php echo $page?> | Save's Design</title>
+    <title><?php if(isset($title)){echo $title;}else{echo $page;}?> | Save's Design</title>
 </head>
 <body aria-label='<?php if(isset($title)){echo $title;}else{echo $page;}?>'>
 <header id="header" style="top:0;" aria-label='Header'>
@@ -26,7 +26,7 @@
     <nav aria-label="Main" id="topNav">
         <ul>
             <li>
-                <a class="menuIt" aria-label="Cart" href="">
+                <a class="menuIt" aria-label="Cart" href="cart.php">
                     <div id="log" class="menuTtl">Cart</div>
                     <svg role="img" overflow="visible" aria-label="Cart" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g stroke="var(--dr)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
@@ -67,13 +67,21 @@
     </nav>
 </header>
 <div aria-expanded="true" aria-controls="header" id="headerUnfold" aria-hidden="true" aria-label="Expand Header" class="">
-        <svg overflow="visible" role="img" width="30" stroke="var(--dr)" viewBox="0 0 30 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linejoin="round"  stroke-width="3" stroke-linecap="round" d="M0 1L15 5L30 1">
-        </svg>
+    <svg overflow="visible" role="img" width="30" stroke="var(--dr)" viewBox="0 0 30 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linejoin="round"  stroke-width="3" stroke-linecap="round" d="M0 1L15 5L30 1">
+    </svg>
 </div>
 <nav aria-label="Site" id="sideNav" style="right:-250px;" class="contHid">
     <ul>
-        <li aria-label="Home"><a href="./index.php">Home</a></li>
+        <li aria-label="Home" <?php if($page == "Home"){echo 'class="curentPage" aria-current="page"';}?>><a href="./index.php">Home</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <li aria-label="Shop" <?php if($page == "Shop"){echo 'class="curentPage" aria-current="page"';}?>><a href="./shop.php">Shop</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <li aria-label="Cart" <?php if($page == "Cart"){echo 'class="curentPage" aria-current="page"';}?>><a href="./cart.php">Cart</a></li>
     </ul>
 </nav>
 <main id="content">
