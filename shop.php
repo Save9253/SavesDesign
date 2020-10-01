@@ -57,6 +57,7 @@
                     </div>
                 <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCart">
                     <input name="servID" type="hidden" value="<?php echo $row['id']?>">
+                    <input name="qty" type="hidden" value="1">
                     <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
                 </form>
                 </div>
@@ -72,6 +73,8 @@
     <?php
         print_r($_SESSION['cart']);
         echo $_SESSION['cartItems'];
+        echo '<br>';
+        echo array_sum($_SESSION['cart'])
     ?>
 </section>
 <?php

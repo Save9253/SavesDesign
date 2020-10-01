@@ -3,13 +3,17 @@
     $_SESSION['cartItems'] = 0;
     if(isset($_POST['servID'])){
         if(isset($_SESSION['cart'])){
-            array_push($_SESSION['cart'],$_POST['servID']);
-            $_SESSION['cartItems'] = count($_SESSION['cart']);
+            $servID = $_POST['servID'];
+            if(array_key_exists($servID, $_SESSION['cart'])){
+                $_SESSION['cart'][$servID]++;
+            }else{
+                $_SESSION['cart'][$servID] = intval($_POST['qty']);
+            }
         }else{
-            $_SESSION['cart'] = array($_POST['servID']);
+            $_SESSION['cart'] = array($_POST['servID'] => intval($_POST['qty']));
         }
     }
-    if(isset($_SESSION['cart'])){$_SESSION['cartItems'] = count($_SESSION['cart']);}
+    if(isset($_SESSION['cart'])){$_SESSION['cartItems'] = array_sum($_SESSION['cart']);}
 ?>
 <!DOCTYPE html>
 <html lang="en">
