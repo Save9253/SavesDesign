@@ -1,0 +1,33 @@
+.H{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+.H p{font-size: 20px;text-align: center;}
+
+table{border-collapse: collapse;}
+th{border-bottom: solid 2px;}
+td,th{
+    text-align: center;
+    padding: 5px 10px;
+}
+tbody tr{border-bottom: solid 1px;}
+td svg{
+    max-width: 100px;
+    max-width: 100px;
+    overflow: visible;
+}
+tfoot td{
+    border-top: double 1px;
+    font-weight: bold;
+}
+#totalT{text-align:right}
+@media screen and (max-width:600px){
+    .H p{font-size: 16px;margin-top:0}
+    td svg{
+        max-width: 50px;
+        max-width: 50px;
+    }
+}

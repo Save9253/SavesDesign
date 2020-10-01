@@ -43,7 +43,8 @@
                     </div>
                     <hr>
                     <div aria-label="price" class="price">
-                        <?php if($row['discount']!=null){
+                        <?php
+                            if($row['discount']!=null){
                                 $price = $row['price'];
                                 $discount = $row['discount'];
                                 $DisPrice = $price - (($discount/100)*$price);
