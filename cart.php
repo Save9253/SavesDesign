@@ -10,16 +10,15 @@
 <div class="H">
     <h1>Cart</h1>
     <?php if(!isset($_SESSION['cart'])):?>
-    <p>The cart is empty!</p>
+    <p>Your cart is empty!</p>
 </div>
     <a href="shop.php" class="btn">Go to the shop to fill it up!</a>
     <?php
         elseif($db):
     ?>
-    <p>Here is what you've got!</p>
+    <p>Here's what you've got!</p>
 </div>
 <table>
-    <caption>Items in the cart:</caption>
     <thead>
         <tr>
             <th>Image</th>
@@ -48,6 +47,10 @@
                         echo '<td>';
                         if($row['discount'] == null){
                             echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
+                            $total = $total + ($qty*$row['price']);
+                            echo '</td>';
+                            echo '<td>'.$qty.'</td>';
+                            echo '<td>$'.$qty*$row['price'].'</td>';
                         }else{
                             $price = $row['price'];
                             $discount = $row['discount'];
@@ -55,12 +58,12 @@
                             echo '<span aria-label="Old Price" class="oldPrice">$'.$price.'</span>';
                             echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
                             echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
+                            $total = $total + ($qty*$DisPrice);
+                            echo '</td>';
+                            echo '<td>'.$qty.'</td>';
+                            echo '<td>$'.$qty*$DisPrice.'</td>';
                         }
-                        echo '</td>';
-                        echo '<td>'.$qty.'</td>';
-                        echo '<td>$'.$qty*$DisPrice.'</td>';
                         echo '</tr>';
-                        $total = $total + ($qty*$DisPrice);
                     }
                 }else{
                     echo '<p role="alert">Something whent wrong</p>';

@@ -19,7 +19,7 @@
 }
 
 /* Text */
-h1,h2{
+h1,h2,#cartText{
     font-family: 'Do Hyeon', sans-serif;
 }
 p{text-align:justify}

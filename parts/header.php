@@ -5,7 +5,7 @@
         if(isset($_SESSION['cart'])){
             $servID = $_POST['servID'];
             if(array_key_exists($servID, $_SESSION['cart'])){
-                $_SESSION['cart'][$servID]++;
+                $_SESSION['cart'][$servID] = $_SESSION['cart'][$servID]+intval($_POST['qty']);
             }else{
                 $_SESSION['cart'][$servID] = intval($_POST['qty']);
             }
