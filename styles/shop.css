@@ -106,12 +106,8 @@ h2 {
   align-items: center;
   font-size: 24px;
 }
-.oldPrice,.newPrice,.discount,.addTCart,.qty{font-family: 'Do Hyeon', sans-serif;}
-
-
 .oldPrice {
   color: var(--aclt);
-  text-decoration: line-through;
 }
 .newPrice {
   color: var(--lt);

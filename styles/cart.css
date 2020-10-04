@@ -8,26 +8,63 @@
 .H p{font-size: 20px;text-align: center;}
 
 table{border-collapse: collapse;}
-th{border-bottom: solid 2px;}
+thead{
+    background-color: var(--md);
+    color:var(--lt);
+}
 td,th{
     text-align: center;
     padding: 5px 10px;
 }
 tbody tr{border-bottom: solid 1px;}
 td svg{
-    max-width: 100px;
-    max-width: 100px;
+    max-width: 50px;
+    max-width: 50px;
     overflow: visible;
 }
-tfoot td{
-    border-top: double 1px;
-    font-weight: bold;
+tfoot{
+    background-color: var(--md);
+    color:white;
+    font-size: 22px;
 }
+
+.price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+.oldPrice {
+    color: var(--ac);
+}
+.newPrice {
+    font-size: 20px;
+}
+.discount {
+    background-color: var(--md);
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: var(--lt);
+}
+
+.qty{
+    background-color: var(--lt);
+    border-radius: 2px;
+    font-size: 20px;
+    padding:0;
+    overflow: hidden;
+    text-align: center;
+    transition: ease 500ms;
+    max-width: 50px;
+    margin-left: 5px;
+}
+.qty:hover,.qty:focus{background-color: white;}
+
 #totalT{text-align:right}
 @media screen and (max-width:600px){
-    .H p{font-size: 16px;margin-top:0}
-    td svg{
-        max-width: 50px;
-        max-width: 50px;
-    }
+    .thqty{min-width:65px;}
+    .qty{max-width: 30px;}
+    .H p{font-size: 16px;margin:0}
 }

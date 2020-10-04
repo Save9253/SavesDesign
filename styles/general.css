@@ -19,7 +19,7 @@
 }
 
 /* Text */
-h1,h2,#cartText{
+h1,h2,#cartText,.num,.oldPrice,.newPrice,.discount,.addTCart,.qty{
     font-family: 'Do Hyeon', sans-serif;
 }
 p{text-align:justify}
@@ -246,3 +246,6 @@ header #logoLink{height:50px;}
 #hamburger:hover,#hamburger:focus{
     outline:unset;
 }
+
+/* Prices */
+.oldPrice {text-decoration: line-through;}

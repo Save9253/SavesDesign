@@ -24,7 +24,7 @@
             <th>Image</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Qty</th>
+            <th class="thqty">Qty</th>
             <th>Subtotal</th>
         </tr>
     </thead>
@@ -44,13 +44,13 @@
                         echo '<tr>';
                         echo '<td>'.$row['svg'].'</td>';
                         echo '<td>'.$row['title'].'</td>';
-                        echo '<td>';
+                        echo '<td><div class="num price">';
                         if($row['discount'] == null){
                             echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
                             $total = $total + ($qty*$row['price']);
-                            echo '</td>';
-                            echo '<td>'.$qty.'</td>';
-                            echo '<td>$'.$qty*$row['price'].'</td>';
+                            echo '</div></td>';
+                            echo '<td class="num">x<input class="qty" name="qty" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">= $'.$qty*$row['price'].'</td>';
                         }else{
                             $price = $row['price'];
                             $discount = $row['discount'];
@@ -59,9 +59,9 @@
                             echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
                             echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
                             $total = $total + ($qty*$DisPrice);
-                            echo '</td>';
-                            echo '<td>'.$qty.'</td>';
-                            echo '<td>$'.$qty*$DisPrice.'</td>';
+                            echo '</div></td>';
+                            echo '<td class="num">x<input class="qty" name="qty" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">= $'.$qty*$DisPrice.'</td>';
                         }
                         echo '</tr>';
                     }
@@ -74,7 +74,7 @@
     <tfoot>
     <tr>
       <td id="totalT" colspan="4">Total:</td>
-      <td id="totalN">$<?php echo $total;?></td>
+      <td id="totalN" class="num">$<?php echo $total;?></td>
     </tr>
   </tfoot>
 </table>
