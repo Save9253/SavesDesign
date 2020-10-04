@@ -5,6 +5,8 @@
 
     include_once './parts/header.php';
     require './functions/db.php';
+
+    if(isset($_GET['msg']) && $_GET['msg'] == 'added'){echo '<div role="alert" class="msg">Added to the cart successfully!</div>';}
 ?>
 <div class="H" id="top">
     <h1>Shop</h1>
@@ -58,7 +60,7 @@
                     }
                 ?>
             </div>
-            <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCart">
+            <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php?msg=added" method="post" class="addTCart">
                 <input name="servID" type="hidden" value="<?php echo $row['id']?>">
                 <input name="qty" type="hidden" value="1">
                 <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
@@ -114,7 +116,7 @@
                     }
                 ?>
             </div>
-            <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCartWqty">
+            <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php?msg=added" method="post" class="addTCartWqty">
                 <input name="servID" type="hidden" value="<?php echo $row['id']?>">
                 <input aria-label='Quantity of the item "<?php echo $row['title'];?>".' class="qty" name="qty" type="number" min="1" value="1">
                 <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>

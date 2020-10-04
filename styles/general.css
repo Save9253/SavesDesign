@@ -7,6 +7,7 @@
     --dr:#1a1a1a;
     --ac:#b25c59;
     --aclt: #eb7f7b;
+    --acdr:#9a3d3a;
     --wh50:rgba(255,255,255,0.5);
 }
 
@@ -157,6 +158,9 @@ button{
     border-left:solid 3px var(--md);
     padding-left:10px;
     border-radius: 2px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

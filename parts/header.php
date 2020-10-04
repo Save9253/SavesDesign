@@ -44,7 +44,7 @@
             <li>
                 <a class="menuIt" aria-label="Cart" href="cart.php">
                     <div class="menuTtl">Cart</div>
-                    <svg id="cartSVG" role="img" overflow="visible" aria-label="Cart has <?php echo $_SESSION['cartItems']?> items" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="cartSVG" role="img" overflow="visible" aria-label="Cart" width="30" height="30" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g stroke="var(--dr)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 5L15 10L30 55H75L85 25"/>
                             <path d="M30 55L25 70H70"/>

@@ -42,10 +42,12 @@ for(let i=0;i<qtys.length;i++){
             remAddicon[i].attributes.transform.value = 'rotate(45)';
             remAddicon[i].attributes.stroke.value = 'var(--dr)'
             qtys[i].value = 0;
+            remAddBtn[i].attributes['aria-pressed'].value=true;
         }else{
             remAddicon[i].attributes.transform.value = 'rotate(0)';
-            remAddicon[i].attributes.stroke.value = 'var(--ac)';
+            remAddicon[i].attributes.stroke.value = 'var(--acdr)';
             qtys[i].value = 1;
+            remAddBtn[i].attributes['aria-pressed'].value=false;
         }
         qtyChange(i);
     })
@@ -68,7 +70,7 @@ const request = document.querySelector('#btnRequest');
 const cartUdate = document.querySelector('#cartUpdate');
 
 save.addEventListener('click',()=>{
-    cartUdate.attributes.action.value="cart.php";
+    cartUdate.attributes.action.value='cart.php';
     cartUdate.submit();
 })
 shop.addEventListener('click',()=>{

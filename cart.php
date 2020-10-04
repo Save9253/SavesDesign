@@ -55,7 +55,7 @@
                             echo '<span aria-label="New Price" class="newPrice">$<span class="itPrice">'.$row['price'].'</span></span>';
                             $total = $total + ($qty*$row['price']);
                             echo '</div></td>';
-                            echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">x<input aria-label="Quantity" class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
                             echo '<td class="num">= $<span class="subTtl">'.$qty*$row['price'].'</span></td>';
                         }else{
                             $price = $row['price'];
@@ -66,14 +66,14 @@
                             echo '<span aria-label="New Price" class="newPrice">$<span class="itPrice">'.$DisPrice.'</span></span>';
                             $total = $total + ($qty*$DisPrice);
                             echo '</div></td>';
-                            echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">x<input aria-label="Quantity" class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
                             echo '<td class="num">= $<span class="subTtl">'.$qty*$DisPrice.'</span></td>';
                         }
                         ?>
                             <td style="opacity:1 !important">
-                                <button type="button" class="remAdd icon">
+                                <button type="button" aria-label="Remove the <?php echo $row['title']?> from the cart" aria-pressed="false" class="remAdd icon">
                                     <svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path transform="rotate(0)" stroke="var(--ac)" d="M0 0L10 10 M0 10L10 0">
+                                        <path transform="rotate(0)" stroke="var(--acdr)" d="M0 0L10 10 M0 10L10 0">
                                     </svg>
                                 </button>
                             </td>
@@ -91,7 +91,7 @@
         <td id="totalT" colspan="4">Total:</td>
         <td id="totalN" class="num">$<span id="ttl"><?php echo $total;?></span></td>
         <td>
-            <button type="button" class="remAddAll icon">
+            <button aria-label="Remove All the Items from the cart." type="button" class="remAddAll icon">
                 <svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path transform="rotate(0)" stroke="var(--aclt)" d="M0 0L10 10 M0 10L10 0">
                 </svg>
