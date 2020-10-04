@@ -112,7 +112,7 @@
             </div>
             <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCartWqty">
                 <input name="servID" type="hidden" value="<?php echo $row['id']?>">
-                <input class="qty" name="qty" type="number" value="1">
+                <input class="qty" name="qty" type="number" min="1" value="1">
                 <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
             </form>
         </div>

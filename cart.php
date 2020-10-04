@@ -49,7 +49,7 @@
                             echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
                             $total = $total + ($qty*$row['price']);
                             echo '</div></td>';
-                            echo '<td class="num">x<input class="qty" name="qty" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
                             echo '<td class="num">= $'.$qty*$row['price'].'</td>';
                         }else{
                             $price = $row['price'];
@@ -60,7 +60,7 @@
                             echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
                             $total = $total + ($qty*$DisPrice);
                             echo '</div></td>';
-                            echo '<td class="num">x<input class="qty" name="qty" type="number" value="'.$qty.'"></td>';
+                            echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
                             echo '<td class="num">= $'.$qty*$DisPrice.'</td>';
                         }
                         echo '</tr>';
