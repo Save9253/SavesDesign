@@ -119,20 +119,27 @@ button{
     margin:5px 0;
     background-color: var(--md);
     color:white;
-    box-shadow: 0 0 var(--ac);
-    transform: translate(0,0);
     padding: 5px 10px;
     border-radius: 2px;
     display: grid;
     place-content: center;
 }
-.btn:hover, .btn:focus{
+.btn:hover, .btn:focus,.btnlt:hover, .btnlt:focus{
     box-shadow: 2px 2px var(--ac);
-    transform: translate(-2px,-2px);
 }
 .btn:active{
     color:var(--md);
     background-color:white;
+}
+.btnlt{
+    margin:5px 0;
+    background-color: var(--lt);
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: grid;
+    place-content: center;
+    border: solid 2px var(--dr);
+    font-weight: 600;
 }
 .icon{background-color:transparent;}
 

@@ -13,6 +13,15 @@
             $_SESSION['cart'] = array($_POST['servID'] => intval($_POST['qty']));
         }
     }
+    if(isset($_POST['cartItems'])){
+        $preItems = explode(',',$_POST['cartItems']);
+        $preQtys = explode(',',$_POST['qtys']);
+        for($i=0;$i<count($preItems);$i++){
+            $newCart[$preItems[$i]] = intval($preQtys[$i]);
+            foreach (array_keys($newCart, 0) as $key) {unset($newCart[$key]);            }
+        }
+        $_SESSION['cart'] = $newCart;
+    }
     if(isset($_SESSION['cart'])){$_SESSION['cartItems'] = array_sum($_SESSION['cart']);}
 ?>
 <!DOCTYPE html>

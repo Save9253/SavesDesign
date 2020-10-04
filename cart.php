@@ -9,7 +9,7 @@
 ?>
 <div class="H">
     <h1>Cart</h1>
-    <?php if(!isset($_SESSION['cart'])):?>
+    <?php if(!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0):?>
     <p>Your cart is empty!</p>
 </div>
     <a href="shop.php" class="btn">Go to the shop to fill it up!</a>
@@ -32,6 +32,8 @@
     <tbody>
         <?php
             $total = 0;
+            $cartItems = '';
+            $qtys ='';
             foreach(array_keys($_SESSION['cart']) as $key){
                 $stmt = mysqli_stmt_init($db);
                 $queri = "SELECT * FROM `services` WHERE `id`=?";
@@ -42,6 +44,9 @@
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_assoc($result)) {
                         $qty = $_SESSION['cart'][$key];
+                        if($cartItems == ''){$cartItems = $row['id'];}else{$cartItems = $cartItems.','.$row['id'];}
+                        if($qtys == ''){$qtys = $qty;}else{$qtys = $qtys.','.$qty;}
+
                         echo '<tr>';
                         echo '<td>'.$row['svg'].'</td>';
                         echo '<td><a href="service.php?id='.$row['id'].'">'.$row['title'].'</a></td>';
@@ -95,6 +100,13 @@
     </tr>
   </tfoot>
 </table>
+<form  id="cartUpdate" method="post" action="">
+    <input name="cartItems" type="hidden" value="<?php echo $cartItems?>">
+    <input name="qtys" type="hidden" value="<?php echo $qtys?>">
+    <button id="btnSave" type="button" class="btnlt">Save the cart</button>
+    <button id="btnShop" type="button" class="btnlt">Return to the shop</button>
+    <button id="btnRequest" type="button" class="btn">Request the services</button>
+</form>
 <?php
         mysqli_close($db);
     else:
