@@ -26,6 +26,7 @@
             <th>Price</th>
             <th class="thqty">Qty</th>
             <th>Subtotal</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -63,7 +64,16 @@
                             echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';
                             echo '<td class="num">= $<span class="subTtl">'.$qty*$DisPrice.'</span></td>';
                         }
-                        echo '</tr>';
+                        ?>
+                            <td style="opacity:1 !important">
+                                <button type="button" class="remAdd icon">
+                                    <svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path transform="rotate(0)" stroke="var(--ac)" d="M0 0L10 10 M0 10L10 0">
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <?php
                     }
                 }else{
                     echo '<p role="alert">Something whent wrong</p>';
@@ -75,6 +85,7 @@
     <tr>
       <td id="totalT" colspan="4">Total:</td>
       <td id="totalN" class="num">$<span id="ttl"><?php echo $total;?></span></td>
+      <td></td>
     </tr>
   </tfoot>
 </table>

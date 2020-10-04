@@ -62,6 +62,10 @@ tfoot{
 }
 .qty:hover,.qty:focus{background-color: white;}
 
+.remAdd:hover svg path,.remAdd:focus svg path{stroke:white}
+
+.removedTR td{opacity: 0.3;}
+
 #totalT{text-align:right}
 @media screen and (max-width:600px){
     .thqty{min-width:65px;}

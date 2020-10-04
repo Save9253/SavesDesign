@@ -39,7 +39,7 @@ h3{
 h1,h2,h3{text-align: center;}
 
 /* Elements */
-svg *{transition: ease 500ms;}
+svg *{transition: ease 500ms;transform-origin: center;}
 a{
     text-decoration: unset;
     color:unset;
