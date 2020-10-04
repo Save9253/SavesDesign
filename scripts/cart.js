@@ -5,17 +5,25 @@ const total = document.querySelector('#ttl');
 const trs = document.querySelectorAll('tbody tr');
 const remAddBtn = document.querySelectorAll('.remAdd');
 const remAddicon = document.querySelectorAll('.remAdd svg path');
+const remAddAllBtn = document.querySelector('.remAddAll');
+const remAddAllicon = document.querySelector('.remAddAll svg path');
 
 function qtyChange(n){
     subTtls[n].innerHTML = Number(itPrices[n].innerHTML)*qtys[n].value;
+
     let sum = 0;
     subTtls.forEach(subTtl=> {sum = sum + Number(subTtl.innerHTML)});
     total.innerHTML = sum;
+
     if(qtys[n].value == 0){
         trs[n].classList.add('removedTR')
     }else{
         trs[n].classList.remove('removedTR')
     }
+
+    let ttlQty = 0;
+    qtys.forEach(qty=> {ttlQty = ttlQty + Number(qty.value)});
+    cartText.innerHTML = ttlQty;
 }
 
 for(let i=0;i<qtys.length;i++){
@@ -27,9 +35,19 @@ for(let i=0;i<qtys.length;i++){
             qtys[i].value = 0;
         }else{
             remAddicon[i].attributes.transform.value = 'rotate(0)';
-            remAddicon[i].attributes.stroke.value = 'var(--ac)'
+            remAddicon[i].attributes.stroke.value = 'var(--ac)';
             qtys[i].value = 1;
         }
         qtyChange(i);
     })
 };
+
+remAddAllBtn.addEventListener('click',()=>{
+    for(let i=0;i<qtys.length;i++){
+        qtys[i].value = 0;
+        remAddicon[i].attributes.transform.value = 'rotate(45)';
+        remAddicon[i].attributes.stroke.value = 'var(--dr)'
+        qtyChange(i);
+    }
+
+})

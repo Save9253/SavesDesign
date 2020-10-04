@@ -44,7 +44,7 @@
                         $qty = $_SESSION['cart'][$key];
                         echo '<tr>';
                         echo '<td>'.$row['svg'].'</td>';
-                        echo '<td>'.$row['title'].'</td>';
+                        echo '<td><a href="service.php?id='.$row['id'].'">'.$row['title'].'</a></td>';
                         echo '<td><div class="num price">';
                         if($row['discount'] == null){
                             echo '<span aria-label="New Price" class="newPrice">$<span class="itPrice">'.$row['price'].'</span></span>';
@@ -83,9 +83,15 @@
     </tbody>
     <tfoot>
     <tr>
-      <td id="totalT" colspan="4">Total:</td>
-      <td id="totalN" class="num">$<span id="ttl"><?php echo $total;?></span></td>
-      <td></td>
+        <td id="totalT" colspan="4">Total:</td>
+        <td id="totalN" class="num">$<span id="ttl"><?php echo $total;?></span></td>
+        <td>
+            <button type="button" class="remAddAll icon">
+                <svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="rotate(0)" stroke="var(--aclt)" d="M0 0L10 10 M0 10L10 0">
+                </svg>
+            </button>
+        </td>
     </tr>
   </tfoot>
 </table>

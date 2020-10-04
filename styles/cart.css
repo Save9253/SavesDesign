@@ -17,6 +17,7 @@ td,th{
     padding: 5px 10px;
 }
 tbody tr{border-bottom: solid 1px;}
+tbody tr td{opacity: 1;transition: 500ms ease;}
 td svg{
     max-width: 50px;
     max-width: 50px;
@@ -27,6 +28,8 @@ tfoot{
     color:white;
     font-size: 22px;
 }
+
+td a:hover,td a:focus{color:white}
 
 .price {
     display: flex;
@@ -50,7 +53,7 @@ tfoot{
 }
 
 .qty{
-    background-color: var(--lt);
+    background-color: var(--md50);
     border-radius: 2px;
     font-size: 20px;
     padding:0;
@@ -62,9 +65,10 @@ tfoot{
 }
 .qty:hover,.qty:focus{background-color: white;}
 
-.remAdd:hover svg path,.remAdd:focus svg path{stroke:white}
+.remAdd:hover svg path,.remAdd:focus svg path,
+.remAddAll:hover svg path,.remAddAll:focus svg path{stroke:white}
 
-.removedTR td{opacity: 0.3;}
+.removedTR td{opacity: 0.3 !important}
 
 #totalT{text-align:right}
 @media screen and (max-width:600px){
