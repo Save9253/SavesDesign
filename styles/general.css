@@ -253,6 +253,3 @@ header #logoLink{height:50px;}
 #hamburger:hover,#hamburger:focus{
     outline:unset;
 }
-
-/* Prices */
-.oldPrice {text-decoration: line-through;}

@@ -30,12 +30,14 @@
                 <p><?php if($row['description']!=null){echo $row['description'];}?></p>
                 <?php
                     if($row['includes']!=null){
-                        echo '<ul class="includes" aria-label="Includes"><span>Includes:</span>';
+                        echo '<h4 class="includes">Includes:</h4>';
+                        echo '<ul class="includes">';
                         echo $row['includes'];
                         echo '</ul>';
                     }
                     if($row['requires']!=null){
-                        echo '<ul class="requires" aria-label="Requires"><span>Requires:</span>';
+                        echo '<h4 class="requires">Requires:</h4>';
+                        echo '<ul class="requires">';
                         echo $row['requires'];
                         echo '</ul>';
                     }
@@ -48,9 +50,9 @@
                         $price = $row['price'];
                         $discount = $row['discount'];
                         $DisPrice = $price - (($discount/100)*$price);
-                        echo '<span aria-label="Old Price" class="oldPrice">$'.$price.'</span>';
-                        echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
+                        echo '<del aria-label="Old Price" class="oldPrice">$'.$price.'</del>';
                         echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
+                        echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
                     }else{
                         echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
                     }
@@ -84,12 +86,14 @@
                 <p><?php if($row['description']!=null){echo $row['description'];}?></p>
                 <?php
                     if($row['includes']!=null){
-                        echo '<ul class="includes" aria-label="Includes"><span>Includes:</span>';
+                        echo '<h4 class="includes">Includes:</h4>';
+                        echo '<ul class="includes">';
                         echo $row['includes'];
                         echo '</ul>';
                     }
                     if($row['requires']!=null){
-                        echo '<ul class="requires" aria-label="Requires"><span>Requires:</span>';
+                        echo '<h4 class="requires">Requires:</h4>';
+                        echo '<ul class="requires">';
                         echo $row['requires'];
                         echo '</ul>';
                     }
@@ -103,8 +107,8 @@
                         $discount = $row['discount'];
                         $DisPrice = $price - (($discount/100)*$price);
                         echo '<span aria-label="Old Price" class="oldPrice">$'.$price.'</span>';
-                        echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
                         echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
+                        echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
                     }else{
                         echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
                     }
@@ -112,7 +116,7 @@
             </div>
             <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php" method="post" class="addTCartWqty">
                 <input name="servID" type="hidden" value="<?php echo $row['id']?>">
-                <input class="qty" name="qty" type="number" min="1" value="1">
+                <input aria-label='Quantity of the item "<?php echo $row['title'];?>".' class="qty" name="qty" type="number" min="1" value="1">
                 <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
             </form>
         </div>

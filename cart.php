@@ -61,9 +61,9 @@
                             $price = $row['price'];
                             $discount = $row['discount'];
                             $DisPrice = $price - (($discount/100)*$price);
-                            echo '<span aria-label="Old Price" class="oldPrice">$'.$price.'</span>';
-                            echo '<span aria-label="New Price" class="newPrice">$<span class="itPrice">'.$DisPrice.'</span></span>';
+                            echo '<del aria-label="Old Price" class="oldPrice">$'.$price.'</del>';
                             echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
+                            echo '<span aria-label="New Price" class="newPrice">$<span class="itPrice">'.$DisPrice.'</span></span>';
                             $total = $total + ($qty*$DisPrice);
                             echo '</div></td>';
                             echo '<td class="num">x<input class="qty" name="qty" min="0" type="number" value="'.$qty.'"></td>';

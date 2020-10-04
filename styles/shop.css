@@ -86,9 +86,10 @@ h2 {
   margin: 5px 10px;
   list-style-type: disc;
 }
-.description span {
+.description h4 {
   font-weight: bold;
   font-size: 18px;
+  margin:5px;
 }
 .description li {
   margin-left: 20px;
@@ -105,6 +106,7 @@ h2 {
   gap: 10px;
   align-items: center;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 .oldPrice {
   color: var(--aclt);
