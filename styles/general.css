@@ -19,7 +19,7 @@
 }
 
 /* Text */
-h1,h2,#cartText,.num,.oldPrice,.newPrice,.discount,.addTCart,.qty{
+h1,h2,#cartText,.num,.num *,.oldPrice,.newPrice,.newPrice *,.discount,.addTCart,.qty{
     font-family: 'Do Hyeon', sans-serif;
 }
 p{text-align:justify}
