@@ -103,9 +103,9 @@
 <form  id="cartUpdate" method="post" action="">
     <input name="cartItems" type="hidden" value="<?php echo $cartItems?>">
     <input name="qtys" type="hidden" value="<?php echo $qtys?>">
-    <button id="btnSave" type="button" class="btnlt">Save the cart</button>
-    <button id="btnShop" type="button" class="btnlt">Return to the shop</button>
-    <button id="btnRequest" type="button" class="btn">Request the services</button>
+    <button id="btnSave" type="button" class="btnlt">Save changes</button>
+    <button id="btnShop" type="button" class="btnlt">Return to shop</button>
+    <button id="btnRequest" type="button" class="btn">Request services</button>
 </form>
 <?php
         mysqli_close($db);

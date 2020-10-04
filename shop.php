@@ -6,7 +6,7 @@
     include_once './parts/header.php';
     require './functions/db.php';
 
-    if(isset($_GET['msg']) && $_GET['msg'] == 'added'){echo '<div role="alert" class="msg">Added to the cart successfully!</div>';}
+    if(isset($_GET['msg']) && $_GET['msg'] == 'added'){echo '<div role="alert" class="msg">Successfully added to cart!</div>';}
 ?>
 <div class="H" id="top">
     <h1>Shop</h1>
