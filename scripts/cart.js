@@ -78,6 +78,6 @@ shop.addEventListener('click',()=>{
     cartUdate.submit();
 })
 request.addEventListener('click',()=>{
-    cartUdate.attributes.action.value="login.php";
+    cartUdate.attributes.action.value="./functions/profile.php?requested=true";
     cartUdate.submit();
 })

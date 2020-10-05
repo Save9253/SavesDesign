@@ -69,6 +69,18 @@ hr{
     padding: 0 5px;
 }
 
+.H {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.H p {
+    font-size: 20px;
+    text-align: center;
+}
+
 /* Main */
 body{
     background-color: var(--lt);
@@ -256,4 +268,14 @@ header #logoLink{height:50px;}
 }
 #hamburger:hover,#hamburger:focus{
     outline:unset;
+}
+
+@media screen and (max-width: 600px) {
+    .H {
+      gap: 0;
+    }
+    .H p {
+      font-size: 16px;
+      margin-top: 0;
+    }
 }

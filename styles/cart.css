@@ -1,12 +1,3 @@
-.H{
-    display: flex;
-    flex-wrap: wrap;
-    gap:20px;
-    align-items: center;
-    justify-content: center;
-}
-.H p{font-size: 20px;text-align: center;}
-
 table{border-collapse: collapse;}
 thead{
     background-color: var(--md);
@@ -84,5 +75,4 @@ td a:hover,td a:focus{color:white}
 @media screen and (max-width:600px){
     .thqty{min-width:65px;}
     .qty{max-width: 30px;}
-    .H p{font-size: 16px;margin:0}
 }

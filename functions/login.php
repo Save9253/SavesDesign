@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
                 if($pwdCheck == true){
                     session_start();
                     $_SESSION['uname']=$row['uname'];
-                    header('Location: ../index.php');exit();
+                    header('Location: ../profile.php');exit();
                 }else{
                     header('Location: ../login.php?err=pwd&uname='.$mailUname);exit();
                 }

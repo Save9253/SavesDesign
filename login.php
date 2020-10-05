@@ -13,6 +13,7 @@
         if($_GET['msg']=="scs"){echo '<div class="msg" role="alert">You are registered successfully!<br>Use your Username or E-mail to log in.</div>';};
         if($_GET['msg']=="lgdOut"){echo '<div class="msg" role="alert">You are logged out!</div>';};
         if($_GET['msg']=="pwdRst"){echo '<div class="msg" role="alert">Your password was successfully reset. You can now log in with your new password!</div>';};
+        if($_GET['msg']=="login"){echo '<div class="msg" role="alert">You have to log in to continue.</div>';};
     }
     if(isset($_GET['err'])){
         if($_GET['err']=='empty'){echo '<div class="errMsg" role="alert">Fill in all the fields</div>';};
