@@ -48,6 +48,22 @@ header{
 }
 #forgotPwd:hover,#forgotPwd:focus{color:var(--ac)}
 
+.checkboxLabl{
+    display: flex;
+    align-items: center;
+}
+.checkboxLabl span{
+    border-radius: 2px;
+    background-color: var(--grd);
+    width: 15px;
+    height: 15px;
+    display: grid;
+    place-content: center;
+    margin-right: 5px;
+}
+.checkbox{display: none}
+
+
 /* Mobile*/
 @media screen and (max-width:900px){
     .tooltipPwd{display: none;}

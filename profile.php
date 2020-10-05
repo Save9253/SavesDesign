@@ -15,7 +15,7 @@
 <a href="./functions/logout.php" class="btn">Log out</a>
 <p>Test</p>
 <?php
-
+    echo '<br />';
 ?>
 
 <?php

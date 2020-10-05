@@ -43,6 +43,14 @@
         <div aria-label="Show Password Label" class="tooltipPwd" style="opacity:0">Show</div>
     </div>
     <?php if(isset($_GET['err']) && $_GET['err'] == 'pwd'){echo '<a id="forgotPwd" href="pwdRst.php">Forgot your password?</a>';}?>
+    <label class="checkboxLabl">
+        <input class="checkbox" name="remeber" type="checkbox">
+        <span>
+            <svg class="checkboxSVG" aria-label="Check Mark" role="img" overflow="visible" width="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 8L6 8L6 8L6 8Z" fill="white"></path>
+            </svg>
+        </span>Remeber me
+    </label>
     <button class="btn" type="submit" name="login">Login</button>
 </form>
 <?php

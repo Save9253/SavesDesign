@@ -45,3 +45,21 @@ function eyeSetup (b){
     },1000);
 };
 for(a=0;a<eyePwds.length;a++){eyeSetup(a)};
+
+//Checkbox animation
+const checkboxes = document.querySelectorAll(".checkbox");
+const checkMarks = document.querySelectorAll('.checkboxSVG path');
+const checked = 'M2 5L6 8L13 2L6 13Z';
+const notchecked = 'M6 8L6 8L6 8L6 8Z';
+
+function checkMark(ch){
+    checkboxes[ch].addEventListener('change',()=>{
+        if(checkboxes[ch].checked){
+            checkMarks[ch].attributes.d.value = checked;
+        }else{
+            checkMarks[ch].attributes.d.value = notchecked;
+        }
+    });
+};
+
+for(i=0;i<checkboxes.length;i++){checkMark(i)};
