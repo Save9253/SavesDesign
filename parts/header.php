@@ -32,8 +32,7 @@
     <link rel="stylesheet" href="./styles/general.css">
     <?php if(isset($styles)){echo $styles;}?>
     <link rel="shortcut icon" href="./imgs/SavesDesignFavicon.png">
-    <title><?php if(isset($title)){echo $title;}else{echo $page;}?> | Save's Design</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"></head>
 <body aria-label='<?php if(isset($title)){echo $title;}else{echo $page;}?>'>
 <header id="header" style="top:0;" aria-label='Header'>
     <?php if($HeaderLogo == 'yes'):?>
