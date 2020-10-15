@@ -63,3 +63,23 @@ function checkMark(ch){
 };
 
 for(i=0;i<checkboxes.length;i++){checkMark(i)};
+//Cheking the fields
+const mailIn = document.querySelector('#mailIn');
+const unameIn = document.querySelector('#unameIn');
+const pwdIn = document.querySelector('#pwdIn');
+const pwdRptIn = document.querySelector('#pwdRptIn');
+const regBtn = document.querySelector('#register');
+
+const msgValMl = document.querySelector('#msgValMl')
+
+let chkMail = 1;
+let chkPwd = 1;
+let emptyFields = false;
+
+mailIn.addEventListener('keyup',()=>{
+    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){chkMail = 2;}else{chkMail = 1};
+})
+mailIn.addEventListener('blur',()=>{
+    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){chkMail = 2;}else{chkMail = 0};
+    if(chkMail == 0){msgValMl.classList.remove('hid')}else{msgValMl.classList.add('hid')}
+})

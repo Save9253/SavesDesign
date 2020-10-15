@@ -40,11 +40,14 @@
         ( isset($_GET['err']) && ($_GET['err'] == 'pwdMtch') )
     ){$errPwdRpt = 1;}
 ?>
+<div role="alert" class="errMsg hid">Fill in all the fields</div>
+<div role="alert" id="msgValMl"class="errMsg hid">Enter a valid e-mail address</div>
+<div role="alert" class="errMsg hid">Passwords don't match</div>
 <form aria-label="Register" action="functions/register.php" method="POST">
-    <input aria-invalid="<?php if($errMail == 1){echo "true";}else{echo 'false';};?>" aria-label="E-mail" maxlength="65" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>
-    <input aria-invalid="<?php if($errName == 1){echo "true";}else{echo 'false';};?>" aria-label="Username" maxlength="65" class="fld <?php if($errName == 1){echo 'errFld';}?>" type="text" name="uname" placeholder="Username" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';}?>>
+    <input aria-invalid="<?php if($errMail == 1){echo "true";}else{echo 'false';};?>" aria-label="E-mail" maxlength="65" id="mailIn" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>
+    <input aria-invalid="<?php if($errName == 1){echo "true";}else{echo 'false';};?>" aria-label="Username" maxlength="65" id="unameIn" class="fld <?php if($errName == 1){echo 'errFld';}?>" type="text" name="uname" placeholder="Username" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';}?>>
     <div aria-label="Password Field" class="fld pwdDiv <?php if($errPwd == 1){echo 'errFld';};?>">
-        <input aria-invalid="<?php if($errPwd == 1){echo "true";}else{echo 'false';};?>" aria-label="Password" type="password" name="pwd" placeholder="Password">
+        <input aria-invalid="<?php if($errPwd == 1){echo "true";}else{echo 'false';};?>" aria-label="Password" id="pwdIn" type="password" name="pwd" placeholder="Password">
         <button aria-pressed="false" aria-label="Show Password" type="button" class="icon eyePwd">
             <svg aria-label="Closed eye" role="img" width="25" height="22" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white"></path>
@@ -53,7 +56,7 @@
         <div aria-label="Show Password Label" class="tooltipPwd" style="opacity:0">Show</div>
     </div>
     <div aria-label="Repeat Password Field" class="fld pwdDiv <?php if($errPwdRpt == 1){echo 'errFld';};?>">
-        <input aria-invalid="<?php if($errPwdRpt == 1){echo "true";}else{echo 'false';};?>" aria-label="Repeat Password" type="password" name="pwdRpt" placeholder="Repeat Password">
+        <input aria-invalid="<?php if($errPwdRpt == 1){echo "true";}else{echo 'false';};?>" aria-label="Repeat Password" type="password" id="pwdRptIn" name="pwdRpt" placeholder="Repeat Password">
         <button aria-pressed="false" aria-label="Show Password" type="button" class="icon eyePwd">
             <svg aria-label="Closed eye" role="img" width="25" height="22" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.8L4.5 11.8L8.5 11.2L9.4 15.6L15 18L20.6 15.6L21.5 11.2L25.5 11.8L30 13.8L27 10.3L20.9 8.2L15 7.5L9.1 8.2L3 10.3Z" fill="white"></path>
@@ -61,7 +64,7 @@
         </button>
         <div aria-label="Show Password Label" class="tooltipPwd" style="opacity:0">Show</div>
     </div>
-    <button class="btn" type="submit" name="register">Register</button>
+    <button class="btn" id="register" type="button" name="register">Register</button>
 </form>
 <script type="text/javascript" src="./scripts/Flds.js"></script>
 <?php include_once './parts/footer.php'?>
