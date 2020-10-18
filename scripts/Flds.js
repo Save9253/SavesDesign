@@ -63,6 +63,7 @@ function checkMark(ch){
 };
 
 for(i=0;i<checkboxes.length;i++){checkMark(i)};
+
 //Cheking the fields
 const mailIn = document.querySelector('#mailIn');
 const unameIn = document.querySelector('#unameIn');
@@ -87,9 +88,11 @@ mailIn.addEventListener('keyup',()=>{
         chkMail = 2;
         mailIn.classList.add('corFld');
         msgValMl.classList.add('hid');
+        mailIn.attributes['aria-invalid'].value = 'false'
     }else{
         chkMail = 1;
         mailIn.classList.remove('corFld');
+        mailIn.attributes['aria-invalid'].value = 'false'
     };
 })
 mailIn.addEventListener('blur',()=>{
@@ -98,8 +101,10 @@ mailIn.addEventListener('blur',()=>{
         msgValMl.classList.remove('hid');
         mailIn.classList.remove('corFld');
         mailIn.classList.add('errFld');
+        mailIn.attributes['aria-invalid'].value = 'true'
     }else{
         msgValMl.classList.add('hid');
+        mailIn.attributes['aria-invalid'].value = 'false'
     }
 })
 
@@ -116,6 +121,8 @@ pwdIn.addEventListener('keyup',()=>{
     pwdRptFld.classList.remove('errFld')
     msgPwdMtch.classList.add('hid');
     msgPwdLength.classList.add('hid');
+    pwdIn.attributes['aria-invalid'].value = 'false'
+    pwdRptIn.attributes['aria-invalid'].value = 'false'
 })
 pwdRptIn.addEventListener('keyup',()=>{
     if(pwdIn.value != '' && pwdRptIn.value != '' && pwdIn.value == pwdRptIn.value){
@@ -130,14 +137,17 @@ pwdRptIn.addEventListener('keyup',()=>{
     };
     pwdFld.classList.remove('errFld')
     pwdRptFld.classList.remove('errFld')
+    pwdIn.attributes['aria-invalid'].value = 'false'
+    pwdRptIn.attributes['aria-invalid'].value = 'false'
 })
 pwdIn.addEventListener('blur',()=>{
     if(pwdIn.value.length>5){PwdLength = 2}else if(pwdIn.value.length==0){PwdLength = 1}else{PwdLength = 0}
     if(PwdLength == 0){
         pwdFld.classList.add('errFld')
         msgPwdLength.classList.remove('hid');
+        pwdIn.attributes['aria-invalid'].value = 'true'
     }else{
-        msgPwdLength.classList.remove('add');
+        msgPwdLength.classList.add('hid');
     }
 })
 pwdRptIn.addEventListener('blur',()=>{
@@ -148,6 +158,8 @@ pwdRptIn.addEventListener('blur',()=>{
         pwdFld.classList.add('errFld');
         pwdRptFld.classList.remove('corFld');
         pwdRptFld.classList.add('errFld');
+        pwdIn.attributes['aria-invalid'].value = 'true'
+        pwdRptIn.attributes['aria-invalid'].value = 'true'
     }else{
         msgPwdMtch.classList.add('hid');
     }
