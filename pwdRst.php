@@ -82,4 +82,3 @@
 <?php endif;?>
 <?php include_once './parts/footer.php';?>
 <script type="text/javascript" src="./scripts/Flds.js"></script>
-<script type="text/javascript" src="./scripts/winkLogo.js"></script>

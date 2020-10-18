@@ -8,10 +8,11 @@
     include "parts/logoThick.svg";
     echo '</a>';
 ?>
-<div role="alert" class="errMsg hid">Fill in all the fields</div>
+<div role="alert" id="msgEmptyFlds" class="errMsg hid">Fill in all the fields</div>
 <div role="alert" id="msgValMl"class="errMsg hid">Enter a valid e-mail address</div>
 <div role="alert" id="msgPwdLength" class="errMsg hid">Password should be at least 6 characters</div>
 <div role="alert" id="msgPwdMtch" class="errMsg hid">Passwords don't match</div>
+<div role="alert" id="msgFBErr" class="errMsg hid"></div>
 <form aria-label="Register">
     <input aria-invalid="false" aria-label="E-mail" maxlength="65" id="mailIn" class="fld" type="text" placeholder="E-mail">
     <div aria-label="Password Field" class="fld pwdDiv" id="pwdFld">
@@ -34,6 +35,6 @@
     </div>
     <button class="btn" id="register" type="button">Register</button>
 </form>
-<script type="text/javascript" src="./scripts/Flds.js"></script>
 <?php include_once './parts/footer.php'?>
-<script type="text/javascript" src="./scripts/winkLogo.js"></script>
+<script type="text/javascript" src="./scripts/Flds.js"></script>
+<script type="text/javascript" src="./scripts/register.js"></script>
