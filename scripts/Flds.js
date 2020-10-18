@@ -68,18 +68,67 @@ const mailIn = document.querySelector('#mailIn');
 const unameIn = document.querySelector('#unameIn');
 const pwdIn = document.querySelector('#pwdIn');
 const pwdRptIn = document.querySelector('#pwdRptIn');
+const pwdFld = document.querySelector('#pwdFld');
+const pwdRptFld = document.querySelector('#pwdRptFld');
 const regBtn = document.querySelector('#register');
 
 const msgValMl = document.querySelector('#msgValMl')
+const msgPwdMtch = document.querySelector('#msgPwdMtch')
 
 let chkMail = 1;
 let chkPwd = 1;
 let emptyFields = false;
 
 mailIn.addEventListener('keyup',()=>{
-    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){chkMail = 2;}else{chkMail = 1};
+    mailIn.classList.remove('errFld')
+    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){
+        chkMail = 2;
+        mailIn.classList.add('corFld');
+        msgValMl.classList.add('hid');
+    }else{
+        chkMail = 1;
+        mailIn.classList.remove('corFld');
+    };
 })
 mailIn.addEventListener('blur',()=>{
-    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){chkMail = 2;}else{chkMail = 0};
-    if(chkMail == 0){msgValMl.classList.remove('hid')}else{msgValMl.classList.add('hid')}
+    if(mailIn.value && /.+@.+\..+/.test(mailIn.value)){chkMail = 2;}else{chkMail = 0}; 
+    if(chkMail == 0){
+        msgValMl.classList.remove('hid');
+        mailIn.classList.remove('corFld');
+        mailIn.classList.add('errFld');
+    }else{
+        msgValMl.classList.add('hid');
+    }
+})
+
+pwdIn.addEventListener('keyup',()=>{
+    pwdFld.classList.remove('errFld')
+    pwdRptFld.classList.remove('errFld')
+})
+pwdRptIn.addEventListener('keyup',()=>{
+    if(pwdIn.value != '' && pwdRptIn.value != '' && pwdIn.value == pwdRptIn.value){
+        chkPwd = 2;
+        pwdFld.classList.add('corFld');
+        pwdRptFld.classList.add('corFld');
+        msgPwdMtch.classList.add('hid');
+    }else{
+        chkPwd = 1
+        pwdFld.classList.remove('corFld');
+        pwdRptFld.classList.remove('corFld');
+    };
+    pwdFld.classList.remove('errFld')
+    pwdRptFld.classList.remove('errFld')
+})
+
+pwdRptIn.addEventListener('blur',()=>{
+    if(pwdIn.value == pwdRptIn.value){chkPwd = 2;}else{chkPwd = 0}; 
+    if(chkPwd == 0){
+        msgPwdMtch.classList.remove('hid');
+        pwdFld.classList.remove('corFld');
+        pwdFld.classList.add('errFld');
+        pwdRptFld.classList.remove('corFld');
+        pwdRptFld.classList.add('errFld');
+    }else{
+        msgPwdMtch.classList.add('hid');
+    }
 })

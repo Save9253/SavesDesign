@@ -115,11 +115,16 @@ input{
     background-color: var(--grd)!important;
     color:white !important;
     margin:3px 0;
+    transition: ease 500ms;
+    border-left:solid 5px var(--grd);
 }
+.errFld{border-left:solid 5px var(--ac)!important;}
+.corFld{border-left:solid 5px white !important;}
+
 input:-webkit-autofill{
     -webkit-text-fill-color: white;
     box-shadow:inset 0 0 0 100px var(--grd);
-    border-bottom: solid 2px white;
+    border-right: solid 5px white;
 }
 input::placeholder{color:var(--wh50);}
 textarea:focus, input:focus, button:focus,a:focus{outline: none;}
@@ -159,7 +164,6 @@ button{
 .icon{background-color:transparent;}
 
 /* Messages */
-.errFld{background-color:var(--ac)!important;}
 .errMsg{
     color:var(--ac);
     font-weight: bold;

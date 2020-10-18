@@ -42,11 +42,11 @@
 ?>
 <div role="alert" class="errMsg hid">Fill in all the fields</div>
 <div role="alert" id="msgValMl"class="errMsg hid">Enter a valid e-mail address</div>
-<div role="alert" class="errMsg hid">Passwords don't match</div>
+<div role="alert" id="msgPwdMtch" class="errMsg hid">Passwords don't match</div>
 <form aria-label="Register" action="functions/register.php" method="POST">
     <input aria-invalid="<?php if($errMail == 1){echo "true";}else{echo 'false';};?>" aria-label="E-mail" maxlength="65" id="mailIn" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>
     <input aria-invalid="<?php if($errName == 1){echo "true";}else{echo 'false';};?>" aria-label="Username" maxlength="65" id="unameIn" class="fld <?php if($errName == 1){echo 'errFld';}?>" type="text" name="uname" placeholder="Username" <?php if(isset($_GET['uname'])){echo 'value="'.$_GET['uname'].'"';}?>>
-    <div aria-label="Password Field" class="fld pwdDiv <?php if($errPwd == 1){echo 'errFld';};?>">
+    <div aria-label="Password Field" class="fld pwdDiv <?php if($errPwd == 1){echo 'errFld';};?>" id="pwdFld">
         <input aria-invalid="<?php if($errPwd == 1){echo "true";}else{echo 'false';};?>" aria-label="Password" id="pwdIn" type="password" name="pwd" placeholder="Password">
         <button aria-pressed="false" aria-label="Show Password" type="button" class="icon eyePwd">
             <svg aria-label="Closed eye" role="img" width="25" height="22" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@
         </button>
         <div aria-label="Show Password Label" class="tooltipPwd" style="opacity:0">Show</div>
     </div>
-    <div aria-label="Repeat Password Field" class="fld pwdDiv <?php if($errPwdRpt == 1){echo 'errFld';};?>">
+    <div aria-label="Repeat Password Field" class="fld pwdDiv <?php if($errPwdRpt == 1){echo 'errFld';};?>" id="pwdRptFld">
         <input aria-invalid="<?php if($errPwdRpt == 1){echo "true";}else{echo 'false';};?>" aria-label="Repeat Password" type="password" id="pwdRptIn" name="pwdRpt" placeholder="Repeat Password">
         <button aria-pressed="false" aria-label="Show Password" type="button" class="icon eyePwd">
             <svg aria-label="Closed eye" role="img" width="25" height="22" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
