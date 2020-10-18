@@ -42,6 +42,7 @@
 ?>
 <div role="alert" class="errMsg hid">Fill in all the fields</div>
 <div role="alert" id="msgValMl"class="errMsg hid">Enter a valid e-mail address</div>
+<div role="alert" id="msgPwdLength" class="errMsg hid">Password should be at least 6 characters</div>
 <div role="alert" id="msgPwdMtch" class="errMsg hid">Passwords don't match</div>
 <form aria-label="Register" action="functions/register.php" method="POST">
     <input aria-invalid="<?php if($errMail == 1){echo "true";}else{echo 'false';};?>" aria-label="E-mail" maxlength="65" id="mailIn" class="fld <?php if($errMail == 1){echo 'errFld';}?>" type="text" name="email" placeholder="E-mail" <?php if(isset($_GET['email'])){echo 'value="'.$_GET['email'].'"';}?>>

@@ -74,9 +74,11 @@ const regBtn = document.querySelector('#register');
 
 const msgValMl = document.querySelector('#msgValMl')
 const msgPwdMtch = document.querySelector('#msgPwdMtch')
+const msgPwdLength = document.querySelector('#msgPwdLength')
 
 let chkMail = 1;
 let chkPwd = 1;
+let PwdLength = 1;
 let emptyFields = false;
 
 mailIn.addEventListener('keyup',()=>{
@@ -102,8 +104,18 @@ mailIn.addEventListener('blur',()=>{
 })
 
 pwdIn.addEventListener('keyup',()=>{
+    if(pwdIn.value.length>5){
+        PwdLength = 2;
+        msgPwdMtch.classList.add('hid');
+        msgPwdLength.classList.add('hid');
+    }else{
+        chkPwd = 1
+        PwdLength = 1
+    } 
     pwdFld.classList.remove('errFld')
     pwdRptFld.classList.remove('errFld')
+    msgPwdMtch.classList.add('hid');
+    msgPwdLength.classList.add('hid');
 })
 pwdRptIn.addEventListener('keyup',()=>{
     if(pwdIn.value != '' && pwdRptIn.value != '' && pwdIn.value == pwdRptIn.value){
@@ -119,7 +131,15 @@ pwdRptIn.addEventListener('keyup',()=>{
     pwdFld.classList.remove('errFld')
     pwdRptFld.classList.remove('errFld')
 })
-
+pwdIn.addEventListener('blur',()=>{
+    if(pwdIn.value.length>5){PwdLength = 2}else if(pwdIn.value.length==0){PwdLength = 1}else{PwdLength = 0}
+    if(PwdLength == 0){
+        pwdFld.classList.add('errFld')
+        msgPwdLength.classList.remove('hid');
+    }else{
+        msgPwdLength.classList.remove('add');
+    }
+})
 pwdRptIn.addEventListener('blur',()=>{
     if(pwdIn.value == pwdRptIn.value){chkPwd = 2;}else{chkPwd = 0}; 
     if(chkPwd == 0){
