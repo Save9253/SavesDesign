@@ -143,6 +143,7 @@ button{
     border-radius: 2px;
     display: grid;
     place-content: center;
+    width: 100%;
 }
 .btn:hover, .btn:focus,.btnlt:hover, .btnlt:focus{
     box-shadow: 2px 2px var(--ac);

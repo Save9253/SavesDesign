@@ -14,6 +14,7 @@
 <div role="alert" id="msgPwdMtch" class="errMsg hid">Passwords don't match</div>
 <div role="alert" id="msgFBErr" class="errMsg hid"></div>
 <form aria-label="Register">
+    <input aria-label="Username" maxlength="65" id="unameIn" class="fld" type="text" placeholder="Username">    
     <input aria-invalid="false" aria-label="E-mail" maxlength="65" id="mailIn" class="fld" type="text" placeholder="E-mail">
     <div aria-label="Password Field" class="fld pwdDiv" id="pwdFld">
         <input aria-invalid="false" aria-label="Password" id="pwdIn" type="password" placeholder="Password">

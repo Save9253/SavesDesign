@@ -1,4 +1,5 @@
 //Cheking the fields
+const unameIn = document.querySelector('#unameIn');
 const mailIn = document.querySelector('#mailIn');
 const pwdIn = document.querySelector('#pwdIn');
 const pwdRptIn = document.querySelector('#pwdRptIn');
@@ -18,6 +19,14 @@ let chkMail = 1;
 let chkPwd = 1;
 let PwdLength = 1;
 let emptyFields = false;
+
+unameIn.addEventListener('keyup',()=>{
+    if(unameIn.value){
+        unameIn.classList.add('corFld')
+    }else{
+        unameIn.classList.remove('corFld')
+    }
+})
 
 mailIn.addEventListener('keyup',()=>{
     mailIn.classList.remove('errFld')
@@ -108,7 +117,7 @@ pwdRptIn.addEventListener('blur',()=>{
 //Firebase submit
 regBtn.addEventListener('click',()=>{
     msgFBErr.classList.add('hid');
-    if(mailIn.value == '' || pwdIn.value == '' || pwdRptIn.value == ''){
+    if(mailIn.value == '' || pwdIn.value == '' || pwdRptIn.value == '' || unameIn.value == ''){
         emptyFields == true;
         msgEmptyFlds.classList.remove('hid');
     } 
@@ -120,7 +129,14 @@ regBtn.addEventListener('click',()=>{
             msgFBErr.classList.remove('hid');
         }).then(()=>{
             if(!FBerr){
-                window.location.href = "login.php?msg=scs"
+                firebase.auth().currentUser.updateProfile({
+                    displayName: unameIn.value
+                }).then(function() {
+                    window.location.href = "login.php"
+                }, function(error) {
+                    setFrBsErr(error.message);
+                    console.log(error.message)
+                })
             }
         })
     }

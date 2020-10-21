@@ -10,7 +10,6 @@
     echo '</a>';
 
     if(isset($_GET['msg'])){
-        if($_GET['msg']=="scs"){echo '<div class="msg" role="alert">You are registered successfully!<br>Use your Username or E-mail to log in.</div>';};
         if($_GET['msg']=="lgdOut"){echo '<div class="msg" role="alert">You are logged out!</div>';};
         if($_GET['msg']=="login"){echo '<div class="msg" role="alert">You have to log in to continue.</div>';};
     }

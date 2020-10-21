@@ -78,3 +78,17 @@ if(cartText.innerHTML!="0"){
         cartL3.setAttribute('opacity','0');
     },1250);
 }
+//Firebase
+const log = document.querySelector('#log')
+const loginPath = document.querySelector('#loginPath')
+const loginSVG = document.querySelector('#loginSVG')
+const loginA = document.querySelector('#loginA')
+firebase.auth().onAuthStateChanged(function(u) {
+    if (u) {
+        log.innerHTML = 'Profile'
+        loginPath.attributes.fill.value = 'var(--dr)'
+        loginA.attributes['aria-label'].value = 'Profile'
+        loginSVG.attributes['aria-label'].value = 'Profile'
+    }
+})
+
