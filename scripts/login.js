@@ -14,7 +14,7 @@ const loginDiv = document.querySelector('#loginDiv')
 
 let emptyFields = false;
 
-//User Auth
+//Userchekc
 firebase.auth().onAuthStateChanged(function(u) {
     if (u) {
         loginDiv.classList.add('hid');
@@ -25,6 +25,7 @@ firebase.auth().onAuthStateChanged(function(u) {
     }
 })
 
+
 //Firebase submit
 loginBtn.addEventListener('click',()=>{
     msgFBErr.classList.add('hid');
@@ -34,7 +35,9 @@ loginBtn.addEventListener('click',()=>{
     } 
     if(emptyFields == false){
         let FBerr = null;
-        firebase.auth().signInWithEmailAndPassword(mailIn.value, pwdIn.value).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(mailIn.value, pwdIn.value).then(()=>{
+            window.location.href = "profile.php"
+        }).catch(function(error) {
             FBerr = error.message
             msgFBErr.innerHTML = FBerr;
             msgFBErr.classList.remove('hid');
@@ -44,6 +47,7 @@ loginBtn.addEventListener('click',()=>{
 logoutBtn.addEventListener('click',()=>{
     let FBerr = null;
     firebase.auth().signOut().then(function() {
+        window.location.href = "index.php"
     }).catch(function(error) {
         FBerr = error.message
         msgFBErr.innerHTML = FBerr;

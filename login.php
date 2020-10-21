@@ -29,23 +29,10 @@
             <div aria-label="Show Password Label" class="tooltipPwd" style="opacity:0">Show</div>
         </div>
         <a id="forgotPwd" href="pwdRst.php">Forgot your password?</a>
-        <label class="checkboxLabl">
-            <input class="checkbox" name="remeber" type="checkbox">
-            <span>
-                <svg class="checkboxSVG" aria-label="Check Mark" role="img" overflow="visible" width="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 8L6 8L6 8L6 8Z" fill="white"></path>
-                </svg>
-            </span>Remeber me
-        </label>
         <button class="btn" type="button" id="loginBtn">Login</button>
     </form>
-    <?php
-        if(!(isset($_GET['msg']) && $_GET['msg']=="scs")){
-            include_once './parts/sepr.html';
-            echo '<a aria-label="Register" href="register.php" id="RegBtn" class="btn">Register</a>';
-        };
-
-    ?>
+    <?php include_once './parts/sepr.html';?>
+    <a aria-label="Register" href="register.php" id="RegBtn" class="btn">Register</a>
 </div>
 <div id="msgSignedIn" class="hid"> 
     <div role="alert" class="errMsg">You are already logged in!</div>
@@ -54,4 +41,3 @@
 <?php include_once './parts/footer.php'?>
 <script type="text/javascript" src="./scripts/Flds.js"></script>
 <script type="text/javascript" src="./scripts/login.js"></script>
-

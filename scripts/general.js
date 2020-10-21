@@ -85,9 +85,10 @@ const loginSVG = document.querySelector('#loginSVG')
 const loginA = document.querySelector('#loginA')
 firebase.auth().onAuthStateChanged(function(u) {
     if (u) {
-        log.innerHTML = 'Profile'
+        if(log){log.innerHTML = 'Profile'}
         loginPath.attributes.fill.value = 'var(--dr)'
         loginA.attributes['aria-label'].value = 'Profile'
+        loginA.attributes.href.value = 'profile.php'
         loginSVG.attributes['aria-label'].value = 'Profile'
     }
 })

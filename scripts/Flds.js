@@ -46,24 +46,6 @@ function eyeSetup (b){
 };
 for(a=0;a<eyePwds.length;a++){eyeSetup(a)};
 
-//Checkbox animation
-const checkboxes = document.querySelectorAll(".checkbox");
-const checkMarks = document.querySelectorAll('.checkboxSVG path');
-const checked = 'M2 5L6 8L13 2L6 13Z';
-const notchecked = 'M6 8L6 8L6 8L6 8Z';
-
-function checkMark(ch){
-    checkboxes[ch].addEventListener('change',()=>{
-        if(checkboxes[ch].checked){
-            checkMarks[ch].attributes.d.value = checked;
-        }else{
-            checkMarks[ch].attributes.d.value = notchecked;
-        }
-    });
-};
-
-for(i=0;i<checkboxes.length;i++){checkMark(i)};
-
 //Wink Logo
 const norm = {
     nose:"M151 176L162 171L205 164L165 176L156 189L157 214L168 226L163 243L142 246L132 246L109 241L105 225L111 236L127 232L140 236L152 232L156 222L148 209L148 187L151 176Z",

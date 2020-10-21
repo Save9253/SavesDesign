@@ -4,24 +4,19 @@
     $HeaderLogo = 'yes';
 
     include_once './parts/header.php';
-    require './functions/db.php';
-    if(isset($_SESSION['uname'])):
 ?>
-<div class="H" id="top">
-    <h1>Profile</h1>
-    <p>Hello <?php echo $_SESSION['uname'];?>!</p>
-
+<div role="alert" id="msgFBErr" class="errMsg hid"></div>
+<div id="profDiv" class="hid">
+    <div class="H" id="top">
+        <h1>Profile</h1>
+        <p id="greeting">Hello!</p>
+    </div>
+    <button id="logoutBtn" class="btn">Log out</button>
 </div>
-<a href="./functions/logout.php" class="btn">Log out</a>
-<p>Test</p>
-<?php
-    echo '<br />';
-?>
+<div id="login" class="hid">
+    <div class="errMsg" role="alert">Log in to access this page!</div>
+    <a href="login.php" class="btn">Log in</a>
+</div>
+<?php include_once './parts/footer.php';?>
+<script type="text/javascript" src="./scripts/profile.js"></script>
 
-<?php
-    else:
-        echo '<div class="errMsg" role="alert">Log in to see access this page!</div>';
-        echo '<a href="login.php" class="btn">Log in</a>';
-    endif;
-    include_once './parts/footer.php';
-?>
