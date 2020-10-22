@@ -4,71 +4,23 @@
     $HeaderLogo = 'yes';
 
     include_once './parts/header.php';
-    require './functions/db.php';
 
-    if(isset($_GET['msg']) && $_GET['msg'] == 'added'){echo '<div role="alert" class="msg">Successfully added to cart!</div>';}
 ?>
+<div role="alert" id="added" class="msg hid">Successfully added to cart!</div>
 <div class="H" id="top">
     <h1>Shop</h1>
     <p>Enjoy transparent prices! All taxes are already included!</p>
 </div>
-<?php
-    if($db):
-    $result = mysqli_query($db,"SELECT * FROM `services` WHERE `category` = 'Packages' ORDER BY `price` ASC");
-    if (mysqli_num_rows($result) > 0) {
-?>
+
 <section id="packagesSec" aria-label="Packages">
     <div class="H">
         <h2>Packages</h2>
         <p class="underH">Get a <span class="discount">10%</span> discount for purchasing a package!</p>
     </div>
     <div aria-label="Packages" id="packages">
-        <?php while($row = mysqli_fetch_assoc($result)) {?>
-        <div aria-label="<?php echo $row['title'];?>" class="service">
-            <h3><a href="service.php?id=<?php echo $row['id'];?>"><?php echo $row['title'];?></a></h3>
-            <?php if($row['svg']!=null){echo $row['svg'];}?>
-            <hr>
-            <div aria-label="Description" class="description">
-                <p><?php if($row['description']!=null){echo $row['description'];}?></p>
-                <?php
-                    if($row['includes']!=null){
-                        echo '<h4 class="includes">Includes:</h4>';
-                        echo '<ul class="includes">';
-                        echo $row['includes'];
-                        echo '</ul>';
-                    }
-                    if($row['requires']!=null){
-                        echo '<h4 class="requires">Requires:</h4>';
-                        echo '<ul class="requires">';
-                        echo $row['requires'];
-                        echo '</ul>';
-                    }
-                ?>
-            </div>
-            <hr>
-            <div aria-label="price" class="price">
-                <?php
-                    if($row['discount']!=null){
-                        $price = $row['price'];
-                        $discount = $row['discount'];
-                        $DisPrice = $price - (($discount/100)*$price);
-                        echo '<del aria-label="Old Price" class="oldPrice">$'.$price.'</del>';
-                        echo '<span aria-label="Discount" class="discount">-'.$discount.'%</span>';
-                        echo '<span aria-label="New Price" class="newPrice">$'.$DisPrice.'</span>';
-                    }else{
-                        echo '<span aria-label="New Price" class="newPrice">$'.$row['price'].'</span>';
-                    }
-                ?>
-            </div>
-            <form aria-label="Add to Cart <?php echo $row['title'];?>" action="shop.php?msg=added" method="post" class="addTCart">
-                <input name="servID" type="hidden" value="<?php echo $row['id']?>">
-                <input name="qty" type="hidden" value="1">
-                <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
-            </form>
-        </div>
-        <?php }; ?>
-    </div>
-</section>
+
+    <?php /*
+
 <?php };
     $result = mysqli_query($db,"SELECT * FROM `services` WHERE `category` != 'Packages' ORDER BY `price` ASC");
     if (mysqli_num_rows($result) > 0) {
@@ -122,14 +74,9 @@
                 <button aria-label="Add to Cart <?php echo $row['title'];?>" type="submit">Add to Cart</button>
             </form>
         </div>
-        <?php }; ?>
+        <?php };*/ ?>
     </div>
 </section>
-<?php
-    };
-    mysqli_close($db);
-    else:
-        echo '<p role="alert">Coud not connect to the database</p>';
-    endif;
-    include_once './parts/footer.php';
-?>
+<?php include_once './parts/footer.php';?>
+<script type="text/javascript" src="./scripts/shop.js"></script>
+

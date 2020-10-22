@@ -113,9 +113,6 @@ h2 {
 .addTCart {
   width: 100%;
   margin-top: 10px;
-}
-.addTCart button {
-  width: 100%;
   border-width: 2px 0;
   border-color: var(--lt);
   border-style: solid;
@@ -124,7 +121,7 @@ h2 {
   padding: 5px;
   font-size: 20px;
 }
-.addTCart button:hover,.addTCart button:focus,
+.addTCart:hover,.addTCart:focus,
 .addTCartWqty button:hover,.addTCartWqty button:focus {
   background-color: var(--lt);
   color: var(--dr);
