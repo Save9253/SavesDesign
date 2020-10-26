@@ -1,8 +1,8 @@
 const db = firebase.firestore();
 const PackgsDiv = document.querySelector('#packages')
 
-db.collection("services").orderBy('price').get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
+db.collection("services").orderBy('price').get().then((res) => {
+    res.forEach((doc) => {
         const dt = doc.data()
         if(dt.category == 'Packages'){
             const PackDiv = document.createElement('div')

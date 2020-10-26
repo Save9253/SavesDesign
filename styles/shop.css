@@ -10,9 +10,16 @@ h2 {
   display: grid;
 }
 
+#content{
+  place-content: start center;
+  animation: fadein 2s 500ms ease forwards;
+  opacity: 0;
+}
+
 #top {
   border-bottom: solid;
   margin: 0 10px 20px;
+  width: var(--vw);
 }
 
 #all {
@@ -28,6 +35,11 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 20px;
+  animation: fadein 2s 500ms ease forwards;
+  opacity: 0;
+}
+@keyframes fadein{
+  to{opacity:1}
 }
 
 #packagesSec .H p {

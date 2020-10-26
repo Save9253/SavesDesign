@@ -1,3 +1,7 @@
+// Width with no scroll bar
+function winWidth(){document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + "px")}
+winWidth();
+window.addEventListener('resize', ()=>{winWidth();});
 
 const hamB = document.querySelector('#hamburger');
 const hamBpath = document.querySelector('#hamburger svg path');
@@ -26,11 +30,6 @@ content.addEventListener('click',()=>{
     if(sideNav.classList.contains('navMoved')){sideNav.classList.remove('navMoved')};
     if(hamBpath.attributes.d.value == arrowD){hamBpath.attributes.d.value = hamBD}
 });
-
-// Width with no scroll bar
-function winWidth(){document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + "px")}
-winWidth();
-window.addEventListener('resize', ()=>{winWidth();});
 
 // Header Folder
 const header = document.querySelector('header');
