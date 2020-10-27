@@ -45,7 +45,7 @@ db.collection("services").orderBy('price').get().then((res) => {
                 incs.forEach(inc => {
                     const A = document.createElement('a')
                     A.setAttribute('href','service.php?id='+inc)
-                    A.innerHTML = inc
+                    A.innerHTML = inc.replace(/-/g,' ')
                     Ul.appendChild(A)
                 })
                 DesDiv.appendChild(Ul)
@@ -62,7 +62,7 @@ db.collection("services").orderBy('price').get().then((res) => {
                 reqs.forEach(req => {
                     const A = document.createElement('a')
                     A.setAttribute('href','service.php?id='+req)
-                    A.innerHTML = req
+                    A.innerHTML = req.replace(/-/g,' ')
                     Ul.appendChild(A)
                 })
                 DesDiv.appendChild(Ul)
@@ -102,13 +102,18 @@ db.collection("services").orderBy('price').get().then((res) => {
             PackDiv.appendChild(priceDiv)
 
             const btn = document.createElement('button')
-            btn.setAttribute('aria-label','Add to cart '+ dt.id)
+            btn.setAttribute('aria-label','Add to cart '+ doc.id)
             btn.setAttribute('class','addTCart')
             btn.setAttribute('type','button ')
+            btn.setAttribute('data-id',doc.id)
             btn.innerHTML = 'Add to Cart'
             PackDiv.appendChild(btn)
+            btn.addEventListener('click',()=>{
+                console.log(doc.id)
+            })
 
             PackgsDiv.appendChild(PackDiv)
         }
     });
 }).catch((error)=>{console.log(error)})
+

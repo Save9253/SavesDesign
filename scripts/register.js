@@ -123,21 +123,29 @@ regBtn.addEventListener('click',()=>{
     } 
     if(chkMail == 2 && chkPwd == 2 && PwdLength == 2 && emptyFields == false){
         let FBerr = null;
-        firebase.auth().createUserWithEmailAndPassword(mailIn.value, pwdIn.value).catch(function(error) {
+        firebase.auth().createUserWithEmailAndPassword(mailIn.value, pwdIn.value).then(()=>{
+            firebase.auth().currentUser.updateProfile({
+                displayName: unameIn.value
+            }).then(()=>{
+                const uid = firebase.auth().currentUser.uid
+                firebase.firestore().collection('users').doc(uid).set({
+                    name:unameIn.value
+                }).then(() =>{
+                    window.location.href = "index.php"
+                }).catch(error=>{
+                    FBerr = error.message
+                    msgFBErr.innerHTML = FBerr;
+                    msgFBErr.classList.remove('hid');
+                })
+            }).catch(error=>{
+                FBerr = error.message
+                msgFBErr.innerHTML = FBerr;
+                msgFBErr.classList.remove('hid');
+            })
+        }).catch(error=>{
             FBerr = error.message
             msgFBErr.innerHTML = FBerr;
             msgFBErr.classList.remove('hid');
-        }).then(()=>{
-            if(!FBerr){
-                firebase.auth().currentUser.updateProfile({
-                    displayName: unameIn.value
-                }).then(function() {
-                    window.location.href = "login.php"
-                }, function(error) {
-                    setFrBsErr(error.message);
-                    console.log(error.message)
-                })
-            }
         })
     }
 })
