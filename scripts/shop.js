@@ -1,5 +1,16 @@
-const db = firebase.firestore();
 const PackgsDiv = document.querySelector('#packages')
+
+function add2cart (itemId){
+    const uid = firebase.auth().currentUser.uid
+    const docRef = db.collection('users').doc(uid)
+    let qty = 1;
+    docRef.set({
+        cart: firebase.firestore.FieldValue.arrayUnion({
+            id:itemId,
+            qty:qty,
+        })
+    })
+}
 
 db.collection("services").orderBy('price').get().then((res) => {
     res.forEach((doc) => {
@@ -109,7 +120,11 @@ db.collection("services").orderBy('price').get().then((res) => {
             btn.innerHTML = 'Add to Cart'
             PackDiv.appendChild(btn)
             btn.addEventListener('click',()=>{
-                console.log(doc.id)
+                if(!firebase.auth().currentUser){
+                    window.location.href = 'login.php?msg=login'
+                }else{
+                    add2cart(doc.id)
+                }
             })
 
             PackgsDiv.appendChild(PackDiv)

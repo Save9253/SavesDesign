@@ -61,34 +61,43 @@ const cartL2 = document.querySelector('#cartL2');
 const cartL3 = document.querySelector('#cartL3');
 const cartText = document.querySelector('#cartText');
 
-if(cartText.innerHTML!="0"){
-    setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
-    setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
-    setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
-    if(cartText.innerHTML.length == 1){
-        setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
-    }else if(cartText.innerHTML.length == 2){
-        cartText.setAttribute('x','28');
-        setTimeout(()=>{cartText.style['font-size'] = '50px'},1250);
-    }
-    setTimeout(()=>{
-        cartL1.setAttribute('opacity','0');
-        cartL2.setAttribute('opacity','0');
-        cartL3.setAttribute('opacity','0');
-    },1250);
-}
 //Firebase
+const db = firebase.firestore();
+
 const log = document.querySelector('#log')
 const loginPath = document.querySelector('#loginPath')
 const loginSVG = document.querySelector('#loginSVG')
 const loginA = document.querySelector('#loginA')
-firebase.auth().onAuthStateChanged(function(u) {
+firebase.auth().onAuthStateChanged(u=> {
     if (u) {
         if(log){log.innerHTML = 'Profile'}
         loginPath.attributes.fill.value = 'var(--dr)'
         loginA.attributes['aria-label'].value = 'Profile'
         loginA.attributes.href.value = 'profile.php'
         loginSVG.attributes['aria-label'].value = 'Profile'
+
+        const uid = firebase.auth().currentUser.uid
+        db.collection('users').doc(uid).onSnapshot(doc=>{
+            cartText.innerHTML = doc.data().cart.length
+            header.style.top = '0px'
+            if(cartText.innerHTML!="0"){
+                cartText.style['font-size'] = '0px'
+                setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
+                setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
+                setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
+                if(cartText.innerHTML.length == 1){
+                    setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
+                }else if(cartText.innerHTML.length == 2){
+                    cartText.setAttribute('x','28');
+                    setTimeout(()=>{cartText.style['font-size'] = '50px'},1250);
+                }
+                setTimeout(()=>{
+                    cartL1.setAttribute('opacity','0');
+                    cartL2.setAttribute('opacity','0');
+                    cartL3.setAttribute('opacity','0');
+                },1250);
+            }
+        })
     }
 })
 

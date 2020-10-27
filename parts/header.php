@@ -53,7 +53,7 @@
                             <path id="cartL2" opacity="1" d="M33 35H82"/>
                             <path id="cartL3" opacity="1" d="M36 45H79"/>
                         </g>
-                        <text id="cartText" x="35" y="45" style="font-size:0px;" fill="var(--dr)"><?php echo $_SESSION['cartItems']?></text>
+                        <text id="cartText" x="35" y="45" style="font-size:0px;" fill="var(--dr)">0</text>
                     </svg>
                 </a>
             </li>
