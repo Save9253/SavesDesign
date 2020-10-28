@@ -1,15 +1,16 @@
 const PackgsDiv = document.querySelector('#packages')
 
 function add2cart (itemId){
+    let qty = 1;
+    let indx = localCart.findIndex(item => item.id == itemId)
+    if(indx == -1){
+        localCart.push({id:itemId,qty:qty})
+    }else{
+        localCart[indx].qty++
+    }
     const uid = firebase.auth().currentUser.uid
     const docRef = db.collection('users').doc(uid)
-    let qty = 1;
-    docRef.set({
-        cart: firebase.firestore.FieldValue.arrayUnion({
-            id:itemId,
-            qty:qty,
-        })
-    })
+    docRef.set({cart: localCart})
 }
 
 db.collection("services").orderBy('price').get().then((res) => {

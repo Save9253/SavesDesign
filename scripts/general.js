@@ -68,6 +68,9 @@ const log = document.querySelector('#log')
 const loginPath = document.querySelector('#loginPath')
 const loginSVG = document.querySelector('#loginSVG')
 const loginA = document.querySelector('#loginA')
+
+let localCart = []
+
 firebase.auth().onAuthStateChanged(u=> {
     if (u) {
         if(log){log.innerHTML = 'Profile'}
@@ -78,24 +81,33 @@ firebase.auth().onAuthStateChanged(u=> {
 
         const uid = firebase.auth().currentUser.uid
         db.collection('users').doc(uid).onSnapshot(doc=>{
-            cartText.innerHTML = doc.data().cart.length
-            header.style.top = '0px'
-            if(cartText.innerHTML!="0"){
+            if(doc.data().cart){
                 cartText.style['font-size'] = '0px'
-                setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
-                setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
-                setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
-                if(cartText.innerHTML.length == 1){
-                    setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
-                }else if(cartText.innerHTML.length == 2){
-                    cartText.setAttribute('x','28');
-                    setTimeout(()=>{cartText.style['font-size'] = '50px'},1250);
+                localCart = doc.data().cart
+                let sum = 0;
+                for(let i=0;i<localCart.length;i++){
+                    sum = sum + localCart[i].qty
                 }
-                setTimeout(()=>{
-                    cartL1.setAttribute('opacity','0');
-                    cartL2.setAttribute('opacity','0');
-                    cartL3.setAttribute('opacity','0');
-                },1250);
+                if(sum>9){sum = '9+'}
+                cartText.innerHTML = sum
+                header.style.top = '0px'
+                if(cartText.innerHTML!="0"){
+                    setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
+                    setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
+                    setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
+                    if(cartText.innerHTML.length == 1){
+                        setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
+                    }else if(cartText.innerHTML.length == 2){
+                        cartText.setAttribute('x','28');
+                        setTimeout(()=>{cartText.style['font-size'] = '50px'},1250);
+                    }
+                    setTimeout(()=>{
+                        cartL1.setAttribute('opacity','0');
+                        cartL2.setAttribute('opacity','0');
+                        cartL3.setAttribute('opacity','0');
+                    },1250);
+                }
+                
             }
         })
     }
