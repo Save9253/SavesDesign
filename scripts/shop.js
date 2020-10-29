@@ -1,4 +1,5 @@
 const PackgsDiv = document.querySelector('#packages')
+const AllServicesDiv = document.querySelector('#services') 
 
 function add2cart (itemId,qty){
     let indx = localCart.findIndex(item => item.id == itemId)
@@ -143,3 +144,4 @@ function servicesLoop (orderby,category,parent,quant) {
 
 servicesLoop('price','Packages',PackgsDiv,false)
 
+servicesLoop('price','Web',AllServicesDiv,true)
