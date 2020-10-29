@@ -74,13 +74,14 @@ hr{
 .H {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     align-items: center;
     justify-content: center;
 }
 .H p {
     font-size: 20px;
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Main */
@@ -143,7 +144,6 @@ button{
     border-radius: 2px;
     display: grid;
     place-content: center;
-    width: 100%;
 }
 .btn:hover, .btn:focus,.btnlt:hover, .btnlt:focus{
     box-shadow: 2px 2px var(--ac);

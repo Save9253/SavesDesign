@@ -69,7 +69,7 @@ const loginPath = document.querySelector('#loginPath')
 const loginSVG = document.querySelector('#loginSVG')
 const loginA = document.querySelector('#loginA')
 
-let localCart = []
+let localCart = null;
 
 firebase.auth().onAuthStateChanged(u=> {
     if (u) {
@@ -84,6 +84,7 @@ firebase.auth().onAuthStateChanged(u=> {
             if(doc.data().cart){
                 cartText.style['font-size'] = '0px'
                 localCart = doc.data().cart
+                if(typeof Cart === 'function'){Cart()}
                 let sum = 0;
                 for(let i=0;i<localCart.length;i++){
                     sum = sum + localCart[i].qty
@@ -107,7 +108,6 @@ firebase.auth().onAuthStateChanged(u=> {
                         cartL3.setAttribute('opacity','0');
                     },1250);
                 }
-                
             }
         })
     }
