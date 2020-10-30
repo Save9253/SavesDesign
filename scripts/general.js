@@ -90,12 +90,11 @@ firebase.auth().onAuthStateChanged(u=> {
                     sum = sum + localCart[i].qty
                 }
                 if(sum>9){sum = '9+'}
-                cartText.innerHTML = sum
                 header.style.top = '0px'
-                if(cartText.innerHTML!="0"){
+                if(localCart.length > 0){
                     setTimeout(()=>{cartL1.setAttribute('d','M85 25H85')},500);
                     setTimeout(()=>{cartL2.setAttribute('d','M82 35H82')},750);
-                    setTimeout(()=>{cartL3.setAttribute('d','M79 45H79')},1000);
+                    setTimeout(()=>{cartL3.setAttribute('d','M79 45H79');cartText.innerHTML = sum},1000);
                     if(cartText.innerHTML.length == 1){
                         setTimeout(()=>{cartText.style['font-size'] = '60px'},1250);
                     }else if(cartText.innerHTML.length == 2){
