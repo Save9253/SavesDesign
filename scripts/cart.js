@@ -98,7 +98,13 @@ function Cart(){
                         icon.attributes.stroke.value = 'var(--acdr)';
                         btn.attributes['aria-pressed'].value=false;
                     }
-                    qtyChange(item.qty,itemPrice,inpt,subTtl,tr)
+                    item.qty = Number(inpt.value)
+                    subTtl.innerHTML = inpt.value * itemPrice
+                    if(inpt.value == 0){
+                        tr.classList.add('removedTR')
+                    }else{
+                        tr.classList.remove('removedTR')
+                    }
                     TotalRecount()
                 })
                 btn.innerHTML ='<svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path transform="rotate(0)" stroke="var(--acdr)" d="M0 0L10 10 M0 10L10 0"></svg>' 
