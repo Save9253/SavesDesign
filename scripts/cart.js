@@ -133,7 +133,6 @@ function Cart(){
     }
 }
 
-
 const remAddAllBtn = document.querySelector('.remAddAll');
 const remAddAllicon = document.querySelector('.remAddAll svg path');
 
