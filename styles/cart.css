@@ -7,7 +7,11 @@ td,th{
     text-align: center;
     padding: 5px 10px;
 }
-tbody tr{border-bottom: solid 1px;}
+tbody tr{
+    border-bottom: solid 1px;
+    overflow: hidden;
+    /*animation: height 500ms ease 100ms forwards;*/
+}
 tbody tr td{opacity: 1;transition: 500ms ease;}
 td svg{
     max-width: 50px;

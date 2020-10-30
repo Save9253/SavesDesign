@@ -3,13 +3,35 @@ const cartTitleP = document.querySelector('#cartP');
 const fillItUpBtn = document.querySelector('#fillItUpBtn')
 const tbody = document.querySelector('tbody')
 const total = document.querySelector('#ttl');
+const theDiv = document.querySelector('#theDiv')
+
+const subTtls = [];
+const qtys = [];
+const icons = [];
+const prices = [];
+const trs = [];
+
+function TotalRecount() {
+    let newSum = 0
+    subTtls.forEach(sbttl=>{
+        newSum = newSum + Number(sbttl.innerHTML)
+    })
+    total.innerHTML =newSum
+}
 
 function Cart(){
     if(localCart){
         cartTitleP.innerHTML = "Here's what you've got!"
         fillItUpBtn.classList.add('hid')
         let ttl = 0 
-        localCart.forEach(item => {
+        let timeout = 0;
+        if(theDiv.style.opacity == '1'){
+            theDiv.style.opacity = 0
+            timeout = 1000
+        }
+        setTimeout(()=>{
+            tbody.innerHTML=null
+            localCart.forEach(item => {
             const tr = document.createElement('tr')
             const TDSVG = document.createElement('td')
             const TDTitle = document.createElement('td')
@@ -23,6 +45,7 @@ function Cart(){
             db.collection('services').doc(item.id).get().then(res=>{
                 const data = res.data()
                 let itemPrice = data.price
+                prices.push(itemPrice)
                 if(data.discount){itemPrice = (data.price - (data.discount/100*data.price))}
                 if(data.svg){TDSVG.innerHTML = data.svg}
                 TDTitle.innerHTML = '<a href="service.php?id='+item.id+'">'+data.title+'</a>'
@@ -31,118 +54,116 @@ function Cart(){
                 }else{
                     TDPrice.innerHTML = '<div class="num price"><span aria-label="New Price" class="newPrice">$<span class="itPrice">'+data.price+'</span></span></div>'
                 }
-                TDQty.innerHTML = 'x<input aria-label="Quantity" class="qty" name="qty" min="0" type="number" value="'+item.qty+'">'
-                TDSub.innerHTML = '$<span class="subTtl">'+itemPrice*item.qty+'</span>'
-                TDRem.innerHTML = '<button type="button" aria-label="Remove the '+data.title+'from the cart" aria-pressed="false" class="remAdd icon"><svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path transform="rotate(0)" stroke="var(--acdr)" d="M0 0L10 10 M0 10L10 0"></svg></button>'
+                const inpt = document.createElement('input')
+                inpt.setAttribute('aria-label','Quantity')
+                inpt.setAttribute('class','qty')
+                inpt.setAttribute('min','0')
+                inpt.setAttribute('type','number')
+                inpt.setAttribute('value',item.qty)
+                inpt.addEventListener('change',()=>{
+                    item.qty = Number(inpt.value)
+                    subTtl.innerHTML = inpt.value * itemPrice
+                    if(inpt.value == 0){
+                        tr.classList.add('removedTR')
+                    }else{
+                        tr.classList.remove('removedTR')
+                    }
+                    TotalRecount()
+                })
+                qtys.push(inpt);
+                TDQty.innerHTML = 'x'
+                TDQty.appendChild(inpt)
+
+                const subTtl = document.createElement('span')
+                subTtls.push(subTtl)
+                subTtl.classList.add('subTtl')
+                subTtl.innerHTML = itemPrice*item.qty
+                TDSub.innerHTML = '$'
+                TDSub.appendChild(subTtl);
+
+                const btn = document.createElement('button')
+                btn.setAttribute('type','button')
+                btn.setAttribute('aria-label','Remove the '+data.title+' from the cart')
+                btn.setAttribute('aria-pressed','false')
+                btn.setAttribute('class','remAdd icon')
+                btn.addEventListener('click',()=>{
+                    if(inpt.value != 0){
+                        inpt.value = 0
+                        icon.attributes.transform.value = 'rotate(45)';
+                        icon.attributes.stroke.value = 'var(--dr)'
+                        btn.attributes['aria-pressed'].value=true;
+                    }else{
+                        inpt.value = 1
+                        icon.attributes.transform.value = 'rotate(0)';
+                        icon.attributes.stroke.value = 'var(--acdr)';
+                        btn.attributes['aria-pressed'].value=false;
+                    }
+                    qtyChange(item.qty,itemPrice,inpt,subTtl,tr)
+                    TotalRecount()
+                })
+                btn.innerHTML ='<svg overflow="visible" role="img" width="10" stroke-width="2" stroke-linecap="round"  viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path transform="rotate(0)" stroke="var(--acdr)" d="M0 0L10 10 M0 10L10 0"></svg>' 
+                TDRem.appendChild(btn)
                 tr.appendChild(TDSVG)
                 tr.appendChild(TDTitle)
                 tr.appendChild(TDPrice)
                 tr.appendChild(TDQty)
                 tr.appendChild(TDSub)
                 tr.appendChild(TDRem)
+                trs.push(tr)
                 tbody.appendChild(tr)
+                const icon = btn.children[0].children[0];
+                icons.push(icon)
                 
                 ttl = ttl + (itemPrice*item.qty)
                 total.innerHTML = ttl
+
+                theDiv.style.opacity = 1
             })
-        });
+        });   
+        },timeout)
     }else{
         cartTitleP.innerHTML = "Your cart is empty!"
         fillItUpBtn.classList.remove('hid')
     }
 }
-/*
-const qtys = document.querySelectorAll('input[type="number"]');
-const subTtls = document.querySelectorAll('.subTtl');
-const itPrices = document.querySelectorAll('.itPrice');
-const trs = document.querySelectorAll('tbody tr');
 
-const remAddBtn = document.querySelectorAll('.remAdd');
-const remAddicon = document.querySelectorAll('.remAdd svg path');
+
 const remAddAllBtn = document.querySelector('.remAddAll');
 const remAddAllicon = document.querySelector('.remAddAll svg path');
-
-const itemQtys = document.querySelector('input[name="qtys"]');
-
-function qtyChange(n){
-    subTtls[n].innerHTML = Number(itPrices[n].innerHTML)*qtys[n].value;
-
-    let sum = 0;
-    subTtls.forEach(subTtl=> {sum = sum + Number(subTtl.innerHTML)});
-    total.innerHTML = sum;
-
-    if(qtys[n].value == 0){
-        trs[n].classList.add('removedTR')
-    }else{
-        trs[n].classList.remove('removedTR')
-    }
-
-    let ttlQty = 0;
-    qtys.forEach(qty=> {ttlQty = ttlQty + Number(qty.value)});
-    cartText.innerHTML = ttlQty;
-
-    let newItemQty = '';
-    qtys.forEach(qty=>{
-        if(newItemQty  == ''){newItemQty = qty.value;}else{newItemQty  = newItemQty + ',' + qty.value;}
-    })
-    itemQtys.value = newItemQty;
-}
-
-for(let i=0;i<qtys.length;i++){
-    qtys[i].addEventListener('change',()=>{qtyChange(i)});
-    remAddBtn[i].addEventListener('click',()=>{
-        if(qtys[i].value != 0){
-            remAddicon[i].attributes.transform.value = 'rotate(45)';
-            remAddicon[i].attributes.stroke.value = 'var(--dr)'
-            qtys[i].value = 0;
-            remAddBtn[i].attributes['aria-pressed'].value=true;
-        }else{
-            remAddicon[i].attributes.transform.value = 'rotate(0)';
-            remAddicon[i].attributes.stroke.value = 'var(--acdr)';
-            qtys[i].value = 1;
-            remAddBtn[i].attributes['aria-pressed'].value=false;
-        }
-        qtyChange(i);
-    })
-};
 
 remAddAllBtn.addEventListener('click',()=>{
     for(let i=0;i<qtys.length;i++){
         qtys[i].value = 0;
-        remAddicon[i].attributes.transform.value = 'rotate(45)';
-        remAddicon[i].attributes.stroke.value = 'var(--dr)'
-        qtyChange(i);
+        icons[i].attributes.transform.value = 'rotate(45)';
+        icons[i].attributes.stroke.value = 'var(--dr)'
+        localCart[i].qty = Number(qtys[i].value)
+        subTtls[i].innerHTML = qtys[i].value * prices[i]
+        if(qtys[i].value == 0){
+            trs[i].classList.add('removedTR')
+        }else{
+            trs[i].classList.remove('removedTR')
+        }
+        TotalRecount()
     }
-
 })
 
 // Submit Cart Update
 const save = document.querySelector('#btnSave');
 const shop = document.querySelector('#btnShop');
 const request = document.querySelector('#btnRequest');
-const cartUdate = document.querySelector('#cartUpdate');
 
 save.addEventListener('click',()=>{
-    cartUdate.attributes.action.value='cart.php';
-    cartUdate.submit();
+    const uid = firebase.auth().currentUser.uid
+    const docRef = db.collection('users').doc(uid)
+    docRef.set({cart: localCart})
 })
 shop.addEventListener('click',()=>{
-    cartUdate.attributes.action.value="shop.php";
-    cartUdate.submit();
+    const uid = firebase.auth().currentUser.uid
+    const docRef = db.collection('users').doc(uid)
+    docRef.set({cart: localCart}).then(window.location.href = 'shop.php')
 })
 request.addEventListener('click',()=>{
-    cartUdate.attributes.action.value="./functions/profile.php?requested=true";
-    cartUdate.submit();
+    const uid = firebase.auth().currentUser.uid
+    const docRef = db.collection('users').doc(uid)
+    docRef.set({cart: localCart}).then(window.location.href = 'profile.php?requested=true')
 })
-
-foreach(array_keys($_SESSION['cart']) as $key){
-    while($row = mysqli_fetch_assoc($result)) {
-$qty = $_SESSION['cart'][$key];
-if($cartItems == ''){$cartItems = $row['id'];}else{$cartItems = $cartItems.','.$row['id'];}
-if($qtys == ''){$qtys = $qty;}else{$qtys = $qtys.','.$qty;}
-
-
-<?php
-};
-echo '<p role="alert">Something whent wrong</p>'
-*/
