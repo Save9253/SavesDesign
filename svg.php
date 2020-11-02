@@ -25,9 +25,6 @@
 
         <input id="pr001" type="radio" name="roundTo" value="0.01">
         <label for='pr001'>0.01</label>
-
-        <input id="pr001" type="radio" name="roundTo" value="0.01">
-        <label for='pr001'>0.01</label>
     </div>
     <div class="inputs">
         <input id="forHTML" type="radio" name="roundFor" checked value="HTML">
