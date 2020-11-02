@@ -3,6 +3,22 @@ const btn = document.querySelector('#RoundUpBtn')
 const before = document.querySelector('#before')
 const after = document.querySelector('#after')
 
+const tos = document.querySelectorAll('input[name="roundTo"]')
+const fors = document.querySelectorAll('input[name="roundFor"]')
+
+let prec = '1';
+let For = 'HTML';
+tos.forEach(to=>{
+    to.addEventListener('click',()=>{
+        prec = to.value
+    })}
+)
+fors.forEach(foR=>{
+    foR.addEventListener('click',()=>{
+        For = foR.value
+    })}
+)
+
 function roundUp(num, precision) {
     let res = "wrong entry";
     num = Number(num)
@@ -11,18 +27,17 @@ function roundUp(num, precision) {
         num = num / precision
         res = Math.round(num)
         res = res * precision
-        if(res.toString().match(/[0]+[1-9]/)){
-            res = res.toString().replace(/[0]+[1-9]/,'')
+        if(res.toString().match(/0[0]+[1-9]/)){
+            res = res.toString().replace(/0[0]+[1-9]/,'')
         }
     }
     return res;
 }
 
-let prec = '0.1'
-
 btn.addEventListener('click',()=>{
     let string = svgIn.innerHTML
     string = string.replaceAll('&nbsp;',' ')
+    string = string.replaceAll('<br>',' ')
     string = string.replaceAll('&lt;','<')
     string = string.replaceAll('&gt;','>')
     string = string.replaceAll(/<div([^>]*)>/g,' ')
@@ -49,5 +64,14 @@ btn.addEventListener('click',()=>{
 
     string = string.replaceAll('<','&lt;')
     string = string.replaceAll('>','&gt;<br>')
+
+    if(For == 'JS'){
+        string = string.replaceAll('-line','Line')
+        string = string.replaceAll('-width','Width')
+        string = string.replaceAll('-dash','Dash')
+        string = string.replaceAll('-opacity','Opacity')
+        string = string.replaceAll('svg','Svg')
+        string = string.replaceAll('path','Path')
+    }
     svgIn.innerHTML = string
 })

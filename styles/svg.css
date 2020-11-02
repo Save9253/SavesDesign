@@ -11,7 +11,7 @@ div {
     background-color: var(--md);
     color:var(--lt);
     max-width: calc(var(--vw) - 40px);
-    overflow-x: scroll;
+    overflow-x: auto;
     font-size: 12px;
     text-align: start;
 }
@@ -30,11 +30,23 @@ div {
 #preview div{
     padding: 5px;
 }
-
-/*
-<Svg width="100" fill="none" viewBox="0 0 27 28">
-    <Path d="M13.7324 27.0076C21.0387 27.0076 26.9609 21.0847 26.9609 13.7785C26.9609 6.47218 21.0387 0.549286 13.7324 0.549286C6.42615 0.549286 0.50293 6.47218 0.50293 13.7785C0.50293 21.0847 6.42615 27.0076 13.7324 27.0076Z" fill="white"/>
-    <Path d="M5.6748 9.52162C11.5038 8.21485 16.6602 8.5277 22.0332 11.1635" stroke="black" strokeWidth="2.47" strokeLinecap="round"/>
-    <Path d="M6.34375 13.7784C10.9587 12.5986 15.7763 12.8002 20.3613 15.4508" stroke="black" strokeWidth="2.04" strokeLinecap="round"/>
-    <Path d="M6.67773 17.792C11.9097 16.5441 15.6409 17.3201 18.9619 19.1299" stroke="black" strokeWidth="1.62" strokeLinecap="round"/>
-</Svg>
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+input[type='radio']{
+    display: none;
+}
+label{
+    padding:5px;
+    border-radius: 2px;
+    border:solid var(--md) 2px;
+    margin:5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+input[type="radio"]:checked+label{
+    border:solid var(--ac) 2px !important;
+}
