@@ -36,6 +36,7 @@ function roundUp(num, precision) {
 
 btn.addEventListener('click',()=>{
     let string = svgIn.innerHTML
+    string = string.replaceAll('xmlns="http://www.w3.org/2000/svg"','sss')
     string = string.replaceAll('&nbsp;',' ')
     string = string.replaceAll('<br>',' ')
     string = string.replaceAll('&lt;','<')
@@ -72,7 +73,9 @@ btn.addEventListener('click',()=>{
         string = string.replaceAll('-opacity','Opacity')
         string = string.replaceAll('svg','Svg')
         string = string.replaceAll('path','Path')
-        string = string.replaceAll('xmlns="http://www.w3.org/2000/svg"','')
+        string = string.replaceAll('sss','')
+    }else{
+        string = string.replaceAll('sss','xmlns="http://www.w3.org/2000/svg"')
     }
     svgIn.innerHTML = string
 })
